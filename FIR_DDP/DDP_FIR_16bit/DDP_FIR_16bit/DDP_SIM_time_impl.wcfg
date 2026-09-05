@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="DDP_SIM_time_impl.wdb" id="1">
+         <top_modules>
+            <top_module name="DDP_SIM" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="128,599.345 ns"></ZoomStartTime>
+      <ZoomEndTime time="129,304.346 ns"></ZoomEndTime>
+      <Cursor1Time time="128,883.943 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="218"></NameColumnWidth>
+      <ValueColumnWidth column_width="108"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="group238" type="group">
+      <obj_property name="label">MAIN</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/DDP_SIM/RST" type="logic">
+         <obj_property name="ElementShortName">RST</obj_property>
+         <obj_property name="ObjectShortName">RST</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/Send_in" type="logic">
+         <obj_property name="ElementShortName">Send_in</obj_property>
+         <obj_property name="ObjectShortName">Send_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/Ack_out" type="logic">
+         <obj_property name="ElementShortName">Ack_out</obj_property>
+         <obj_property name="ObjectShortName">Ack_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/PACKET_IN" type="array">
+         <obj_property name="ElementShortName">PACKET_IN[37:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_IN[37:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/Ack_in" type="logic">
+         <obj_property name="ElementShortName">Ack_in</obj_property>
+         <obj_property name="ObjectShortName">Ack_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/Send_out" type="logic">
+         <obj_property name="ElementShortName">Send_out</obj_property>
+         <obj_property name="ObjectShortName">Send_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/PACKET_OUT" type="array">
+         <obj_property name="ElementShortName">PACKET_OUT[7:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_OUT[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/i" type="array">
+         <obj_property name="ElementShortName">i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">i[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/SEC" type="array">
+         <obj_property name="ElementShortName">SEC[31:0]</obj_property>
+         <obj_property name="ObjectShortName">SEC[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/RST_TIME" type="array">
+         <obj_property name="ElementShortName">RST_TIME[31:0]</obj_property>
+         <obj_property name="ObjectShortName">RST_TIME[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/pNIN" type="array">
+         <obj_property name="ElementShortName">pNIN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pNIN[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/pTIN" type="array">
+         <obj_property name="ElementShortName">pTIN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pTIN[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/NIN" type="array">
+         <obj_property name="ElementShortName">NIN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">NIN[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/TIN" type="array">
+         <obj_property name="ElementShortName">TIN[31:0]</obj_property>
+         <obj_property name="ObjectShortName">TIN[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group263" type="group">
+      <obj_property name="label">C_cycle</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Send_in" type="logic">
+         <obj_property name="ElementShortName">Send_in</obj_property>
+         <obj_property name="ObjectShortName">Send_in</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Ack_out" type="logic">
+         <obj_property name="ElementShortName">Ack_out</obj_property>
+         <obj_property name="ObjectShortName">Ack_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Send_out_B_INTERNAL" type="logic">
+         <obj_property name="ElementShortName">Send_out_B_INTERNAL</obj_property>
+         <obj_property name="ObjectShortName">Send_out_B_INTERNAL</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Ack_out_M" type="logic">
+         <obj_property name="ElementShortName">Ack_out_M</obj_property>
+         <obj_property name="ObjectShortName">Ack_out_M</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/CP_M_EXTERNAL" type="logic">
+         <obj_property name="ElementShortName">CP_M_EXTERNAL</obj_property>
+         <obj_property name="ObjectShortName">CP_M_EXTERNAL</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/CP_M_INTERNAL" type="logic">
+         <obj_property name="ElementShortName">CP_M_INTERNAL</obj_property>
+         <obj_property name="ObjectShortName">CP_M_INTERNAL</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Send_out_M" type="logic">
+         <obj_property name="ElementShortName">Send_out_M</obj_property>
+         <obj_property name="ObjectShortName">Send_out_M</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Ack_out_MMCAM" type="logic">
+         <obj_property name="ElementShortName">Ack_out_MMCAM</obj_property>
+         <obj_property name="ObjectShortName">Ack_out_MMCAM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/CP_MMCAM" type="logic">
+         <obj_property name="ElementShortName">CP_MMCAM</obj_property>
+         <obj_property name="ObjectShortName">CP_MMCAM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Send_out_MMCAM" type="logic">
+         <obj_property name="ElementShortName">Send_out_MMCAM</obj_property>
+         <obj_property name="ObjectShortName">Send_out_MMCAM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Ack_out_MMRAM" type="logic">
+         <obj_property name="ElementShortName">Ack_out_MMRAM</obj_property>
+         <obj_property name="ObjectShortName">Ack_out_MMRAM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/CP_MMRAM" type="logic">
+         <obj_property name="ElementShortName">CP_MMRAM</obj_property>
+         <obj_property name="ObjectShortName">CP_MMRAM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Send_out_MMRAM" type="logic">
+         <obj_property name="ElementShortName">Send_out_MMRAM</obj_property>
+         <obj_property name="ObjectShortName">Send_out_MMRAM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Ack_out_PS" type="logic">
+         <obj_property name="ElementShortName">Ack_out_PS</obj_property>
+         <obj_property name="ObjectShortName">Ack_out_PS</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/CP_PS" type="logic">
+         <obj_property name="ElementShortName">CP_PS</obj_property>
+         <obj_property name="ObjectShortName">CP_PS</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Send_out_PS" type="logic">
+         <obj_property name="ElementShortName">Send_out_PS</obj_property>
+         <obj_property name="ObjectShortName">Send_out_PS</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Ack_out_FP" type="logic">
+         <obj_property name="ElementShortName">Ack_out_FP</obj_property>
+         <obj_property name="ObjectShortName">Ack_out_FP</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/CP_FP" type="logic">
+         <obj_property name="ElementShortName">CP_FP</obj_property>
+         <obj_property name="ObjectShortName">CP_FP</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Send_out_FP" type="logic">
+         <obj_property name="ElementShortName">Send_out_FP</obj_property>
+         <obj_property name="ObjectShortName">Send_out_FP</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Ack_out_MA" type="logic">
+         <obj_property name="ElementShortName">Ack_out_MA</obj_property>
+         <obj_property name="ObjectShortName">Ack_out_MA</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/CP_MA" type="logic">
+         <obj_property name="ElementShortName">CP_MA</obj_property>
+         <obj_property name="ObjectShortName">CP_MA</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Send_out_MA" type="logic">
+         <obj_property name="ElementShortName">Send_out_MA</obj_property>
+         <obj_property name="ObjectShortName">Send_out_MA</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Ack_out_COPY" type="logic">
+         <obj_property name="ElementShortName">Ack_out_COPY</obj_property>
+         <obj_property name="ObjectShortName">Ack_out_COPY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/CP_COPY" type="logic">
+         <obj_property name="ElementShortName">CP_COPY</obj_property>
+         <obj_property name="ObjectShortName">CP_COPY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Send_out_COPY" type="logic">
+         <obj_property name="ElementShortName">Send_out_COPY</obj_property>
+         <obj_property name="ObjectShortName">Send_out_COPY</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Ack_out_B" type="logic">
+         <obj_property name="ElementShortName">Ack_out_B</obj_property>
+         <obj_property name="ObjectShortName">Ack_out_B</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/CP_B" type="logic">
+         <obj_property name="ElementShortName">CP_B</obj_property>
+         <obj_property name="ObjectShortName">CP_B</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Send_out_B_INTERNAL" type="logic">
+         <obj_property name="ElementShortName">Send_out_B_INTERNAL</obj_property>
+         <obj_property name="ObjectShortName">Send_out_B_INTERNAL</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Send_out_B_EXTERNAL" type="logic">
+         <obj_property name="ElementShortName">Send_out_B_EXTERNAL</obj_property>
+         <obj_property name="ObjectShortName">Send_out_B_EXTERNAL</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Ack_out_C" type="logic">
+         <obj_property name="ElementShortName">Ack_out_C</obj_property>
+         <obj_property name="ObjectShortName">Ack_out_C</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/CP_C" type="logic">
+         <obj_property name="ElementShortName">CP_C</obj_property>
+         <obj_property name="ObjectShortName">CP_C</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Send_out" type="logic">
+         <obj_property name="ElementShortName">Send_out</obj_property>
+         <obj_property name="ObjectShortName">Send_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/cc/Ack_in" type="logic">
+         <obj_property name="ElementShortName">Ack_in</obj_property>
+         <obj_property name="ObjectShortName">Ack_in</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group383" type="group">
+      <obj_property name="label">C_Delay</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group283" type="group">
+         <obj_property name="label">C</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/c/Send_in" type="logic">
+            <obj_property name="ElementShortName">Send_in</obj_property>
+            <obj_property name="ObjectShortName">Send_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/c/Ack_out" type="logic">
+            <obj_property name="ElementShortName">Ack_out</obj_property>
+            <obj_property name="ObjectShortName">Ack_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/c/cp" type="logic">
+            <obj_property name="ElementShortName">cp</obj_property>
+            <obj_property name="ObjectShortName">cp</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/c/Send_out" type="logic">
+            <obj_property name="ElementShortName">Send_out</obj_property>
+            <obj_property name="ObjectShortName">Send_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/c/Ack_in" type="logic">
+            <obj_property name="ElementShortName">Ack_in</obj_property>
+            <obj_property name="ObjectShortName">Ack_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/c/LA_out" type="logic">
+            <obj_property name="ElementShortName">LA_out</obj_property>
+            <obj_property name="ObjectShortName">LA_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/c/LB_out" type="logic">
+            <obj_property name="ElementShortName">LB_out</obj_property>
+            <obj_property name="ObjectShortName">LB_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/c/LC_out" type="logic">
+            <obj_property name="ElementShortName">LC_out</obj_property>
+            <obj_property name="ObjectShortName">LC_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/c/LD_out" type="logic">
+            <obj_property name="ElementShortName">LD_out</obj_property>
+            <obj_property name="ObjectShortName">LD_out</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group327" type="group">
+         <obj_property name="label">M_CJ1</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ1/Send_in" type="logic">
+            <obj_property name="ElementShortName">Send_in</obj_property>
+            <obj_property name="ObjectShortName">Send_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ1/Ack_out" type="logic">
+            <obj_property name="ElementShortName">Ack_out</obj_property>
+            <obj_property name="ObjectShortName">Ack_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ1/cp" type="logic">
+            <obj_property name="ElementShortName">cp</obj_property>
+            <obj_property name="ObjectShortName">cp</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ1/Send_out" type="logic">
+            <obj_property name="ElementShortName">Send_out</obj_property>
+            <obj_property name="ObjectShortName">Send_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ1/Ack_in" type="logic">
+            <obj_property name="ElementShortName">Ack_in</obj_property>
+            <obj_property name="ObjectShortName">Ack_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ1/LA_out" type="logic">
+            <obj_property name="ElementShortName">LA_out</obj_property>
+            <obj_property name="ObjectShortName">LA_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ1/LB_out" type="logic">
+            <obj_property name="ElementShortName">LB_out</obj_property>
+            <obj_property name="ObjectShortName">LB_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ1/LC_out" type="logic">
+            <obj_property name="ElementShortName">LC_out</obj_property>
+            <obj_property name="ObjectShortName">LC_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ1/LD_out" type="logic">
+            <obj_property name="ElementShortName">LD_out</obj_property>
+            <obj_property name="ObjectShortName">LD_out</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group338" type="group">
+         <obj_property name="label">M_CJ2</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ2/Send_in" type="logic">
+            <obj_property name="ElementShortName">Send_in</obj_property>
+            <obj_property name="ObjectShortName">Send_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ2/Ack_out" type="logic">
+            <obj_property name="ElementShortName">Ack_out</obj_property>
+            <obj_property name="ObjectShortName">Ack_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ2/cp" type="logic">
+            <obj_property name="ElementShortName">cp</obj_property>
+            <obj_property name="ObjectShortName">cp</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ2/Send_out" type="logic">
+            <obj_property name="ElementShortName">Send_out</obj_property>
+            <obj_property name="ObjectShortName">Send_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ2/Ack_in" type="logic">
+            <obj_property name="ElementShortName">Ack_in</obj_property>
+            <obj_property name="ObjectShortName">Ack_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ2/LA_out" type="logic">
+            <obj_property name="ElementShortName">LA_out</obj_property>
+            <obj_property name="ObjectShortName">LA_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ2/LB_out" type="logic">
+            <obj_property name="ElementShortName">LB_out</obj_property>
+            <obj_property name="ObjectShortName">LB_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ2/LC_out" type="logic">
+            <obj_property name="ElementShortName">LC_out</obj_property>
+            <obj_property name="ObjectShortName">LC_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/m/CJ2/LD_out" type="logic">
+            <obj_property name="ElementShortName">LD_out</obj_property>
+            <obj_property name="ObjectShortName">LD_out</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group360" type="group">
+         <obj_property name="label">MMCAM</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmcam/Send_in" type="logic">
+            <obj_property name="ElementShortName">Send_in</obj_property>
+            <obj_property name="ObjectShortName">Send_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmcam/Ack_out" type="logic">
+            <obj_property name="ElementShortName">Ack_out</obj_property>
+            <obj_property name="ObjectShortName">Ack_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmcam/cp" type="logic">
+            <obj_property name="ElementShortName">cp</obj_property>
+            <obj_property name="ObjectShortName">cp</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmcam/Send_out" type="logic">
+            <obj_property name="ElementShortName">Send_out</obj_property>
+            <obj_property name="ObjectShortName">Send_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmcam/Ack_in" type="logic">
+            <obj_property name="ElementShortName">Ack_in</obj_property>
+            <obj_property name="ObjectShortName">Ack_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmcam/LA_out" type="logic">
+            <obj_property name="ElementShortName">LA_out</obj_property>
+            <obj_property name="ObjectShortName">LA_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmcam/LB_out" type="logic">
+            <obj_property name="ElementShortName">LB_out</obj_property>
+            <obj_property name="ObjectShortName">LB_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmcam/LC_out" type="logic">
+            <obj_property name="ElementShortName">LC_out</obj_property>
+            <obj_property name="ObjectShortName">LC_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmcam/LD_out" type="logic">
+            <obj_property name="ElementShortName">LD_out</obj_property>
+            <obj_property name="ObjectShortName">LD_out</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group371" type="group">
+         <obj_property name="label">MMRAM</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmram/c0/Send_in" type="logic">
+            <obj_property name="ElementShortName">Send_in</obj_property>
+            <obj_property name="ObjectShortName">Send_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmram/c0/Ack_out" type="logic">
+            <obj_property name="ElementShortName">Ack_out</obj_property>
+            <obj_property name="ObjectShortName">Ack_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmram/c0/cp" type="logic">
+            <obj_property name="ElementShortName">cp</obj_property>
+            <obj_property name="ObjectShortName">cp</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmram/c0/Send_out" type="logic">
+            <obj_property name="ElementShortName">Send_out</obj_property>
+            <obj_property name="ObjectShortName">Send_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmram/c0/Ack_in" type="logic">
+            <obj_property name="ElementShortName">Ack_in</obj_property>
+            <obj_property name="ObjectShortName">Ack_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmram/DEL" type="logic">
+            <obj_property name="ElementShortName">DEL</obj_property>
+            <obj_property name="ObjectShortName">DEL</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmram/c0/LA_out" type="logic">
+            <obj_property name="ElementShortName">LA_out</obj_property>
+            <obj_property name="ObjectShortName">LA_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmram/c0/LB_out" type="logic">
+            <obj_property name="ElementShortName">LB_out</obj_property>
+            <obj_property name="ObjectShortName">LB_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmram/c0/LC_out" type="logic">
+            <obj_property name="ElementShortName">LC_out</obj_property>
+            <obj_property name="ObjectShortName">LC_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/mmram/c0/LD_out" type="logic">
+            <obj_property name="ElementShortName">LD_out</obj_property>
+            <obj_property name="ObjectShortName">LD_out</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group382" type="group">
+         <obj_property name="label">PS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ps/Send_in" type="logic">
+            <obj_property name="ElementShortName">Send_in</obj_property>
+            <obj_property name="ObjectShortName">Send_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ps/Ack_out" type="logic">
+            <obj_property name="ElementShortName">Ack_out</obj_property>
+            <obj_property name="ObjectShortName">Ack_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ps/cp" type="logic">
+            <obj_property name="ElementShortName">cp</obj_property>
+            <obj_property name="ObjectShortName">cp</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ps/Send_out" type="logic">
+            <obj_property name="ElementShortName">Send_out</obj_property>
+            <obj_property name="ObjectShortName">Send_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ps/Ack_in" type="logic">
+            <obj_property name="ElementShortName">Ack_in</obj_property>
+            <obj_property name="ObjectShortName">Ack_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ps/LA_out" type="logic">
+            <obj_property name="ElementShortName">LA_out</obj_property>
+            <obj_property name="ObjectShortName">LA_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ps/LB_out" type="logic">
+            <obj_property name="ElementShortName">LB_out</obj_property>
+            <obj_property name="ObjectShortName">LB_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ps/LC_out" type="logic">
+            <obj_property name="ElementShortName">LC_out</obj_property>
+            <obj_property name="ObjectShortName">LC_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ps/LD_out" type="logic">
+            <obj_property name="ElementShortName">LD_out</obj_property>
+            <obj_property name="ObjectShortName">LD_out</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group316" type="group">
+         <obj_property name="label">FP</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/fp/c0/Send_in" type="logic">
+            <obj_property name="ElementShortName">Send_in</obj_property>
+            <obj_property name="ObjectShortName">Send_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/fp/c0/Ack_out" type="logic">
+            <obj_property name="ElementShortName">Ack_out</obj_property>
+            <obj_property name="ObjectShortName">Ack_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/fp/c0/cp" type="logic">
+            <obj_property name="ElementShortName">cp</obj_property>
+            <obj_property name="ObjectShortName">cp</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/fp/c0/Send_out" type="logic">
+            <obj_property name="ElementShortName">Send_out</obj_property>
+            <obj_property name="ObjectShortName">Send_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/fp/c0/Ack_in" type="logic">
+            <obj_property name="ElementShortName">Ack_in</obj_property>
+            <obj_property name="ObjectShortName">Ack_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/fp/c0/LA_out" type="logic">
+            <obj_property name="ElementShortName">LA_out</obj_property>
+            <obj_property name="ObjectShortName">LA_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/fp/c0/LB_out" type="logic">
+            <obj_property name="ElementShortName">LB_out</obj_property>
+            <obj_property name="ObjectShortName">LB_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/fp/c0/LC_out" type="logic">
+            <obj_property name="ElementShortName">LC_out</obj_property>
+            <obj_property name="ObjectShortName">LC_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/fp/c0/LD_out" type="logic">
+            <obj_property name="ElementShortName">LD_out</obj_property>
+            <obj_property name="ObjectShortName">LD_out</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group349" type="group">
+         <obj_property name="label">MA</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ma/Send_in" type="logic">
+            <obj_property name="ElementShortName">Send_in</obj_property>
+            <obj_property name="ObjectShortName">Send_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ma/Ack_out" type="logic">
+            <obj_property name="ElementShortName">Ack_out</obj_property>
+            <obj_property name="ObjectShortName">Ack_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ma/cp" type="logic">
+            <obj_property name="ElementShortName">cp</obj_property>
+            <obj_property name="ObjectShortName">cp</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ma/Send_out" type="logic">
+            <obj_property name="ElementShortName">Send_out</obj_property>
+            <obj_property name="ObjectShortName">Send_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ma/Ack_in" type="logic">
+            <obj_property name="ElementShortName">Ack_in</obj_property>
+            <obj_property name="ObjectShortName">Ack_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ma/LA_out" type="logic">
+            <obj_property name="ElementShortName">LA_out</obj_property>
+            <obj_property name="ObjectShortName">LA_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ma/LB_out" type="logic">
+            <obj_property name="ElementShortName">LB_out</obj_property>
+            <obj_property name="ObjectShortName">LB_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ma/LC_out" type="logic">
+            <obj_property name="ElementShortName">LC_out</obj_property>
+            <obj_property name="ObjectShortName">LC_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/ma/LD_out" type="logic">
+            <obj_property name="ElementShortName">LD_out</obj_property>
+            <obj_property name="ObjectShortName">LD_out</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group294" type="group">
+         <obj_property name="label">COPY_CF1</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF1/Send_in" type="logic">
+            <obj_property name="ElementShortName">Send_in</obj_property>
+            <obj_property name="ObjectShortName">Send_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF1/Ack_out" type="logic">
+            <obj_property name="ElementShortName">Ack_out</obj_property>
+            <obj_property name="ObjectShortName">Ack_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF1/cp" type="logic">
+            <obj_property name="ElementShortName">cp</obj_property>
+            <obj_property name="ObjectShortName">cp</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF1/Send_out" type="logic">
+            <obj_property name="ElementShortName">Send_out</obj_property>
+            <obj_property name="ObjectShortName">Send_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF1/Ack_in" type="logic">
+            <obj_property name="ElementShortName">Ack_in</obj_property>
+            <obj_property name="ObjectShortName">Ack_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF1/LA_out" type="logic">
+            <obj_property name="ElementShortName">LA_out</obj_property>
+            <obj_property name="ObjectShortName">LA_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF1/LB_out" type="logic">
+            <obj_property name="ElementShortName">LB_out</obj_property>
+            <obj_property name="ObjectShortName">LB_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF1/LC_out" type="logic">
+            <obj_property name="ElementShortName">LC_out</obj_property>
+            <obj_property name="ObjectShortName">LC_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF1/LD_out" type="logic">
+            <obj_property name="ElementShortName">LD_out</obj_property>
+            <obj_property name="ObjectShortName">LD_out</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group305" type="group">
+         <obj_property name="label">COPY_CF2</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF2/Send_in" type="logic">
+            <obj_property name="ElementShortName">Send_in</obj_property>
+            <obj_property name="ObjectShortName">Send_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF2/Ack_out" type="logic">
+            <obj_property name="ElementShortName">Ack_out</obj_property>
+            <obj_property name="ObjectShortName">Ack_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF2/cp" type="logic">
+            <obj_property name="ElementShortName">cp</obj_property>
+            <obj_property name="ObjectShortName">cp</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF2/Send_out" type="logic">
+            <obj_property name="ElementShortName">Send_out</obj_property>
+            <obj_property name="ObjectShortName">Send_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF2/Ack_in" type="logic">
+            <obj_property name="ElementShortName">Ack_in</obj_property>
+            <obj_property name="ObjectShortName">Ack_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF2/LA_out" type="logic">
+            <obj_property name="ElementShortName">LA_out</obj_property>
+            <obj_property name="ObjectShortName">LA_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF2/LB_out" type="logic">
+            <obj_property name="ElementShortName">LB_out</obj_property>
+            <obj_property name="ObjectShortName">LB_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF2/LC_out" type="logic">
+            <obj_property name="ElementShortName">LC_out</obj_property>
+            <obj_property name="ObjectShortName">LC_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/copy/CF2/LD_out" type="logic">
+            <obj_property name="ElementShortName">LD_out</obj_property>
+            <obj_property name="ObjectShortName">LD_out</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group273" type="group">
+         <obj_property name="label">B</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/b/c0/Send_in" type="logic">
+            <obj_property name="ElementShortName">Send_in</obj_property>
+            <obj_property name="ObjectShortName">Send_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/b/c0/Ack_out" type="logic">
+            <obj_property name="ElementShortName">Ack_out</obj_property>
+            <obj_property name="ObjectShortName">Ack_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/b/c0/cp" type="logic">
+            <obj_property name="ElementShortName">cp</obj_property>
+            <obj_property name="ObjectShortName">cp</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/b/c0/Send_out" type="logic">
+            <obj_property name="ElementShortName">Send_out</obj_property>
+            <obj_property name="ObjectShortName">Send_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/b/c0/Ack_in" type="logic">
+            <obj_property name="ElementShortName">Ack_in</obj_property>
+            <obj_property name="ObjectShortName">Ack_in</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/b/c0/LA_out" type="logic">
+            <obj_property name="ElementShortName">LA_out</obj_property>
+            <obj_property name="ObjectShortName">LA_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/b/c0/LB_out" type="logic">
+            <obj_property name="ElementShortName">LB_out</obj_property>
+            <obj_property name="ObjectShortName">LB_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/b/c0/LC_out" type="logic">
+            <obj_property name="ElementShortName">LC_out</obj_property>
+            <obj_property name="ObjectShortName">LC_out</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/cc/b/c0/LD_out" type="logic">
+            <obj_property name="ElementShortName">LD_out</obj_property>
+            <obj_property name="ObjectShortName">LD_out</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group214" type="group">
+      <obj_property name="label">DDP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group178" type="group">
+         <obj_property name="label">M</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/m/PACKET_IN_EXTERNAL" type="array">
+            <obj_property name="ElementShortName">PACKET_IN_EXTERNAL[37:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_IN_EXTERNAL[37:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/m/PACKET_IN_INTERNAL" type="array">
+            <obj_property name="ElementShortName">PACKET_IN_INTERNAL[37:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_IN_INTERNAL[37:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/m/PACKET_OUT" type="array">
+            <obj_property name="ElementShortName">PACKET_OUT[37:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_OUT[37:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group193" type="group">
+         <obj_property name="label">MMCAM</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/mmcam/PACKET_IN" type="array">
+            <obj_property name="ElementShortName">PACKET_IN[37:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_IN[37:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmcam/PACKET_OUT" type="array">
+            <obj_property name="ElementShortName">PACKET_OUT[37:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_OUT[37:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmcam/DEL" type="logic">
+            <obj_property name="ElementShortName">DEL</obj_property>
+            <obj_property name="ObjectShortName">DEL</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmcam/DL" type="array">
+            <obj_property name="ElementShortName">DL[37:0]</obj_property>
+            <obj_property name="ObjectShortName">DL[37:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmcam/EN" type="array">
+            <obj_property name="ElementShortName">EN[63:0]</obj_property>
+            <obj_property name="ObjectShortName">EN[63:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmcam/FIRE" type="array">
+            <obj_property name="ElementShortName">FIRE[63:0]</obj_property>
+            <obj_property name="ObjectShortName">FIRE[63:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmcam/MF" type="logic">
+            <obj_property name="ElementShortName">MF</obj_property>
+            <obj_property name="ObjectShortName">MF</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmcam/WR_E" type="logic">
+            <obj_property name="ElementShortName">WR_E</obj_property>
+            <obj_property name="ObjectShortName">WR_E</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group207" type="group">
+         <obj_property name="label">MMRAM</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/mmram/DEL" type="logic">
+            <obj_property name="ElementShortName">DEL</obj_property>
+            <obj_property name="ObjectShortName">DEL</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmram/PACKET_IN" type="array">
+            <obj_property name="ElementShortName">PACKET_IN[37:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_IN[37:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmram/PACKET_OUT" type="array">
+            <obj_property name="ElementShortName">PACKET_OUT[51:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_OUT[51:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmram/ADDR" type="array">
+            <obj_property name="ElementShortName">ADDR[5:0]</obj_property>
+            <obj_property name="ObjectShortName">ADDR[5:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmram/CST_DATA" type="array">
+            <obj_property name="ElementShortName">CST_DATA[15:0]</obj_property>
+            <obj_property name="ObjectShortName">CST_DATA[15:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmram/DATA_IN" type="array">
+            <obj_property name="ElementShortName">DATA_IN[19:0]</obj_property>
+            <obj_property name="ObjectShortName">DATA_IN[19:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmram/DATA_OUT" type="array">
+            <obj_property name="ElementShortName">DATA_OUT[19:0]</obj_property>
+            <obj_property name="ObjectShortName">DATA_OUT[19:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmram/MERGE1_OUT" type="array">
+            <obj_property name="ElementShortName">MERGE1_OUT[53:0]</obj_property>
+            <obj_property name="ObjectShortName">MERGE1_OUT[53:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmram/MERGE2_OUT" type="array">
+            <obj_property name="ElementShortName">MERGE2_OUT[53:0]</obj_property>
+            <obj_property name="ObjectShortName">MERGE2_OUT[53:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmram/MUX_OUT" type="array">
+            <obj_property name="ElementShortName">MUX_OUT[53:0]</obj_property>
+            <obj_property name="ObjectShortName">MUX_OUT[53:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmram/WR_E" type="logic">
+            <obj_property name="ElementShortName">WR_E</obj_property>
+            <obj_property name="ObjectShortName">WR_E</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/mmram/dest" type="array">
+            <obj_property name="ElementShortName">dest[6:0]</obj_property>
+            <obj_property name="ObjectShortName">dest[6:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group213" type="group">
+         <obj_property name="label">PS</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/ps/PACKET_IN" type="array">
+            <obj_property name="ElementShortName">PACKET_IN[51:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_IN[51:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/ps/PACKET_OUT" type="array">
+            <obj_property name="ElementShortName">PACKET_OUT[61:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_OUT[61:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/ps/DEL" type="logic">
+            <obj_property name="ElementShortName">DEL</obj_property>
+            <obj_property name="ObjectShortName">DEL</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/ps/PSData" type="array">
+            <obj_property name="ElementShortName">PSData[16:0]</obj_property>
+            <obj_property name="ObjectShortName">PSData[16:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group174" type="group">
+         <obj_property name="label">FP</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/fp/LR2" type="array">
+            <obj_property name="ElementShortName">LR2[1:0]</obj_property>
+            <obj_property name="ObjectShortName">LR2[1:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/fp/PACKET_IN" type="array">
+            <obj_property name="ElementShortName">PACKET_IN[61:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_IN[61:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/fp/PACKET_OUT" type="array">
+            <obj_property name="ElementShortName">PACKET_OUT[39:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_OUT[39:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group185" type="group">
+         <obj_property name="label">MA</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/ma/PACKET_IN" type="array">
+            <obj_property name="ElementShortName">PACKET_IN[39:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_IN[39:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/ma/DL" type="array">
+            <obj_property name="ElementShortName">DL[40:0]</obj_property>
+            <obj_property name="ObjectShortName">DL[40:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/ma/LOAD_DATA" type="array">
+            <obj_property name="ElementShortName">LOAD_DATA[15:0]</obj_property>
+            <obj_property name="ObjectShortName">LOAD_DATA[15:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/ma/LOAD_FLG" type="logic">
+            <obj_property name="ElementShortName">LOAD_FLG</obj_property>
+            <obj_property name="ObjectShortName">LOAD_FLG</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/ma/MERGE_DATA" type="array">
+            <obj_property name="ElementShortName">MERGE_DATA[40:0]</obj_property>
+            <obj_property name="ObjectShortName">MERGE_DATA[40:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/ma/WRITE_EN" type="logic">
+            <obj_property name="ElementShortName">WRITE_EN</obj_property>
+            <obj_property name="ObjectShortName">WRITE_EN</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group169" type="group">
+         <obj_property name="label">COPY</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/copy/PACKET_IN" type="array">
+            <obj_property name="ElementShortName">PACKET_IN[39:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_IN[39:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/copy/PACKET_OUT" type="array">
+            <obj_property name="ElementShortName">PACKET_OUT[37:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_OUT[37:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/copy/LR2" type="array">
+            <obj_property name="ElementShortName">LR2[1:0]</obj_property>
+            <obj_property name="ObjectShortName">LR2[1:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/copy/MUX1" type="array">
+            <obj_property name="ElementShortName">MUX1[6:0]</obj_property>
+            <obj_property name="ObjectShortName">MUX1[6:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/copy/dest" type="array">
+            <obj_property name="ElementShortName">dest[6:0]</obj_property>
+            <obj_property name="ObjectShortName">dest[6:0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group163" type="group">
+         <obj_property name="label">B</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/DDP_SIM/ddp/b/PACKET_IN" type="array">
+            <obj_property name="ElementShortName">PACKET_IN[37:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_IN[37:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/DDP_SIM/ddp/b/PACKET_OUT" type="array">
+            <obj_property name="ElementShortName">PACKET_OUT[37:0]</obj_property>
+            <obj_property name="ObjectShortName">PACKET_OUT[37:0]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group708" type="group">
+      <obj_property name="label">MMCAM_MA</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/DDP_SIM/ddp/mmcam/am_or_ma/ADDR" type="array">
+         <obj_property name="ElementShortName">ADDR[5:0]</obj_property>
+         <obj_property name="ObjectShortName">ADDR[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/mmcam/am_or_ma/CP" type="logic">
+         <obj_property name="ElementShortName">CP</obj_property>
+         <obj_property name="ObjectShortName">CP</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/mmcam/am_or_ma/DEL" type="logic">
+         <obj_property name="ElementShortName">DEL</obj_property>
+         <obj_property name="ObjectShortName">DEL</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/mmcam/am_or_ma/FIRE_OR" type="logic">
+         <obj_property name="ElementShortName">FIRE_OR</obj_property>
+         <obj_property name="ObjectShortName">FIRE_OR</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/mmcam/am_or_ma/R_ADDR" type="array">
+         <obj_property name="ElementShortName">R_ADDR[5:0]</obj_property>
+         <obj_property name="ObjectShortName">R_ADDR[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/mmcam/am_or_ma/W_ADDR" type="array">
+         <obj_property name="ElementShortName">W_ADDR[5:0]</obj_property>
+         <obj_property name="ObjectShortName">W_ADDR[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/mmcam/FIRE" type="array">
+         <obj_property name="ElementShortName">FIRE[63:0]</obj_property>
+         <obj_property name="ObjectShortName">FIRE[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/mmcam/VALID" type="array">
+         <obj_property name="ElementShortName">VALID[63:0]</obj_property>
+         <obj_property name="ObjectShortName">VALID[63:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/DDP_SIM/PACKET_OUT" type="array">
+      <obj_property name="ElementShortName">PACKET_OUT[7:0]</obj_property>
+      <obj_property name="ObjectShortName">PACKET_OUT[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group1041" type="group">
+      <obj_property name="label">FP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/DDP_SIM/ddp/fp/PACKET_IN" type="array">
+         <obj_property name="ElementShortName">PACKET_IN[61:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_IN[61:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/fp/PACKET_OUT" type="array">
+         <obj_property name="ElementShortName">PACKET_OUT[39:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_OUT[39:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1040" type="group">
+      <obj_property name="label">MA</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/DDP_SIM/ddp/ma/PACKET_IN" type="array">
+         <obj_property name="ElementShortName">PACKET_IN[39:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_IN[39:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/ma/PACKET_OUT" type="array">
+         <obj_property name="ElementShortName">PACKET_OUT[39:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_OUT[39:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group999" type="group">
+      <obj_property name="label">COPY</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/DDP_SIM/ddp/copy/PACKET_IN" type="array">
+         <obj_property name="ElementShortName">PACKET_IN[39:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_IN[39:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/copy/PACKET_OUT" type="array">
+         <obj_property name="ElementShortName">PACKET_OUT[37:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_OUT[37:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group998" type="group">
+      <obj_property name="label">B</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/DDP_SIM/ddp/b/PACKET_IN" type="array">
+         <obj_property name="ElementShortName">PACKET_IN[37:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_IN[37:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/b/PACKET_OUT" type="array">
+         <obj_property name="ElementShortName">PACKET_OUT[37:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_OUT[37:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group997" type="group">
+      <obj_property name="label">M</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/DDP_SIM/ddp/m/PACKET_IN_INTERNAL" type="array">
+         <obj_property name="ElementShortName">PACKET_IN_INTERNAL[37:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_IN_INTERNAL[37:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DDP_SIM/ddp/m/PACKET_OUT" type="array">
+         <obj_property name="ElementShortName">PACKET_OUT[37:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_OUT[37:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group996" type="group">
+      <obj_property name="label">MMCAM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/DDP_SIM/ddp/mmcam/PACKET_IN" type="array">
+         <obj_property name="ElementShortName">PACKET_IN[37:0]</obj_property>
+         <obj_property name="ObjectShortName">PACKET_IN[37:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/DDP_SIM/ddp/mmcam/\entry_fd_loop[0].ef /color_gen_dest_LR" type="array">
+      <obj_property name="ElementShortName">color_gen_dest_LR[18:0]</obj_property>
+      <obj_property name="ObjectShortName">color_gen_dest_LR[18:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

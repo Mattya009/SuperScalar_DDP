@@ -1,0 +1,2 @@
+MMRAM_RAM.v,verilog,xil_defaultlib,../../../../DDP_FIR_16bit.gen/sources_1/ip/MMRAM_RAM/sim/MMRAM_RAM.v,incdir="../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"
+glbl.v,Verilog,xil_defaultlib,glbl.v

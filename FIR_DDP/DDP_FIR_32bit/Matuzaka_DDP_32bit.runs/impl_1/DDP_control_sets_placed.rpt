@@ -1,0 +1,156 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Aug 22 15:56:30 2026
+| Host         : DESKTOP-F8PDQQS running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file DDP_control_sets_placed.rpt
+| Design       : DDP
+| Device       : xc7z020i
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    78 |
+|    Minimum number of control sets                        |    78 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   366 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    78 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    74 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |             690 |          282 |
+| No           | Yes                   | No                     |               2 |            1 |
+| Yes          | No                    | No                     |            1216 |          287 |
+| Yes          | No                    | Yes                    |               6 |            4 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------+-----------------------+------------------+------------------+----------------+--------------+
+|   Clock Signal  |     Enable Signal     | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------+-----------------------+------------------+------------------+----------------+--------------+
+|  cc/copy/sd     |                       | MR_IBUF          |                1 |              2 |         2.00 |
+|  cc/copy/cp3    |                       | cc/copy/sd       |                1 |              2 |         2.00 |
+|  cc/copy/cp3    |                       | MR_IBUF          |                1 |              2 |         2.00 |
+|  cc/mmcam/cp    | m/PACKET_OUT[34]      | MR_IBUF          |                4 |              6 |         1.50 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[4]  |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[27] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[28] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[29] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[30] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[33] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[38] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[7]  |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[23] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[32] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[22] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[6]  |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[35] |                  |                7 |             19 |         2.71 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[16] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[36] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[26] |                  |                3 |             19 |         6.33 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[39] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[0]  |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[40] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[42] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[11] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[3]  |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[10] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[18] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[43] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[20] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[45] |                  |                3 |             19 |         6.33 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[25] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[8]  |                  |                3 |             19 |         6.33 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[31] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[12] |                  |                3 |             19 |         6.33 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[34] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[37] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[41] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[46] |                  |                3 |             19 |         6.33 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[17] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[44] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[15] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[48] |                  |                6 |             19 |         3.17 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[47] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[49] |                  |                6 |             19 |         3.17 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[50] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[19] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[1]  |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[2]  |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[14] |                  |                6 |             19 |         3.17 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[24] |                  |                3 |             19 |         6.33 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[13] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[21] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[5]  |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[62] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[59] |                  |                6 |             19 |         3.17 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[56] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[63] |                  |                6 |             19 |         3.17 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[53] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[58] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[61] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[52] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[60] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[57] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[51] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[54] |                  |                4 |             19 |         4.75 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[55] |                  |                5 |             19 |         3.80 |
+|  cc/mmcam/cp    | mmcam/am_or_ma/EN[9]  |                  |                4 |             19 |         4.75 |
+|  cc/c/cp        |                       | MR_IBUF          |               13 |             54 |         4.15 |
+|  cc/m/CJ2/cp    |                       | MR_IBUF          |               12 |             54 |         4.50 |
+|  cc/m/CJ1/cp    |                       | MR_IBUF          |               12 |             54 |         4.50 |
+|  cc/b/c0/cp     |                       | MR_IBUF          |               21 |             55 |         2.62 |
+|  cc/mmram/c0/cp |                       | MR_IBUF          |               20 |             55 |         2.75 |
+|  cc/ma/cp       |                       | MR_IBUF          |               41 |             57 |         1.39 |
+|  cc/copy/CF1/cp |                       | MR_IBUF          |               34 |             58 |         1.71 |
+|  cc/ps/cp       |                       | MR_IBUF          |               39 |             84 |         2.15 |
+|  cc/fp/c0/cp    |                       | MR_IBUF          |               27 |             95 |         3.52 |
+|  cc/mmcam/cp    |                       | MR_IBUF          |               61 |            120 |         1.97 |
++-----------------+-----------------------+------------------+------------------+----------------+--------------+
+
+

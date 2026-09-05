@@ -1,0 +1,2 @@
+PS.v,verilog,xil_defaultlib,../../../../MASA_FIR_DDP_16bit.gen/sources_1/ip/PS_3/sim/PS.v,incdir="../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef"
+glbl.v,Verilog,xil_defaultlib,glbl.v

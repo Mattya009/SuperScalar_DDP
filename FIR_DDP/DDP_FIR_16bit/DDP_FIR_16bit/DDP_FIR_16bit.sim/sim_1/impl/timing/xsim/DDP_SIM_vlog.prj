@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" --include "../../../../../../HDL/DDP" \
+"DDP_SIM_time_impl.v" \
+"../../../../../../SIM/DDP_SIM.v" \
+
+# Do not sort compile order
+nosort
