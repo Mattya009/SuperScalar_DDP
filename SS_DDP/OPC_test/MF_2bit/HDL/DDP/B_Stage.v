@@ -7,7 +7,8 @@ module B_Stage(Send_in, Ack_in_a, Ack_in_b, Send_out_a, Send_out_b, Ack_out, MR,
  output [`B_PACKET_SIZE]    PACKET_OUT;
  output                     Send_out_a, Send_out_b, Ack_out;
 
- (* dont_touch = "true" *) wire                       MF, BR, CP;
+ (* dont_touch = "true" *) wire                       BR, CP;
+ (* dont_touch = "true" *) wire [`B_MF_SIZE]          MF;
  (* dont_touch = "true" *) wire [`B_DEST_SIZE]        dest;
  (* dont_touch = "true" *) wire [`DEST_SIZE]          dest_out;
 

@@ -62,6 +62,7 @@
 `define MMCAM_C_G_D_SIZE                        `MMCAM_C_G_D_WIDTH-1:0
 `define MMCAM_AM_SIZE                           `ENTRY_WIDTH + `MMCAM_ADDR_WIDTH-1:0
 `define MMCAM_FEV_SIZE                          `MMCAM_FEV_WIDTH-1:0
+`define MMCAM_MF_SIZE                           `MF_WIDTH-1:0
 
 `define MMCAM_PACKET_IN_COLOR_GEN_DEST_LR_RANGE `MMCAM_PACKET_WIDTH-1:(`DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH)
 `define MMCAM_C_G_D_RANGE                       `MMCAM_COLOR_GEN_DEST_LR_WIDTH-1:1
@@ -88,12 +89,13 @@
 `define MMRAM_LR_TO_Z_SIZE                      (`LR_WIDTH + `MF_RANGE + `C_WIDTH + `Z_WIDTH -1):0
 `define DATA_SIZE                               `DATA_WIDTH-1:0
 `define MMRAM_C_Z_SIZE                          (`C_WIDTH + `Z_WIDTH -1):0
+`define MMRAM_MF_SIZE                           `MF_WIDTH-1:0
 
 `define MMRAM_Z_START_BIT                       ( `DATA_WIDTH*2 )
 `define MMRAM_DEST_START_BIT                    ( `DATA_WIDTH + `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH )
 
 `define MMRAM_LR_RANGE                          `MMRAM_DATA_IN_WIDTH-1
-`define MMRAM_MF_RANGE                          `MMRAM_DATA_IN_WIDTH - `LR_WIDTH - 1
+`define MMRAM_MF_RANGE                          `MMRAM_DATA_IN_WIDTH - `LR_WIDTH - 1:`MMRAM_DATA_IN_WIDTH - `LR_WIDTH - `MF_WIDTH
 `define MMRAM_LR_TO_Z_IN_RANGE                  `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH - 1 : `DATA_WIDTH
 `define MMRAM_MERGE_LR_RANGE                    (`MMRAM_MERGE_OUT_WIDTH - `COLOR_WIDTH - `GEN_WIDTH - `DEST_WIDTH - 1)
 //`define MMRAM_COLOR_TO_DEST_RANGE               `MMRAM_PACKET_IN_WIDTH - 1:`DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH
@@ -242,9 +244,11 @@
 // --- B_Stage ---
 `define B_PACKET_WIDTH                          `COPY_PACKET_OUT_WIDTH
 `define B_DEST_WIDTH                            `DEST_WIDTH
+`define B_MF_WIDTH                              `MF_WIDTH
 
 `define B_PACKET_SIZE                           `B_PACKET_WIDTH-1:0
 `define B_DEST_SIZE                             `B_DEST_WIDTH-1:0
+`define B_MF_SIZE                               `B_MF_WIDTH-1:0
 
 `define B_BR_RANGE                              (`B_PACKET_WIDTH - `COLOR_WIDTH - `GEN_WIDTH - `DEST_WIDTH - `LR_WIDTH - 1)
 `define B_DEST_RANGE                            `DEST_RANGE

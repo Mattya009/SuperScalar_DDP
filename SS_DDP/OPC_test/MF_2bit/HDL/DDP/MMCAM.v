@@ -11,7 +11,7 @@ module MMCAM(Send_in, Ack_in, Send_out, Ack_out, MR,
 
  (* dont_touch = "true" *) wire [`MMCAM_COLOR_GEN_DEST_LR_SIZE]  color_gen_dest_LR;
  (* dont_touch = "true" *) wire [`MMRAM_HEIGHT_SIZE]             FIRE, EN, VALID;
- (* dont_touch = "true" *) wire [`MMCAM_MF_BIT]                  MF;
+ (* dont_touch = "true" *) wire [`MMCAM_MF_SIZE]                 MF;
  (* dont_touch = "true" *) wire                                  CP;
 
  (* dont_touch = "true" *) reg [`MMCAM_PACKET_SIZE] DL_PACKET;
