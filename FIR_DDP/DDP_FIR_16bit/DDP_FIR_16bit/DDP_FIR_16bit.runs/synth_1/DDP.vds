@@ -1,0 +1,549 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Aug 25 20:24:04 2026
+# Process ID         : 15048
+# Current directory  : C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.runs/synth_1
+# Command line       : vivado.exe -log DDP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DDP.tcl
+# Log file           : C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.runs/synth_1/DDP.vds
+# Journal file       : C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-F8PDQQS
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz
+# CPU Frequency      : 2496 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 34067 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36214 MB
+# Available Virtual  : 11225 MB
+#-----------------------------------------------------------
+source DDP.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 561.777 ; gain = 257.125
+Command: read_checkpoint -auto_incremental -incremental C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.srcs/utils_1/imports/synth_1/DDP.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.srcs/utils_1/imports/synth_1/DDP.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top DDP -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 34112
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1329.227 ; gain = 542.109
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'cp1' is not allowed [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CM.v:29]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'cp2' is not allowed [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CM.v:29]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'FEB' is not allowed [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/COPY.v:14]
+INFO: [Synth 8-6157] synthesizing module 'DDP' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/DDP.v:1]
+INFO: [Synth 8-6157] synthesizing module 'C_Cycle' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/C_Cycle.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CM.v:1]
+	Parameter delay_LA bound to: 10 - type: integer 
+	Parameter delay_LB bound to: 10 - type: integer 
+	Parameter delay_LC bound to: 10 - type: integer 
+	Parameter delay_LD bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'CJ' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CJ.v:2]
+	Parameter delay_LA bound to: 10 - type: integer 
+	Parameter delay_LB bound to: 10 - type: integer 
+	Parameter delay_LC bound to: 10 - type: integer 
+	Parameter delay_LD bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Delay' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/delay_Elements/Delay.v:1]
+	Parameter delay_num bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95343]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95343]
+INFO: [Synth 8-6155] done synthesizing module 'Delay' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/delay_Elements/Delay.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CJ' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CJ.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'CM' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'C' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/C.v:2]
+	Parameter delay_LA bound to: 10 - type: integer 
+	Parameter delay_LB bound to: 10 - type: integer 
+	Parameter delay_LC bound to: 10 - type: integer 
+	Parameter delay_LD bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'C' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/C.v:2]
+INFO: [Synth 8-6157] synthesizing module 'CE' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CE.v:1]
+	Parameter delay_LA bound to: 10 - type: integer 
+	Parameter delay_LB bound to: 5 - type: integer 
+	Parameter delay_LC bound to: 10 - type: integer 
+	Parameter delay_LD bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'CF' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CF.v:2]
+	Parameter delay_LA bound to: 10 - type: integer 
+	Parameter delay_LB bound to: 5 - type: integer 
+	Parameter delay_LC bound to: 10 - type: integer 
+	Parameter delay_LD bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Delay__parameterized0' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/delay_Elements/Delay.v:1]
+	Parameter delay_num bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Delay__parameterized0' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/delay_Elements/Delay.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CF' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CF.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'CE' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CE.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CX2' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CX2.v:1]
+	Parameter delay_LA bound to: 10 - type: integer 
+	Parameter delay_LB bound to: 5 - type: integer 
+	Parameter delay_LC bound to: 10 - type: integer 
+	Parameter delay_LD bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'CX2' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CX2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CB' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CB.v:1]
+	Parameter delay_LA bound to: 10 - type: integer 
+	Parameter delay_LB bound to: 5 - type: integer 
+	Parameter delay_LC bound to: 10 - type: integer 
+	Parameter delay_LD bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'CB' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'C_Cycle' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/C_Cycle.v:1]
+INFO: [Synth 8-6157] synthesizing module 'M' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/M.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'M' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/M.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MMCAM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/MMCAM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MMCAM_ENTRY_FD' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/MMCAM_ENTRY_FD.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MMCAM_ENTRY_FD' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/MMCAM_ENTRY_FD.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MMCAM_AM_OR_MA' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/MMCAM_AM_OR_MA.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MMCAM_AM_OR_MA' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/MMCAM_AM_OR_MA.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MMCAM' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/MMCAM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MMRAM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/MMRAM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'MMRAM_RAM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.runs/synth_1/.Xil/Vivado-15048-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MMRAM_RAM' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.runs/synth_1/.Xil/Vivado-15048-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'MMRAM_CMEM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.runs/synth_1/.Xil/Vivado-15048-DESKTOP-F8PDQQS/realtime/MMRAM_CMEM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MMRAM_CMEM' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.runs/synth_1/.Xil/Vivado-15048-DESKTOP-F8PDQQS/realtime/MMRAM_CMEM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MMRAM' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/MMRAM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'PS' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/PS.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PS_ROM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.runs/synth_1/.Xil/Vivado-15048-DESKTOP-F8PDQQS/realtime/PS_ROM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PS_ROM' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.runs/synth_1/.Xil/Vivado-15048-DESKTOP-F8PDQQS/realtime/PS_ROM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PS' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/PS.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FP' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/FP.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FP' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/FP.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MA' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/MA.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MA_DMEM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.runs/synth_1/.Xil/Vivado-15048-DESKTOP-F8PDQQS/realtime/MA_DMEM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MA_DMEM' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.runs/synth_1/.Xil/Vivado-15048-DESKTOP-F8PDQQS/realtime/MA_DMEM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MA' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/MA.v:1]
+INFO: [Synth 8-6157] synthesizing module 'COPY' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/COPY.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'COPY' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/COPY.v:1]
+INFO: [Synth 8-6157] synthesizing module 'B' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/B.v:1]
+INFO: [Synth 8-6157] synthesizing module 'B_SubPS' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.runs/synth_1/.Xil/Vivado-15048-DESKTOP-F8PDQQS/realtime/B_SubPS_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'B_SubPS' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.runs/synth_1/.Xil/Vivado-15048-DESKTOP-F8PDQQS/realtime/B_SubPS_stub.v:6]
+WARNING: [Synth 8-689] width (6) of port connection 'addra' does not match port width (7) of module 'B_SubPS' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/B.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'B' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/B.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'DDP' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/DDP.v:1]
+WARNING: [Synth 8-5837] Detected dual asynchronous set and preset for register DL1S_reg in module CX2. This is not a recommended register style for Xilinx devices  [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CX2.v:27]
+WARNING: [Synth 8-7129] Port DEL in module MMRAM is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1462.531 ; gain = 675.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1462.531 ; gain = 675.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1462.531 ; gain = 675.414
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1462.531 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.gen/sources_1/ip/MA_DMEM/MA_DMEM/MA_DMEM_in_context.xdc] for cell 'ma/DMEM'
+Finished Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.gen/sources_1/ip/MA_DMEM/MA_DMEM/MA_DMEM_in_context.xdc] for cell 'ma/DMEM'
+Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.gen/sources_1/ip/MMRAM_RAM/MMRAM_RAM/MMRAM_RAM_in_context.xdc] for cell 'mmram/RAM'
+Finished Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.gen/sources_1/ip/MMRAM_RAM/MMRAM_RAM/MMRAM_RAM_in_context.xdc] for cell 'mmram/RAM'
+Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.gen/sources_1/ip/B_SubPS/B_SubPS/B_SubPS_in_context.xdc] for cell 'b/SubPS'
+Finished Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.gen/sources_1/ip/B_SubPS/B_SubPS/B_SubPS_in_context.xdc] for cell 'b/SubPS'
+Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.gen/sources_1/ip/PS_ROM/PS_ROM/PS_ROM_in_context.xdc] for cell 'ps/PS'
+Finished Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.gen/sources_1/ip/PS_ROM/PS_ROM/PS_ROM_in_context.xdc] for cell 'ps/PS'
+Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.gen/sources_1/ip/MMRAM_CMEM/MMRAM_CMEM/MMRAM_CMEM_in_context.xdc] for cell 'mmram/CMEM'
+Finished Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.gen/sources_1/ip/MMRAM_CMEM/MMRAM_CMEM/MMRAM_CMEM_in_context.xdc] for cell 'mmram/CMEM'
+Parsing XDC File [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc]
+Finished Parsing XDC File [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1539.527 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.219 . Memory (MB): peak = 1539.527 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1539.527 ; gain = 752.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1539.527 ; gain = 752.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/CONSTRAINT/DDP.xdc, line 2).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 1539.527 ; gain = 752.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:01 ; elapsed = 00:01:01 . Memory (MB): peak = 1539.527 ; gain = 752.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   48 Bit       Adders := 2     
+	   3 Input   16 Bit       Adders := 1     
+	   4 Input   16 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 2     
++---XORs : 
+	   2 Input     16 Bit         XORs := 1     
++---Registers : 
+	               62 Bit    Registers := 1     
+	               52 Bit    Registers := 1     
+	               41 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               38 Bit    Registers := 6     
+	               19 Bit    Registers := 64    
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 72    
++---Muxes : 
+	   2 Input   54 Bit        Muxes := 1     
+	   2 Input   40 Bit        Muxes := 1     
+	   2 Input   38 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 4     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 67    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP ALU2, operation Mode is: A*B.
+DSP Report: operator ALU2 is absorbed into DSP ALU2.
+WARNING: [Synth 8-7129] Port DEL in module MMRAM is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1583.473 ; gain = 796.355
+---------------------------------------------------------------------------------
+ Sort Area is  ALU2_0 : 0 0 : 1937 1937 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|FP          | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:32 ; elapsed = 00:01:33 . Memory (MB): peak = 1732.449 ; gain = 945.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:33 . Memory (MB): peak = 1735.012 ; gain = 947.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:33 ; elapsed = 00:01:34 . Memory (MB): peak = 1757.902 ; gain = 970.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/M.v:15]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/M.v:15]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/MMCAM_ENTRY_FD.v:33]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/MMRAM.v:31]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/PS.v:21]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/FP.v:31]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/MA.v:23]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CX2.v:22]
+WARNING: [Synth 8-5396] Clock pin G has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CX2.v:1]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/C_Elements/CX2.v:27]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/B.v:20]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/HDL/DDP/DDP.v:34]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:36 ; elapsed = 00:01:37 . Memory (MB): peak = 1989.199 ; gain = 1202.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:36 ; elapsed = 00:01:37 . Memory (MB): peak = 1989.199 ; gain = 1202.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:36 ; elapsed = 00:01:37 . Memory (MB): peak = 1989.199 ; gain = 1202.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:36 ; elapsed = 00:01:37 . Memory (MB): peak = 1989.199 ; gain = 1202.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:36 ; elapsed = 00:01:37 . Memory (MB): peak = 1989.199 ; gain = 1202.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:36 ; elapsed = 00:01:37 . Memory (MB): peak = 1989.199 ; gain = 1202.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|FP          | A*B         | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |MMRAM_RAM     |         1|
+|2     |MMRAM_CMEM    |         1|
+|3     |PS_ROM        |         1|
+|4     |MA_DMEM       |         1|
+|5     |B_SubPS       |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |B_SubPS    |     1|
+|2     |MA_DMEM    |     1|
+|3     |MMRAM_CMEM |     1|
+|4     |MMRAM_RAM  |     1|
+|5     |PS_ROM     |     1|
+|6     |CARRY4     |   161|
+|7     |DSP48E1    |     1|
+|8     |LUT1       |   710|
+|9     |LUT2       |   196|
+|10    |LUT3       |   245|
+|11    |LUT4       |   253|
+|12    |LUT5       |   205|
+|13    |LUT6       |   889|
+|14    |FDCE       |   473|
+|15    |FDCP       |     1|
+|16    |FDPE       |    29|
+|17    |FDRE       |  1216|
+|18    |LDC        |     1|
+|19    |IBUF       |    41|
+|20    |OBUF       |    40|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:36 ; elapsed = 00:01:37 . Memory (MB): peak = 1989.199 ; gain = 1202.082
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:27 ; elapsed = 00:01:35 . Memory (MB): peak = 1989.199 ; gain = 1125.086
+Synthesis Optimization Complete : Time (s): cpu = 00:01:36 ; elapsed = 00:01:38 . Memory (MB): peak = 1989.199 ; gain = 1202.082
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1994.363 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 164 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2002.020 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  FDCP => FDCP (FDCE, FDPE, LDCE, LUT3, VCC): 1 instance 
+  LDC => LDCE: 1 instance 
+
+Synth Design complete | Checksum: 7e084fed
+INFO: [Common 17-83] Releasing license: Synthesis
+74 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:40 ; elapsed = 00:01:43 . Memory (MB): peak = 2002.020 ; gain = 1426.934
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2002.020 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/lab/4B_Research/FIR_DDP/DDP_FIR_16bit/DDP_FIR_16bit/DDP_FIR_16bit.runs/synth_1/DDP.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file DDP_utilization_synth.rpt -pb DDP_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 25 20:25:57 2026...

@@ -1,0 +1,34 @@
+//`timescale 1ns/1ns
+(* dont_touch = "true" *)
+module CF(Send_in, Ack_in, Send_out, Ack_out, CP, MR);
+ input Send_in, Ack_in, MR;
+ output Send_out, Ack_out, CP;
+
+ (* dont_touch = "true" *) wire nand1_out, nand2_out, nand3_out, nand4_out, nand5_out;
+ (* dont_touch = "true" *) wire not_out, LA_out, LB_out, LC_out, LD_out;
+
+ assign not_out = ~MR;
+ assign nand1_out = ~(Send_in & nand2_out);
+ assign nand2_out = ~(nand1_out & not_out & nand3_out);
+ assign nand3_out = ~(Send_in & LA_out & & LC_out & Ack_in);
+ assign nand4_out = ~(nand3_out & nand5_out);
+ assign nand5_out = ~(nand4_out & not_out & Ack_in);
+
+ //delay-グリッチの発生を抑える
+ Delay_4ns delay1(.din(nand1_out), .dout(LA_out));
+ Delay_2ns delay2(.din(nand1_out), .dout(LB_out));
+ Delay_4ns delay3(.din(nand5_out), .dout(LC_out));
+ Delay_2ns delay4(.din(LC_out), .dout(LD_out));
+
+ 
+ /*
+ assign #4 LA_out = nand1_out;
+ assign #2 LB_out = nand1_out;
+ assign #4 LC_out = nand5_out;
+ assign #2 LD_out = LC_out;
+ */
+
+ assign Send_out = LD_out;
+ assign Ack_out = ~LB_out;
+ assign CP = ~nand5_out;
+endmodule

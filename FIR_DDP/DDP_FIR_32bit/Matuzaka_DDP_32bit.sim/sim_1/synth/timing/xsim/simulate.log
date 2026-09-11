@@ -1,0 +1,3 @@
+Time resolution is 1 ps
+you can't define hoge in sim
+The simulator has terminated in an unexpected manner with exit code 1073807364.  Please review the simulation log (xsim.log) for details.
