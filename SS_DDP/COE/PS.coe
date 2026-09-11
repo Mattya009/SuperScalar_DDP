@@ -1,4 +1,0 @@
-; Initaialization of PS (memory of width = 17 and depth = 128)
-memory_initialization_radix = 16;
-memory_initialization_vector =
-407, //COPY

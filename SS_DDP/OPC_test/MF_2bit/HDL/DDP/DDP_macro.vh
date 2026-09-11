@@ -38,7 +38,7 @@
 `define LR_WIDTH        1
 `define LR2_WIDTH       2
 `define BR_WIDTH        1
-`define MF_WIDTH        1
+`define MF_WIDTH        2
 `define CPY_WIDTH       1
 `define OPC_WIDTH       6
 `define C_WIDTH         1
@@ -97,7 +97,7 @@
 `define MMRAM_LR_TO_Z_IN_RANGE                  `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH - 1 : `DATA_WIDTH
 `define MMRAM_MERGE_LR_RANGE                    (`MMRAM_MERGE_OUT_WIDTH - `COLOR_WIDTH - `GEN_WIDTH - `DEST_WIDTH - 1)
 //`define MMRAM_COLOR_TO_DEST_RANGE               `MMRAM_PACKET_IN_WIDTH - 1:`DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH
-`define MMRAM_COLOR_TO_MF_RANGE               `MMRAM_PACKET_IN_WIDTH - 1:`DATA_WIDTH + `Z_WIDTH + `C_WIDTH
+`define MMRAM_COLOR_TO_MF_RANGE                 `MMRAM_PACKET_IN_WIDTH - 1:`DATA_WIDTH + `Z_WIDTH + `C_WIDTH
 `define MMRAM_DEST_IN_RANGE                     (`MMRAM_PACKET_IN_WIDTH - `COLOR_WIDTH - `GEN_WIDTH - 1) : (`MMRAM_PACKET_IN_WIDTH - `COLOR_WIDTH - `GEN_WIDTH - `DEST_WIDTH)
 `define MMRAM_C_TO_D_RANGE                      (`MMRAM_DEST_START_BIT + `DEST_WIDTH + `GEN_WIDTH + `COLOR_WIDTH - 1):`MMRAM_DEST_START_BIT
 `define MMRAM_C_Z_RANGE                         (`MMRAM_Z_START_BIT + `C_WIDTH + `Z_WIDTH - 1):`MMRAM_Z_START_BIT
