@@ -11,7 +11,12 @@ module MMRAM(Send_in, Send_out, Ack_in, Ack_out, PACKET_IN,
  
  (* dont_touch = "true" *) wire [`MMRAM_DATA_IN_SIZE]     DATA_IN, DATA_OUT;
  (* dont_touch = "true" *) wire [`MMRAM_DEST_SIZE]        dest;
- (* dont_touch = "true" *) wire [`MMRAM_MERGE_OUT_SIZE]   MERGE1_OUT, MERGE2_OUT;
+ (* dont_touch = "true" *) wire [`MMRAM_MERGE_OUT_SIZE]   MERGE1_OUT, MERGE2_OUT, MERGE3_OUT, MERGE4_OUT;
+ (* dont_touch = "true" *) wire [`MMRAM_MUX_OUT_SIZE]     MUX_OUT;
+ (* dont_touch = "true" *) wire [`MMRAM_CST_DATA_SIZE]    CST_DATA;
+ (* dont_touch = "true" *) wire [`MMRAM_C_Z_SIZE]         C_Z;
+ (* dont_touch = "true" *) wire [`MMRAM_MF_SIZE]          MF;
+ (* dont_touch = "true" *) wire [`MMRAM_LR_RANGE]         LR;
  (* dont_touch = "true" *) wire [`MMRAM_CST_DATA_SIZE]    CST_DATA;
  (* dont_touch = "true" *) wire [`MMRAM_MUX_OUT_SIZE]     MUX_OUT;
  (* dont_touch = "true" *) wire [`MMRAM_C_Z_SIZE] C_Z;
@@ -85,12 +90,11 @@ module MMRAM(Send_in, Send_out, Ack_in, Ack_out, PACKET_IN,
 
  assign MERGE1_OUT = {DL[`MMRAM_COLOR_TO_MF_RANGE], C_Z, DL[`DATA_SIZE1], DATA_OUT[`DATA_SIZE1], DL[`DATA_SIZE0], DATA_OUT[`DATA_SIZE0]};
 
- assign MERGE1_OUT = {DL[`MMRAM_COLOR_TO_MF_RANGE], C_Z, DL[`DATA_SIZE1], DATA_OUT[`DATA_SIZE1], DL[`DATA_SIZE0], CST_DATA[`DATA_SIZE0]};
+ assign MERGE2_OUT = {DL[`MMRAM_COLOR_TO_MF_RANGE], C_Z, DL[`DATA_SIZE1], DATA_OUT[`DATA_SIZE1], DL[`DATA_SIZE0], CST_DATA[`DATA_SIZE0]};
 
- assign MERGE1_OUT = {DL[`MMRAM_COLOR_TO_MF_RANGE], C_Z, DL[`DATA_SIZE1], CST_DATA[`DATA_SIZE1], DL[`DATA_SIZE0], DATA_OUT[`DATA_SIZE0]};
+ assign MERGE3_OUT = {DL[`MMRAM_COLOR_TO_MF_RANGE], C_Z, DL[`DATA_SIZE1], CST_DATA[`DATA_SIZE1], DL[`DATA_SIZE0], DATA_OUT[`DATA_SIZE0]};
 
- // --- MERGE2 ---
- assign MERGE2_OUT = {DL, CST_DATA};
+ assign MERGE4_OUT = {DL, CST_DATA};
 
  // --- MUX ---
  case(MF)
