@@ -3,7 +3,7 @@
 (* dont_touch = "true" *)
 module OR_AM_MA(VALID, FIRE, WR_E, ADDR, DEL, CP, MF, MR, EN);
  input  MR, CP;
- input  [`MMCAM_MF_BIT] MF;
+ input  [`MMCAM_MF_SIZE] MF;
  input  [`MMCAM_FEV_SIZE] VALID, FIRE;
  output [`MMCAM_FEV_SIZE] EN;
  (* dont_touch = "true" *) output reg [`MMCAM_ADDR_SIZE] ADDR;
@@ -113,7 +113,7 @@ module OR_AM_MA(VALID, FIRE, WR_E, ADDR, DEL, CP, MF, MR, EN);
 
  function [`MMCAM_AM_SIZE] AM;
     input FIRE_OR;
-    input [`MMCAM_MF_BIT] MF;
+    input [`MMCAM_MF_SIZE] MF;
     input [`MMCAM_FEV_SIZE] VALID;
 
     case(MF)
@@ -418,8 +418,6 @@ module OR_AM_MA(VALID, FIRE, WR_E, ADDR, DEL, CP, MF, MR, EN);
 
  // --- MA ---
  always @(posedge MR or posedge CP) begin
-    case(MF)
-    2'b11:begin
         if(MR) begin
             WR_E    <= 1'b0;
             ADDR    <= {`MMCAM_ADDR_WIDTH{1'b0}};
@@ -448,92 +446,4 @@ module OR_AM_MA(VALID, FIRE, WR_E, ADDR, DEL, CP, MF, MR, EN);
             end
         end
     end
-    2'b10:begin
-        if(MR[1]) begin
-            WR_E    <= 1'b0;
-            ADDR    <= {`MMCAM_ADDR_WIDTH{1'b0}};
-            DEL     <= 1'b1;
-        end
-        else begin
-            
-            // --- 発火状態 ---
-            if(FIRE_OR) begin
-                WR_E    <= 1'b0;
-                ADDR    <= R_ADDR;
-                DEL     <= 1'b1;
-            end
-
-            // --- デバック用 ---
-            else if(~MF) begin
-                WR_E    <= 1'b0;
-                DEL     <= 1'b1;
-            end
-
-            // --- 発火していない状態 ---
-            else begin
-                WR_E    <= 1'b1;
-                ADDR    <= W_ADDR;
-                DEL     <= 1'b0;
-            end
-        end
-    end
-    2'b01:begin
-        if(MR[0]) begin
-            WR_E    <= 1'b0;
-            ADDR    <= {`MMCAM_ADDR_WIDTH{1'b0}};
-            DEL     <= 1'b1;
-        end
-        else begin
-            
-            // --- 発火状態 ---
-            if(FIRE_OR) begin
-                WR_E    <= 1'b0;
-                ADDR    <= R_ADDR;
-                DEL     <= 1'b1;
-            end
-
-            // --- デバック用 ---
-            else if(~MF) begin
-                WR_E    <= 1'b0;
-                DEL     <= 1'b1;
-            end
-
-            // --- 発火していない状態 ---
-            else begin
-                WR_E    <= 1'b1;
-                ADDR    <= W_ADDR;
-                DEL     <= 1'b0;
-            end
-        end
-    end
-    default:begin
-        if(MR) begin
-            WR_E    <= 1'b0;
-            ADDR    <= {`MMCAM_ADDR_WIDTH{1'b0}};
-            DEL     <= 1'b1;
-        end
-        else begin
-            
-            // --- 発火状態 ---
-            if(FIRE_OR) begin
-                WR_E    <= 1'b0;
-                ADDR    <= R_ADDR;
-                DEL     <= 1'b1;
-            end
-
-            // --- デバック用 ---
-            else if(~MF) begin
-                WR_E    <= 1'b0;
-                DEL     <= 1'b1;
-            end
-
-            // --- 発火していない状態 ---
-            else begin
-                WR_E    <= 1'b1;
-                ADDR    <= W_ADDR;
-                DEL     <= 1'b0;
-            end
-        end
-    end
-    endcase
 endmodule

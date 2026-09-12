@@ -1,0 +1,156 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Sep 12 16:12:49 2026
+| Host         : DESKTOP-F8PDQQS running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file DDP_control_sets_placed.rpt
+| Design       : DDP
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    78 |
+|    Minimum number of control sets                        |    78 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   398 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    78 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    74 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |             720 |          332 |
+| No           | Yes                   | No                     |               2 |            2 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            1216 |          283 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------+------------------------+-----------------------------------+------------------+----------------+--------------+
+|            Clock Signal            |      Enable Signal     |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------+------------------------+-----------------------------------+------------------+----------------+--------------+
+|  COPY_Stage/cx2_6/dl1s/w_q_i_2_n_0 |                        | COPY_Stage/cx2_6/dl1s/w_q_i_1_n_0 |                1 |              1 |         1.00 |
+| ~COPY_Stage/cx2_6/or2              |                        | COPY_Stage/cx2_6/dl1s/w_q_i_1_n_0 |                1 |              1 |         1.00 |
+|  COPY_Stage/cx2_6/DL1S_cp          |                        | COPY_Stage/cx2_6/dl1s/w_q_i_2_n_0 |                1 |              2 |         2.00 |
+|  COPY_Stage/cx2_6/DL1S_cp          |                        | COPY_Stage/cx2_6/dl1s/w_q_i_1_n_0 |                1 |              2 |         2.00 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[1]  | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[4]  | MR_IBUF                           |                3 |             19 |         6.33 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[5]  | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[6]  | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[7]  | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[8]  | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[58] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[0]  | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[2]  | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[3]  | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[9]  | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[11] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[12] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[13] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[14] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[61] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[47] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[23] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[21] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[27] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[20] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[32] | MR_IBUF                           |                7 |             19 |         2.71 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[34] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[48] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[24] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[52] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[55] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[60] | MR_IBUF                           |                3 |             19 |         6.33 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[50] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[62] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[35] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[44] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[43] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[16] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[17] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[26] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[33] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[37] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[29] | MR_IBUF                           |                6 |             19 |         3.17 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[41] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[53] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[59] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[46] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[18] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[54] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[19] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[28] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[38] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[15] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[51] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[57] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[49] | MR_IBUF                           |                6 |             19 |         3.17 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[30] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[25] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[45] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[22] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[39] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[31] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[42] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[56] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[36] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[63] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[40] | MR_IBUF                           |                5 |             19 |         3.80 |
+|  MMCAM/c1/CP                       | MMCAM/or_am_ma0/EN[10] | MR_IBUF                           |                4 |             19 |         4.75 |
+|  C10/CP                            |                        | MR_IBUF                           |               14 |             56 |         4.00 |
+|  B_Stage/cb7/CF1/CP                |                        | MR_IBUF                           |               25 |             57 |         2.28 |
+|  M_Stage/cm0/cj2/CP                |                        | MR_IBUF                           |               15 |             57 |         3.80 |
+|  M_Stage/cm0/cj1/CP                |                        | MR_IBUF                           |               12 |             57 |         4.75 |
+|  MMRAM/ce2/cf0/CP                  |                        | MR_IBUF                           |               37 |             58 |         1.57 |
+|  MA_Stage/c5/CP                    |                        | MR_IBUF                           |               39 |             59 |         1.51 |
+|  COPY_Stage/cx2_6/cf0/CP           |                        | MR_IBUF                           |               37 |             60 |         1.62 |
+|  PS_Stage/c3/CP                    |                        | MR_IBUF                           |               50 |             86 |         1.72 |
+|  FP_Stage/ce4/cf0/CP               |                        | MR_IBUF                           |               33 |             97 |         2.94 |
+|  MMCAM/c1/CP                       |                        | MR_IBUF                           |               68 |            129 |         1.90 |
++------------------------------------+------------------------+-----------------------------------+------------------+----------------+--------------+
+
+

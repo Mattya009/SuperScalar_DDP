@@ -97,11 +97,12 @@
 `define MMRAM_DEST_SIZE                         `MMRAM_DEST_WIDTH-1:0
 `define MMRAM_MUX_OUT_SIZE                      `MMRAM_MUX_OUT_WIDTH-1:0
 `define MMRAM_LR_TO_Z_SIZE                      (`LR_WIDTH + `MF_RANGE + `C_WIDTH + `Z_WIDTH -1):0
-`define DATA_SIZE                               `DATA_WIDTH-1:0
+`define DATA1_SIZE                              `DATA1_WIDTH-1:0
+`define DATA2_SIZE                              `DATA_WIDTH-1:`DATA1_WIDTH
 `define MMRAM_C_Z_SIZE                          (`C_WIDTH + `Z_WIDTH -1):0
 `define MMRAM_MF_SIZE                           `MF_WIDTH-1:0
 
-`define MMRAM_Z_START_BIT                       ( `DATA_WIDTH * 4 )
+`define MMRAM_Z_START_BIT                       ( `DATA_WIDTH * 2 )
 `define MMRAM_DEST_START_BIT                    ( `DATA_WIDTH + `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH )
 
 `define MMRAM_LR_RANGE                          `MMRAM_DATA_IN_WIDTH-1

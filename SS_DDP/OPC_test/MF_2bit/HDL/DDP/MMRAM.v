@@ -7,23 +7,19 @@ module MMRAM(Send_in, Send_out, Ack_in, Ack_out, PACKET_IN,
  input [`MMRAM_ADDR_SIZE]        ADDR;
  input [`MMRAM_PACKET_IN_SIZE]   PACKET_IN;
  output                          Send_out, Ack_out;
- output [`MMRAM_PACKET_OUT_SIZE] PACKET_OUT;
+ output[`MMRAM_PACKET_OUT_SIZE] PACKET_OUT;
  
  (* dont_touch = "true" *) wire [`MMRAM_DATA_IN_SIZE]     DATA_IN, DATA_OUT;
  (* dont_touch = "true" *) wire [`MMRAM_DEST_SIZE]        dest;
  (* dont_touch = "true" *) wire [`MMRAM_MERGE_OUT_SIZE]   MERGE1_OUT, MERGE2_OUT, MERGE3_OUT, MERGE4_OUT;
- (* dont_touch = "true" *) wire [`MMRAM_MUX_OUT_SIZE]     MUX_OUT;
+ //(* dont_touch = "true" *) wire [`MMRAM_MUX_OUT_SIZE]     MUX_OUT;
  (* dont_touch = "true" *) wire [`MMRAM_CST_DATA_SIZE]    CST_DATA;
  (* dont_touch = "true" *) wire [`MMRAM_C_Z_SIZE]         C_Z;
  (* dont_touch = "true" *) wire [`MMRAM_MF_SIZE]          MF;
- (* dont_touch = "true" *) wire [`MMRAM_LR_RANGE]         LR;
- (* dont_touch = "true" *) wire [`MMRAM_CST_DATA_SIZE]    CST_DATA;
- (* dont_touch = "true" *) wire [`MMRAM_MUX_OUT_SIZE]     MUX_OUT;
- (* dont_touch = "true" *) wire [`MMRAM_C_Z_SIZE] C_Z;
- (* dont_touch = "true" *) wire [`MMRAM_MF_SIZE] MF;
- (* dont_touch = "true" *) wire CP;
+ (* dont_touch = "true" *) wire CP, LR;
 
  (* dont_touch = "true" *) reg [`MMRAM_PACKET_IN_SIZE]       DL;
+ (* dont_touch = "true" *) reg [`MMRAM_MUX_OUT_SIZE] MUX_OUT;
  (* dont_touch = "true" *) reg [`DEST_SIZE]   dest_out;
  (* dont_touch = "true" *) reg LR;
 
@@ -31,33 +27,10 @@ module MMRAM(Send_in, Send_out, Ack_in, Ack_out, PACKET_IN,
  CE ce2(.exb(DEL), .Send_in(Send_in), .Ack_in(Ack_in), .Send_out(Send_out), .Ack_out(Ack_out), .CP(CP), .MR(MR));
 
  // --- DL ---
- case(MF)
-   2'b11:begin
-      always @(posedge MR or posedge CP) begin
-         if(MR) DL <= {`MMRAM_PACKET_IN_WIDTH{1'b0}};
-         else DL <= PACKET_IN;
-      end
-   end
-   2'b10:begin
-      always @(posedge MR or posedge CP) begin
-         if(MR[1]) DL <= {`MMRAM_PACKET_IN_WIDTH{1'b0}};
-         else DL <= PACKET_IN;
-      end
-   end
-   2'b01:begin
-      always @(posedge MR or posedge CP) begin
-         if(MR[0]) DL <= {`MMRAM_PACKET_IN_WIDTH{1'b0}};
-         else DL <= PACKET_IN;
-      end
-   end
-   default:begin
-      always @(posedge MR or posedge CP) begin
-         if(MR) DL <= {`MMRAM_PACKET_IN_WIDTH{1'b0}};
-         else DL <= PACKET_IN;
-      end
-   end
- endcase
-
+ always @(posedge MR or posedge CP) begin
+   if(MR) DL <= {`MMRAM_PACKET_IN_WIDTH{1'b0}};
+   else DL <= PACKET_IN;
+ end
   // --- RAM ---
  assign DATA_IN = PACKET_IN[`MMRAM_DATA_IN_SIZE];
  MMRAM_RAM mmram (
@@ -88,22 +61,24 @@ module MMRAM(Send_in, Send_out, Ack_in, Ack_out, PACKET_IN,
  assign C_Z = (DL[`MMRAM_LR_RANGE]) ? 
                      DL[17:16] : DATA_OUT[17:16];
 
- assign MERGE1_OUT = {DL[`MMRAM_COLOR_TO_MF_RANGE], C_Z, DL[`DATA_SIZE1], DATA_OUT[`DATA_SIZE1], DL[`DATA_SIZE0], DATA_OUT[`DATA_SIZE0]};
+ assign MERGE1_OUT = {DL[`MMRAM_COLOR_TO_MF_RANGE], C_Z, DL[`DATA2_SIZE], DATA_OUT[`DATA2_SIZE], DL[`DATA1_SIZE], DATA_OUT[`DATA1_SIZE]};
 
- assign MERGE2_OUT = {DL[`MMRAM_COLOR_TO_MF_RANGE], C_Z, DL[`DATA_SIZE1], DATA_OUT[`DATA_SIZE1], DL[`DATA_SIZE0], CST_DATA[`DATA_SIZE0]};
+ assign MERGE2_OUT = {DL[`MMRAM_COLOR_TO_MF_RANGE], C_Z, DL[`DATA2_SIZE], DATA_OUT[`DATA2_SIZE], DL[`DATA1_SIZE], CST_DATA[`DATA1_SIZE]};
 
- assign MERGE3_OUT = {DL[`MMRAM_COLOR_TO_MF_RANGE], C_Z, DL[`DATA_SIZE1], CST_DATA[`DATA_SIZE1], DL[`DATA_SIZE0], DATA_OUT[`DATA_SIZE0]};
+ assign MERGE3_OUT = {DL[`MMRAM_COLOR_TO_MF_RANGE], C_Z, DL[`DATA2_SIZE], CST_DATA[`DATA2_SIZE], DL[`DATA1_SIZE], DATA_OUT[`DATA1_SIZE]};
 
  assign MERGE4_OUT = {DL, CST_DATA};
 
  // --- MUX ---
- case(MF)
-   2'b11: assign MUX_OUT = MERGE1_OUT;
-   2'b10: assign MUX_OUT = MERGE2_OUT;
-   2'b01: assign MUX_OUT = MREGE3_OUT;
-   2'b00: assign MUX_OUT = MERGE4_OUT;
-   default: assign MUX_OUT = `MMRAM_MUX_OUT_WIDTH{1'bz};
- endcase
+always @(*) begin
+  case (MF)
+    2'b11: MUX_OUT = MERGE1_OUT;
+    2'b10: MUX_OUT = MERGE2_OUT;
+    2'b01: MUX_OUT = MERGE3_OUT;
+    2'b00: MUX_OUT = MERGE4_OUT;
+    default: MUX_OUT = {`MMRAM_MUX_OUT_WIDTH{1'bz}};
+  endcase
+end
 
 //  assign MUX_OUT = (DL[`MMRAM_MF_RANGE]) ? 
 //                      MERGE1_OUT : MERGE2_OUT;
