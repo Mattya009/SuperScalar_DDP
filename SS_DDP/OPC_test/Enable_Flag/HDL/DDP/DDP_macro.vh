@@ -44,9 +44,10 @@
 `define C_WIDTH         1
 `define Z_WIDTH         1
 `define DATA_WIDTH      16
+`define Enable_WIDTH    2
 
 // --- M_Stage ---
-`define M_PACKET_WIDTH                 ( `COLOR_WIDTH + `GEN_WIDTH + `DEST_WIDTH + `LR_WIDTH + `MF_WIDTH + `C_WIDTH + `Z_WIDTH + `DATA_WIDTH )
+`define M_PACKET_WIDTH                 ( `COLOR_WIDTH + `GEN_WIDTH + `DEST_WIDTH + `LR_WIDTH + `MF_WIDTH + `C_WIDTH + `Z_WIDTH + `DATA_WIDTH + `Enable_WIDTH )
 `define M_PACKET_SIZE                  `M_PACKET_WIDTH-1:0
 
 // --- MMCAM_Stage ---
@@ -88,9 +89,11 @@
 `define MMRAM_LR_TO_Z_SIZE                      (`LR_WIDTH + `MF_RANGE + `C_WIDTH + `Z_WIDTH -1):0
 `define DATA_SIZE                               `DATA_WIDTH-1:0
 `define MMRAM_C_Z_SIZE                          (`C_WIDTH + `Z_WIDTH -1):0
+`define MMRAM_Enable_SIZE                       `Enable_WIDTH-1:0
 
 `define MMRAM_Z_START_BIT                       ( `DATA_WIDTH*2 )
 `define MMRAM_DEST_START_BIT                    ( `DATA_WIDTH + `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH )
+`define MMRAM_Enable_START_BIT                  ( `DATA_WIDTH + `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH + `DEST_WIDTH )
 
 `define MMRAM_LR_RANGE                          `MMRAM_DATA_IN_WIDTH-1
 `define MMRAM_MF_RANGE                          `MMRAM_DATA_IN_WIDTH - `LR_WIDTH - 1
