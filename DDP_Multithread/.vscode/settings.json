@@ -1,0 +1,5 @@
+{
+    "C_Cpp.errorSquiggles": "enabledIfIncludesResolve",
+    "C_Cpp.windowsErrorReportingMode": "default",
+    "latex-workshop.message.error.show": true
+}

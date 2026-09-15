@@ -1,0 +1,28 @@
+; Sample coe file for 16bit wide and 64 deep memory
+memory_initialization_radix = 16;
+memory_initialization_vector =
+0000,
+0009,
+0000,
+0000,
+0000,
+0000,
+0001,
+0001,
+0000,
+0000,
+0001,
+0000,
+0001,
+0000,
+0000,
+0000,
+0000,
+0001,
+0000,
+0001,
+0000,
+0001,
+0001,
+0000,
+0000;

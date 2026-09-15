@@ -1,0 +1,412 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Aug 28 19:10:30 2026
+| Host         : DESKTOP-F8PDQQS running 64-bit major release  (build 9200)
+| Command      : report_drc -file DDP_drc_routed.rpt -pb DDP_drc_routed.pb -rpx DDP_drc_routed.rpx
+| Design       : DDP
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 57
++-------------+------------------+-------------------------------------------------------------+--------+
+| Rule        | Severity         | Description                                                 | Checks |
++-------------+------------------+-------------------------------------------------------------+--------+
+| NSTD-1      | Critical Warning | Unspecified I/O Standard                                    | 1      |
+| UCIO-1      | Critical Warning | Unconstrained Logical Port                                  | 1      |
+| CHECK-3     | Warning          | Report rule limit reached                                   | 1      |
+| DPIP-1      | Warning          | Input pipelining                                            | 2      |
+| DPOP-1      | Warning          | PREG Output pipelining                                      | 1      |
+| DPOP-2      | Warning          | MREG Output pipelining                                      | 1      |
+| LUTLP-2     | Warning          | Combinatorial Loop Allowed                                  | 3      |
+| PDRC-153    | Warning          | Gated clock check                                           | 13     |
+| PLHOLDVIO-2 | Warning          | Non-Optimal connections which could lead to hold violations | 11     |
+| RBOR-1      | Warning          | RAMB output registers                                       | 1      |
+| REQP-1840   | Warning          | RAMB18 async control check                                  | 20     |
+| RTSTAT-10   | Warning          | No routable loads                                           | 1      |
+| ZPS7-1      | Warning          | PS7 block required                                          | 1      |
++-------------+------------------+-------------------------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+NSTD-1#1 Critical Warning
+Unspecified I/O Standard  
+81 out of 81 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: Ack_in, Ack_out, MR, PACKET_IN[37:0], PACKET_OUT[37:0], Send_in, Send_out.
+Related violations: <none>
+
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+81 out of 81 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: Ack_in, Ack_out, MR, PACKET_IN[37:0], PACKET_OUT[37:0], Send_in, Send_out.
+Related violations: <none>
+
+CHECK-3#1 Warning
+Report rule limit reached  
+REQP-1840 rule limit reached: 20 violations have been found.
+Related violations: <none>
+
+DPIP-1#1 Warning
+Input pipelining  
+DSP FP_Stage/alu0/p_0_out input FP_Stage/alu0/p_0_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP FP_Stage/alu0/p_0_out input FP_Stage/alu0/p_0_out/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP FP_Stage/alu0/p_0_out output FP_Stage/alu0/p_0_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP FP_Stage/alu0/p_0_out multiplier stage FP_Stage/alu0/p_0_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+LUTLP-2#1 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: COPY_Stage/cx2_6/nor1_inferred_i_1, COPY_Stage/cx2_6/nor2_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#2 Warning
+Combinatorial Loop Allowed  
+2 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: M_Stage/cm0/nor2_inferred_i_1, M_Stage/cm0/nor3_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#3 Warning
+Combinatorial Loop Allowed  
+286 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: B_Stage/cb7/Ack_in_and_inferred_i_1, B_Stage/cb7/CF1/Ack_out_INST_0,
+C10/Ack_out_INST_0, COPY_Stage/cx2_6/cf0/Ack_out_INST_0,
+FP_Stage/ce4/cf0/Ack_out_INST_0, MA_Stage/c5/Ack_out_INST_0,
+MMCAM/c1/Ack_out_INST_0, MMRAM/ce2/cf0/Ack_out_INST_0,
+M_Stage/cm0/cj1/Ack_out_INST_0, M_Stage/cm0/cj1/CP_INST_0,
+M_Stage/cm0/cj1/Send_out_INST_0, M_Stage/cm0/cj2/Ack_out_INST_0,
+M_Stage/cm0/cj2/CP_INST_0, M_Stage/cm0/cj2/Send_out_INST_0,
+PS_Stage/c3/Ack_out_INST_0 (the first 15 of 286 listed).
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net B_Stage/cb7/CF1/CP is a gated clock net sourced by a combinational pin B_Stage/cb7/CF1/CP_INST_0/O, cell B_Stage/cb7/CF1/CP_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net C10/CP is a gated clock net sourced by a combinational pin C10/CP_INST_0/O, cell C10/CP_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net COPY_Stage/cx2_6/DL1S_cp is a gated clock net sourced by a combinational pin COPY_Stage/cx2_6/DL1S_cp_inferred_i_1/O, cell COPY_Stage/cx2_6/DL1S_cp_inferred_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net COPY_Stage/cx2_6/cf0/CP is a gated clock net sourced by a combinational pin COPY_Stage/cx2_6/cf0/CP_INST_0/O, cell COPY_Stage/cx2_6/cf0/CP_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net COPY_Stage/cx2_6/dl1s/w_q_i_2_n_0 is a gated clock net sourced by a combinational pin COPY_Stage/cx2_6/dl1s/w_q_i_2/O, cell COPY_Stage/cx2_6/dl1s/w_q_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net COPY_Stage/cx2_6/or2 is a gated clock net sourced by a combinational pin COPY_Stage/cx2_6/or2_inferred_i_1/O, cell COPY_Stage/cx2_6/or2_inferred_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net FP_Stage/ce4/cf0/CP is a gated clock net sourced by a combinational pin FP_Stage/ce4/cf0/CP_INST_0/O, cell FP_Stage/ce4/cf0/CP_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net MA_Stage/c5/CP is a gated clock net sourced by a combinational pin MA_Stage/c5/CP_INST_0/O, cell MA_Stage/c5/CP_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net MMCAM/c1/CP is a gated clock net sourced by a combinational pin MMCAM/c1/CP_INST_0/O, cell MMCAM/c1/CP_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net MMRAM/ce2/cf0/CP is a gated clock net sourced by a combinational pin MMRAM/ce2/cf0/CP_INST_0/O, cell MMRAM/ce2/cf0/CP_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net M_Stage/cm0/cj1/CP is a gated clock net sourced by a combinational pin M_Stage/cm0/cj1/CP_INST_0/O, cell M_Stage/cm0/cj1/CP_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net M_Stage/cm0/cj2/CP is a gated clock net sourced by a combinational pin M_Stage/cm0/cj2/CP_INST_0/O, cell M_Stage/cm0/cj2/CP_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Gated clock check  
+Net PS_Stage/c3/CP is a gated clock net sourced by a combinational pin PS_Stage/c3/CP_INST_0/O, cell PS_Stage/c3/CP_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT B_Stage/cb7/CF1/CP_INST_0 is driving clock pin of 40 cells. This could lead to large hold time violations. Involved cells are:
+B_Stage/DL_reg[0], B_Stage/DL_reg[10], B_Stage/DL_reg[11],
+B_Stage/DL_reg[12], B_Stage/DL_reg[13], B_Stage/DL_reg[14],
+B_Stage/DL_reg[15], B_Stage/DL_reg[16], B_Stage/DL_reg[17],
+B_Stage/DL_reg[18], B_Stage/DL_reg[19], B_Stage/DL_reg[1],
+B_Stage/DL_reg[20], B_Stage/DL_reg[21], B_Stage/DL_reg[22]
+ (the first 15 of 40 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT C10/CP_INST_0 is driving clock pin of 38 cells. This could lead to large hold time violations. Involved cells are:
+PACKET_OUT_reg[0], PACKET_OUT_reg[10], PACKET_OUT_reg[11],
+PACKET_OUT_reg[12], PACKET_OUT_reg[13], PACKET_OUT_reg[14],
+PACKET_OUT_reg[15], PACKET_OUT_reg[16], PACKET_OUT_reg[17],
+PACKET_OUT_reg[18], PACKET_OUT_reg[19], PACKET_OUT_reg[1],
+PACKET_OUT_reg[20], PACKET_OUT_reg[21], PACKET_OUT_reg[22]
+ (the first 15 of 38 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT COPY_Stage/cx2_6/DL1S_cp_inferred_i_1 is driving clock pin of 4 cells. This could lead to large hold time violations. Involved cells are:
+COPY_Stage/cx2_6/dl1s/w_q_reg/F1 (in COPY_Stage/cx2_6/dl1s/w_q_reg macro),
+COPY_Stage/cx2_6/dl1s/w_q_reg/F2 (in COPY_Stage/cx2_6/dl1s/w_q_reg macro),
+COPY_Stage/cx2_6/dl1s/w_q_reg_C, COPY_Stage/cx2_6/dl1s/w_q_reg_P
+Related violations: <none>
+
+PLHOLDVIO-2#4 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT COPY_Stage/cx2_6/cf0/CP_INST_0 is driving clock pin of 42 cells. This could lead to large hold time violations. Involved cells are:
+COPY_Stage/DL_reg[0], COPY_Stage/DL_reg[10], COPY_Stage/DL_reg[11],
+COPY_Stage/DL_reg[12], COPY_Stage/DL_reg[13], COPY_Stage/DL_reg[14],
+COPY_Stage/DL_reg[15], COPY_Stage/DL_reg[16], COPY_Stage/DL_reg[17],
+COPY_Stage/DL_reg[18], COPY_Stage/DL_reg[19], COPY_Stage/DL_reg[1],
+COPY_Stage/DL_reg[20], COPY_Stage/DL_reg[21], COPY_Stage/DL_reg[22]
+ (the first 15 of 42 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#5 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT FP_Stage/ce4/cf0/CP_INST_0 is driving clock pin of 63 cells. This could lead to large hold time violations. Involved cells are:
+FP_Stage/DL_reg[0], FP_Stage/DL_reg[10], FP_Stage/DL_reg[11],
+FP_Stage/DL_reg[12], FP_Stage/DL_reg[13], FP_Stage/DL_reg[14],
+FP_Stage/DL_reg[15], FP_Stage/DL_reg[16], FP_Stage/DL_reg[17],
+FP_Stage/DL_reg[18], FP_Stage/DL_reg[19], FP_Stage/DL_reg[1],
+FP_Stage/DL_reg[20], FP_Stage/DL_reg[21], FP_Stage/DL_reg[22]
+ (the first 15 of 63 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#6 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT MA_Stage/c5/CP_INST_0 is driving clock pin of 42 cells. This could lead to large hold time violations. Involved cells are:
+MA_Stage/DL_FLG_reg, MA_Stage/DL_PACKET_reg[0], MA_Stage/DL_PACKET_reg[10],
+MA_Stage/DL_PACKET_reg[11], MA_Stage/DL_PACKET_reg[12],
+MA_Stage/DL_PACKET_reg[13], MA_Stage/DL_PACKET_reg[14],
+MA_Stage/DL_PACKET_reg[15], MA_Stage/DL_PACKET_reg[16],
+MA_Stage/DL_PACKET_reg[17], MA_Stage/DL_PACKET_reg[18],
+MA_Stage/DL_PACKET_reg[19], MA_Stage/DL_PACKET_reg[1],
+MA_Stage/DL_PACKET_reg[20], MA_Stage/DL_PACKET_reg[21]
+ (the first 15 of 42 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#7 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT MMCAM/c1/CP_INST_0 is driving clock pin of 1326 cells. This could lead to large hold time violations. Involved cells are:
+MMCAM/DL_PACKET_reg[0], MMCAM/DL_PACKET_reg[10], MMCAM/DL_PACKET_reg[11],
+MMCAM/DL_PACKET_reg[12], MMCAM/DL_PACKET_reg[13], MMCAM/DL_PACKET_reg[14],
+MMCAM/DL_PACKET_reg[15], MMCAM/DL_PACKET_reg[16], MMCAM/DL_PACKET_reg[17],
+MMCAM/DL_PACKET_reg[18], MMCAM/DL_PACKET_reg[19], MMCAM/DL_PACKET_reg[1],
+MMCAM/DL_PACKET_reg[20], MMCAM/DL_PACKET_reg[21], MMCAM/DL_PACKET_reg[22]
+ (the first 15 of 1326 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#8 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT MMRAM/ce2/cf0/CP_INST_0 is driving clock pin of 41 cells. This could lead to large hold time violations. Involved cells are:
+MMRAM/DL_reg[0], MMRAM/DL_reg[10], MMRAM/DL_reg[11], MMRAM/DL_reg[12],
+MMRAM/DL_reg[13], MMRAM/DL_reg[14], MMRAM/DL_reg[15], MMRAM/DL_reg[16],
+MMRAM/DL_reg[17], MMRAM/DL_reg[18], MMRAM/DL_reg[19], MMRAM/DL_reg[1],
+MMRAM/DL_reg[20], MMRAM/DL_reg[21], MMRAM/DL_reg[22]
+ (the first 15 of 41 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#9 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT M_Stage/cm0/cj1/CP_INST_0 is driving clock pin of 38 cells. This could lead to large hold time violations. Involved cells are:
+M_Stage/DL_EXTERNAL_reg[0], M_Stage/DL_EXTERNAL_reg[10],
+M_Stage/DL_EXTERNAL_reg[11], M_Stage/DL_EXTERNAL_reg[12],
+M_Stage/DL_EXTERNAL_reg[13], M_Stage/DL_EXTERNAL_reg[14],
+M_Stage/DL_EXTERNAL_reg[15], M_Stage/DL_EXTERNAL_reg[16],
+M_Stage/DL_EXTERNAL_reg[17], M_Stage/DL_EXTERNAL_reg[18],
+M_Stage/DL_EXTERNAL_reg[19], M_Stage/DL_EXTERNAL_reg[1],
+M_Stage/DL_EXTERNAL_reg[20], M_Stage/DL_EXTERNAL_reg[21],
+M_Stage/DL_EXTERNAL_reg[22] (the first 15 of 38 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#10 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT M_Stage/cm0/cj2/CP_INST_0 is driving clock pin of 38 cells. This could lead to large hold time violations. Involved cells are:
+M_Stage/DL_INTERNAL_reg[0], M_Stage/DL_INTERNAL_reg[10],
+M_Stage/DL_INTERNAL_reg[11], M_Stage/DL_INTERNAL_reg[12],
+M_Stage/DL_INTERNAL_reg[13], M_Stage/DL_INTERNAL_reg[14],
+M_Stage/DL_INTERNAL_reg[15], M_Stage/DL_INTERNAL_reg[16],
+M_Stage/DL_INTERNAL_reg[17], M_Stage/DL_INTERNAL_reg[18],
+M_Stage/DL_INTERNAL_reg[19], M_Stage/DL_INTERNAL_reg[1],
+M_Stage/DL_INTERNAL_reg[20], M_Stage/DL_INTERNAL_reg[21],
+M_Stage/DL_INTERNAL_reg[22] (the first 15 of 38 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#11 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT PS_Stage/c3/CP_INST_0 is driving clock pin of 53 cells. This could lead to large hold time violations. Involved cells are:
+PS_Stage/DL_reg[0], PS_Stage/DL_reg[10], PS_Stage/DL_reg[11],
+PS_Stage/DL_reg[12], PS_Stage/DL_reg[13], PS_Stage/DL_reg[14],
+PS_Stage/DL_reg[15], PS_Stage/DL_reg[16], PS_Stage/DL_reg[17],
+PS_Stage/DL_reg[18], PS_Stage/DL_reg[19], PS_Stage/DL_reg[1],
+PS_Stage/DL_reg[20], PS_Stage/DL_reg[21], PS_Stage/DL_reg[22]
+ (the first 15 of 53 listed)
+Related violations: <none>
+
+RBOR-1#1 Warning
+RAMB output registers  
+RAMB PS_Stage/ps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram output DOA (3) DOB (8) is connected to asynchronous registers, if you use synchronous controls you will get better results both in area and delay (RAMB has synchronous registers built in).
+Related violations: <none>
+
+REQP-1840#1 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (B_Stage/cb7/DL1_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#2 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (COPY_Stage/cx2_6/DL1_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#3 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (COPY_Stage/cx2_6/DL2_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#4 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (COPY_Stage/cx2_6/dl1s/w_q_reg_C) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#5 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (COPY_Stage/cx2_6/dl1s/w_q_reg_P) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#6 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[10] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[5]) which is driven by a register (FP_Stage/ce4/DL_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#7 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[11] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (B_Stage/cb7/DL1_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#8 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[11] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (COPY_Stage/DL_reg[22]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#9 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[11] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (COPY_Stage/DL_reg[23]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#10 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[11] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (COPY_Stage/DL_reg[24]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#11 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[11] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (COPY_Stage/DL_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#12 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[11] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (COPY_Stage/DL_reg[26]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#13 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[11] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (COPY_Stage/DL_reg[27]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#14 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[11] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (COPY_Stage/DL_reg[28]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#15 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[11] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (COPY_Stage/cx2_6/DL1_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#16 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[11] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (COPY_Stage/cx2_6/DL2_out_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#17 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[11] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (COPY_Stage/cx2_6/dl1s/w_q_reg_C) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#18 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[11] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (COPY_Stage/cx2_6/dl1s/w_q_reg_P) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#19 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[11] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (FP_Stage/ce4/DL_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#20 Warning
+RAMB18 async control check  
+The RAMB18E1 B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram has an input control pin B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram/ADDRARDADDR[11] (net: B_Stage/subps/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]) which is driven by a register (MMRAM/ce2/DL_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+64 net(s) have no routable loads. The problem bus(es) and/or net(s) are B_Stage/DL[18], COPY_Stage/DL[18], COPY_Stage/cx2_6/CF1_Ack_in,
+FP_Stage/alu0/JC[15:0], MMRAM/LR, MMRAM/MF, MMRAM/MUX_OUT[34],
+MMRAM/MUX_OUT[35], PS_Stage/DL[34], PS_Stage/DL[35], PS_Stage/DL[36],
+PS_Stage/DL[37], PS_Stage/DL[38], PS_Stage/DL[39], PS_Stage/DL[40]
+ (the first 15 of 24 listed nets/buses).
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

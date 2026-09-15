@@ -1,0 +1,32 @@
+; Sample coe file for 17bit wide and 128 deep memory
+memory_initialization_radix = 16;
+memory_initialization_vector =
+;8以下の判定
+004C0, ;ADD         0
+00A82, ;SUB         4
+00C93, ;BNC         8
+01480, ;ADD(C = 1)  C
+06000, ;ADD(C = 0)  10
+;0,1判定
+01891, ;BNZ         14
+06000, ;ADD(Z = 1)  18
+02082, ;SUB(Z = 0)  1C
+02491, ;BNZ         20
+01880, ;ADD(Z = 1)  24
+02CC0, ;ADD(Z = 0)  28
+05087, ;MUL         2C
+03482, ;SUB         30
+;SUB
+03891, ;BNZ         34
+05E80, ;ADD(Z = 1)  38
+040C0, ;ADD(Z = 0)  3C
+048C0, ;ADD         40
+030AA, ;ADDGEN      44
+02E80, ;ADD         48
+05282, ;SUB         4C
+;MUL
+05491, ;BNZ         50
+05CAA, ;ADDGEN      54
+02CAA, ;ADDGEN      58
+;MATCH
+06000; ;ADD         5C
