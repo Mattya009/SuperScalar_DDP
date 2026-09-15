@@ -2,9 +2,9 @@
 `include "DDP_macro.vh"
 `include "common_param.vh"
 (* dont_touch = "true" *)
-module ALU(ALU_PACKET_IN, DataL, DataR, WRITE_EN, WRITE_DATA, PACKET_OUT, LOAD_FLG);
+module ALU(ALU_PACKET_IN, DataL_1, DataR_1, DataL_2, DataR_2, WRITE_EN, WRITE_DATA, PACKET_OUT, LOAD_FLG);
  input [`ALU_PACKET_IN_SIZE]    ALU_PACKET_IN;
- input [`FP_DATA_SIZE]          DataL, DataR;
+ input [`DATA16_SIZE]           DataL_1, DataR_1, DataL_2, DataR_2;
  output [`FP_WRITE_DATA_SIZE]   WRITE_DATA;
  output [`FP_PACKET_OUT_SIZE]   PACKET_OUT;
  output                         WRITE_EN, LOAD_FLG;
@@ -15,7 +15,10 @@ module ALU(ALU_PACKET_IN, DataL, DataR, WRITE_EN, WRITE_DATA, PACKET_OUT, LOAD_F
  (* dont_touch = "true" *) wire [`LR2_SIZE]       LR2;
  (* dont_touch = "true" *) wire [`OPC_SIZE]       OPC;
  (* dont_touch = "true" *) wire [`JC_SIZE]        JC; // JC: Judge Carry
- (* dont_touch = "true" *) wire                   BR, CPY, C, Z;
+ (* dont_touch = "true" *) wire [`Enable_SIZE]    Enable;
+ (* dont_touch = "true" *) wire [`C_SIZE]         C;
+ (* dont_touch = "true" *) wire [`Z_SIZE]         Z;
+ (* dont_touch = "true" *) wire                   BR, CPY;
 
  assign color   = ALU_PACKET_IN[`ALU_COLOR_RANGE];
  assign gen     = ALU_PACKET_IN[`ALU_GEN_RANGE];
@@ -24,10 +27,11 @@ module ALU(ALU_PACKET_IN, DataL, DataR, WRITE_EN, WRITE_DATA, PACKET_OUT, LOAD_F
  assign BR      = ALU_PACKET_IN[`ALU_BR_RANGE];
  assign CPY     = ALU_PACKET_IN[`ALU_CPY_RANGE];
  assign OPC     = ALU_PACKET_IN[`ALU_OPC_RANGE];
+ assign Enable  = ALU_PACKET_IN[`ALU_Enable_RANGE];
  assign C       = ALU_PACKET_IN[`ALU_C_RANGE];
  assign Z       = ALU_PACKET_IN[`ALU_Z_RANGE];
 
- assign {JC, LOAD_FLG, WRITE_EN, WRITE_DATA, PACKET_OUT} = ALU(color, gen, dest, LR2, OPC, DataL, DataR, BR, CPY, C, Z);
+ assign {JC, LOAD_FLG, WRITE_EN, WRITE_DATA, PACKET_OUT} = ALU(color, gen, dest, LR2, OPC, DataL_2, DataR_2, DataL_1, DataR_1, BR, CPY, C, Z, Enable);
 
  function [`ALU_OUT_SIZE]   ALU;
     input [`COLOR_SIZE]     color;
@@ -35,15 +39,22 @@ module ALU(ALU_PACKET_IN, DataL, DataR, WRITE_EN, WRITE_DATA, PACKET_OUT, LOAD_F
     input [`DEST_SIZE]      dest;
     input [`LR2_SIZE]       LR2;
     input [`OPC_SIZE]       OPC;
-    input [`FP_DATA_SIZE]   DataL, DataR;
-    input                   BR, CPY, C, Z;
+    input [`DATA16_SIZE]    DataL_2, DataR_2, DataL_1, DataR_1;
+    input [`Enable_SIZE]    Enable;
+    input [`C_SIZE]         C;
+    input [`Z_SIZE]         Z;
+    input                   BR, CPY;
 
         case(OPC)
         //Arithmetic and logic operations
         `ADD    :begin
             {ALU[`ALU_LOAD_FLG_RANGE], ALU[`ALU_WRITE_EN_RANGE], ALU[`ALU_WRITE_DATA_RANGE]}    = {1'b0, 1'b0, {`ALU_WRITE_DATA_WIDTH{1'bz}}}; 
             ALU[`ALU_PACKET_OUT_HIBIT]  = {color, gen, dest, LR2, BR, CPY};
-            {ALU[`ALU_C_OUT_RANGE], ALU[`ALU_RESULT_RANGE]} = ($signed ({1'b0, DataL}) + $signed ({1'b0, DataR})); 
+            case(Enable)
+                2'b01: {ALU[`ALU_C_OUT_RANGE], ALU[`ALU_RESULT_RANGE]} = ($signed ({1'b0, DataL_1}) + $signed ({1'b0, DataR_1})); 
+                2'b10: {ALU[`ALU_C_OUT_RANGE], ALU[`ALU_RESULT_RANGE]} = ($signed ({1'b0, DataL_2}) + $signed ({1'b0, DataR_2})); 
+                default: {ALU[`ALU_C_OUT_RANGE], ALU[`ALU_RESULT_RANGE]} = ($signed ({1'b0, DataL_1}) + $signed ({1'b0, DataR_1}));
+            endcase
             ALU[`ALU_Z_OUT_RANGE]   = ~|ALU[`ALU_RESULT_RANGE];
         end
         

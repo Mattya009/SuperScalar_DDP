@@ -121,11 +121,11 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/DDP.dcp
-  read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/MMRAM_RAM/MMRAM_RAM.xci
-  read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/CMEM_1/CMEM.xci
-  read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/SubPS/SubPS.xci
-  read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/PS/PS.xci
-  read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/DMEM/DMEM.xci
+  read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/MMRAM_RAM/MMRAM_RAM.xci
+  read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/CMEM_1/CMEM.xci
+  read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/SubPS/SubPS.xci
+  read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/PS/PS.xci
+  read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/DMEM/DMEM.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/XDC/.xdc
 OPTRACE "read constraints: implementation" END { }

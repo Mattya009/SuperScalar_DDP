@@ -41,13 +41,19 @@
 `define MF_WIDTH        1
 `define CPY_WIDTH       1
 `define OPC_WIDTH       6
-`define C_WIDTH         1
-`define Z_WIDTH         1
-`define DATA_WIDTH      16
+`define C_WIDTH         2
+`define Z_WIDTH         2
+`define DATA16_WIDTH     16
+`define DATA_WIDTH      (`DATA16_WIDTH * 2)
 `define Enable_WIDTH    2
 
+// --- 元コード ---
+// `define C_WIDTH         1
+// `define Z_WIDTH         1
+// `define DATA_WIDTH      16
+
 // --- M_Stage ---
-`define M_PACKET_WIDTH                 ( `COLOR_WIDTH + `GEN_WIDTH + `DEST_WIDTH + `LR_WIDTH + `MF_WIDTH + `C_WIDTH + `Z_WIDTH + `DATA_WIDTH + `Enable_WIDTH )
+`define M_PACKET_WIDTH                 ( `COLOR_WIDTH + `GEN_WIDTH + `DEST_WIDTH + `LR_WIDTH + `Enable_WIDTH + `MF_WIDTH + `C_WIDTH + `Z_WIDTH + `DATA_WIDTH )
 `define M_PACKET_SIZE                  `M_PACKET_WIDTH-1:0
 
 // --- MMCAM_Stage ---
@@ -56,6 +62,7 @@
 `define MMCAM_C_G_D_WIDTH                       ( `COLOR_WIDTH + `GEN_WIDTH + `DEST_WIDTH ) //18bit
 `define MMCAM_ADDR_WIDTH                        6
 `define MMCAM_FEV_WIDTH                         `MMRAM_HEIGHT
+`define MMCAM_Enable_WIDTH                      `Enable_WIDTH
 
 `define MMCAM_PACKET_SIZE                       `MMCAM_PACKET_WIDTH-1:0
 `define MMCAM_ADDR_SIZE                         `MMCAM_ADDR_WIDTH-1:0
@@ -63,16 +70,18 @@
 `define MMCAM_C_G_D_SIZE                        `MMCAM_C_G_D_WIDTH-1:0
 `define MMCAM_AM_SIZE                           `ENTRY_WIDTH + `MMCAM_ADDR_WIDTH-1:0
 `define MMCAM_FEV_SIZE                          `MMCAM_FEV_WIDTH-1:0
+`define MMCAM_Enable_SIZE                       `MMCAM_Enable_WIDTH-1:0
 
-`define MMCAM_PACKET_IN_COLOR_GEN_DEST_LR_RANGE `MMCAM_PACKET_WIDTH-1:(`DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH)
+`define MMCAM_PACKET_IN_COLOR_GEN_DEST_LR_RANGE `MMCAM_PACKET_WIDTH-1:(`DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `Enable_WIDTH)
 `define MMCAM_C_G_D_RANGE                       `MMCAM_COLOR_GEN_DEST_LR_WIDTH-1:1
-`define MMCAM_MF_BIT                            ( `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH - 1 )
+`define MMCAM_Enable_RANGE                      ( `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `Enable_WIDTH - 1 ):( `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH)
+`define MMCAM_MF_BIT                            ( `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH- 1 )
 
 // --- MMRAM_Stage ---
 `define MMRAM_PACKET_IN_WIDTH                   `MMCAM_PACKET_WIDTH //38bit
 `define MMRAM_CST_DATA_WIDTH                    `DATA_WIDTH
 `define MMRAM_PACKET_OUT_WIDTH                  ( `MMRAM_PACKET_IN_WIDTH + `MMRAM_CST_DATA_WIDTH - `LR_WIDTH - `MF_WIDTH)//52bit
-`define MMRAM_DATA_IN_WIDTH                     ( `LR_WIDTH + `MF_WIDTH + `C_WIDTH + `Z_WIDTH + `DATA_WIDTH )
+`define MMRAM_DATA_IN_WIDTH                     ( `LR_WIDTH + `Enable_WIDTH + `MF_WIDTH + `C_WIDTH + `Z_WIDTH + `DATA_WIDTH )
 `define MMRAM_MERGE_OUT_WIDTH                   ( `MMRAM_PACKET_IN_WIDTH + `MMRAM_CST_DATA_WIDTH )
 `define MMRAM_ADDR_WIDTH                        `MMCAM_ADDR_WIDTH //6bit
 `define MMRAM_DEST_WIDTH                        `DEST_WIDTH
@@ -93,18 +102,17 @@
 
 `define MMRAM_Z_START_BIT                       ( `DATA_WIDTH*2 )
 `define MMRAM_DEST_START_BIT                    ( `DATA_WIDTH + `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH )
-`define MMRAM_Enable_START_BIT                  ( `DATA_WIDTH + `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH + `DEST_WIDTH )
 
-`define MMRAM_LR_RANGE                          `MMRAM_DATA_IN_WIDTH-1
-`define MMRAM_MF_RANGE                          `MMRAM_DATA_IN_WIDTH - `LR_WIDTH - 1
+`define MMRAM_LR_RANGE                          `MMRAM_DATA_IN_WIDTH - 1
+`define MMRAM_Enable_RANGE                      (`MMRAM_DATA_IN_WIDTH - `LR_WIDTH - 1) : (`MMRAM_DATA_IN_WIDTH - `LR_WIDTH - `Enable_WIDTH)
+`define MMRAM_MF_RANGE                          `MMRAM_DATA_IN_WIDTH - `LR_WIDTH - `Enable_WIDTH - 1
 `define MMRAM_LR_TO_Z_IN_RANGE                  `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH - 1 : `DATA_WIDTH
 `define MMRAM_MERGE_LR_RANGE                    (`MMRAM_MERGE_OUT_WIDTH - `COLOR_WIDTH - `GEN_WIDTH - `DEST_WIDTH - 1)
-//`define MMRAM_COLOR_TO_DEST_RANGE               `MMRAM_PACKET_IN_WIDTH - 1:`DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH
-`define MMRAM_COLOR_TO_MF_RANGE               `MMRAM_PACKET_IN_WIDTH - 1:`DATA_WIDTH + `Z_WIDTH + `C_WIDTH
+`define MMRAM_COLOR_TO_MF_RANGE                 `MMRAM_PACKET_IN_WIDTH - 1:`DATA_WIDTH + `Z_WIDTH + `C_WIDTH
 `define MMRAM_DEST_IN_RANGE                     (`MMRAM_PACKET_IN_WIDTH - `COLOR_WIDTH - `GEN_WIDTH - 1) : (`MMRAM_PACKET_IN_WIDTH - `COLOR_WIDTH - `GEN_WIDTH - `DEST_WIDTH)
-`define MMRAM_C_TO_D_RANGE                      (`MMRAM_DEST_START_BIT + `DEST_WIDTH + `GEN_WIDTH + `COLOR_WIDTH - 1):`MMRAM_DEST_START_BIT
-`define MMRAM_C_Z_RANGE                         (`MMRAM_Z_START_BIT + `C_WIDTH + `Z_WIDTH - 1):`MMRAM_Z_START_BIT
-`define MMRAM_DATA_HIBIT                        (`MMRAM_CST_DATA_WIDTH + `MMRAM_CST_DATA_WIDTH - 1):`MMRAM_CST_DATA_WIDTH
+`define MMRAM_C_TO_D_RANGE                      (`MMRAM_DEST_START_BIT + `DEST_WIDTH + `GEN_WIDTH + `COLOR_WIDTH - 1) : `MMRAM_DEST_START_BIT
+`define MMRAM_C_Z_RANGE                         (`MMRAM_Z_START_BIT + `C_WIDTH + `Z_WIDTH - 1) : `MMRAM_Z_START_BIT
+`define MMRAM_DATA_HIBIT                        (`MMRAM_CST_DATA_WIDTH + `MMRAM_CST_DATA_WIDTH - 1) : `MMRAM_CST_DATA_WIDTH
 `define MMRAM_DATA_LOBIT                        `MMRAM_CST_DATA_WIDTH-1:0
 
 // --- PS_Stage ---
@@ -120,15 +128,15 @@
 `define PS_PACKET_OUT_SIZE                      `PS_PACKET_OUT_WIDTH-1:0
 `define PS_OPC_SIZE                             `PS_OPC_WIDTH-1:0
 
-`define PS_OPC_RANGE                            `DATA_WIDTH + `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `OPC_WIDTH - 1: `DATA_WIDTH + `DATA_WIDTH + `Z_WIDTH + `C_WIDTH
-`define PS_DEST_RANGE                           (`DATA_WIDTH*2 + `Z_WIDTH + `C_WIDTH + `DEST_WIDTH - 1):(`DATA_WIDTH*2 + `Z_WIDTH + `C_WIDTH)
+`define PS_OPC_RANGE                            (`DATA_WIDTH + `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `Enable_WIDTH + `OPC_WIDTH - 1) : (`DATA_WIDTH + `DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `Enable_WIDTH)
+`define PS_DEST_RANGE                           (`DATA_WIDTH*2 + `Z_WIDTH + `C_WIDTH + `DEST_WIDTH - 1) : (`DATA_WIDTH*2 + `Z_WIDTH + `C_WIDTH)
 `define PS_PACKET_OUT_HIBIT                     `PS_PACKET_IN_WIDTH-1:(`PS_PACKET_IN_WIDTH - `COLOR_WIDTH - `GEN_WIDTH)
-`define PS_PACKET_OUT_LOBIT                     (`PS_PACKET_IN_WIDTH - `COLOR_WIDTH - `GEN_WIDTH - `DEST_WIDTH - 1):0
+`define PS_PACKET_OUT_LOBIT                     (`PS_PACKET_IN_WIDTH - `COLOR_WIDTH - `GEN_WIDTH - `DEST_WIDTH - 1) : 0
 
 // --- FP_Stage ---
 `define FP_PACKET_IN_WIDTH                      `PS_PACKET_OUT_WIDTH
-`define FP_ALU_PACKET_WIDTH                     (`COLOR_WIDTH + `GEN_WIDTH + `DEST_WIDTH + `LR2_WIDTH + `BR_WIDTH + `CPY_WIDTH + `OPC_WIDTH + `C_WIDTH + `Z_WIDTH)
-`define FP_PACKET_OUT_WIDTH                     (`FP_ALU_PACKET_WIDTH + `DATA_WIDTH - `OPC_WIDTH)
+`define FP_ALU_PACKET_WIDTH                     (`FP_PACKET_IN_WIDTH - (`DATA_WIDTH * 2))
+`define FP_PACKET_OUT_WIDTH                     (`FP_ALU_PACKET_WIDTH + `DATA_WIDTH - `OPC_WIDTH - `Enable_WIDTH)
 `define FP_WRITE_DATA_WIDTH                     `DATA_WIDTH
 `define FP_DATA_WIDTH                           `FP_WRITE_DATA_WIDTH
 
@@ -139,9 +147,11 @@
 `define FP_DATA_SIZE                            `FP_DATA_WIDTH-1:0
 
 `define FP_ALU_PACKET_IN_RANGE                  `FP_PACKET_IN_WIDTH-1:`FP_DATA_WIDTH*2
-`define FP_DATAL_RANGE                          `FP_DATA_WIDTH*2 -1:`FP_DATA_WIDTH
-`define FP_DATAR_RANGE                          `FP_DATA_WIDTH-1:0
-`define FP_OPC_RANGE                            (`OPC_WIDTH + `C_WIDTH + `Z_WIDTH - 1):(`C_WIDTH + `Z_WIDTH)
+`define FP_DATAL_2_RANGE                        (`DATA16_WIDTH * 4 - 1) : (`DATA16_WIDTH * 3)
+`define FP_DATAR_2_RANGE                        (`DATA16_WIDTH * 3 - 1) : (`DATA16_WIDTH * 2)
+`define FP_DATAL_1_RANGE                        (`DATA16_WIDTH*2 - 1) : `DATA16_WIDTH
+`define FP_DATAR_1_RANGE                        `DATA16_WIDTH - 1 : 0
+`define FP_OPC_RANGE                            (`OPC_WIDTH + `C_WIDTH + `Z_WIDTH - 1) : (`C_WIDTH + `Z_WIDTH)
 `define FP_BR_RANGE                             (`CPY_WIDTH + `OPC_WIDTH + `C_WIDTH + `Z_WIDTH)
 
 `define gen_max                 8'd127
@@ -150,7 +160,7 @@
 // --- FP_ALU ---
 `define ALU_LOAD_FLG_WIDTH                      1
 `define ALU_WRITE_EN_WIDTN                      1
-`define ALU_PACKET_IN_WIDTH                     (`COLOR_WIDTH + `GEN_WIDTH + `DEST_WIDTH + `LR2_WIDTH + `BR_WIDTH + `CPY_WIDTH + `OPC_WIDTH + `C_WIDTH + `Z_WIDTH)
+`define ALU_PACKET_IN_WIDTH                     `FP_ALU_PACKET_WIDTH
 `define ALU_C_Z_WIDTH                           (`C_WIDTH + `Z_WIDTH)
 `define ALU_RESULT_WIDTH                        `FP_DATA_WIDTH
 `define ALU_WRITE_DATA_WIDTH                    `FP_DATA_WIDTH
@@ -245,9 +255,11 @@
 // --- B_Stage ---
 `define B_PACKET_WIDTH                          `COPY_PACKET_OUT_WIDTH
 `define B_DEST_WIDTH                            `DEST_WIDTH
+`define B_Enable_WIDTH                          `Enable_WIDTH
 
 `define B_PACKET_SIZE                           `B_PACKET_WIDTH-1:0
 `define B_DEST_SIZE                             `B_DEST_WIDTH-1:0
+`define B_Enable_SIZE                           `B_Enable_WIDTH-1:0
 
 `define B_BR_RANGE                              (`B_PACKET_WIDTH - `COLOR_WIDTH - `GEN_WIDTH - `DEST_WIDTH - `LR_WIDTH - 1)
 `define B_DEST_RANGE                            `DEST_RANGE
@@ -255,9 +267,10 @@
 `define B_PACKET_IN_LOBIT                       (`C_WIDTH + `Z_WIDTH + `DATA_WIDTH - 1):0
 
 // --- SIM ---
-`define COLOR_START_BIT (`DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH + `DEST_WIDTH + `GEN_WIDTH)
-`define GEN_START_BIT   (`DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH + `DEST_WIDTH)
-`define DEST_START_BIT  (`DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH)
+`define COLOR_START_BIT (`DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH + `Enable_WIDTH + `DEST_WIDTH + `GEN_WIDTH)
+`define GEN_START_BIT   (`DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH + `Enable_WIDTH + `DEST_WIDTH)
+`define DEST_START_BIT  (`DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH + `Enable_WIDTH)
+`define Enable_START_BIT(`DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH + `LR_WIDTH)
 `define LR_START_BIT    (`DATA_WIDTH + `Z_WIDTH + `C_WIDTH + `MF_WIDTH)
 `define MF_START_BIT    (`DATA_WIDTH + `Z_WIDTH + `C_WIDTH)
 `define C_START_BIT     (`DATA_WIDTH + `Z_WIDTH)
@@ -267,6 +280,7 @@
 `define COLOR_RANGE     `COLOR_START_BIT + `COLOR_WIDTH - 1 : `COLOR_START_BIT
 `define GEN_RANGE       `GEN_START_BIT + `GEN_WIDTH - 1 : `GEN_START_BIT
 `define DEST_RANGE      `DEST_START_BIT + `DEST_WIDTH - 1 : `DEST_START_BIT
+`define Enable_RANGE    `Enable_START_BIT + `Enable_WIDTH - 1 : `Enable_START_BIT
 `define LR_RANGE        `LR_START_BIT + `LR_WIDTH - 1 : `LR_START_BIT
 `define MF_RANGE        `MF_START_BIT + `MF_WIDTH - 1 : `MF_START_BIT
 `define C_RANGE         `C_START_BIT + `C_WIDTH - 1 : `C_START_BIT
