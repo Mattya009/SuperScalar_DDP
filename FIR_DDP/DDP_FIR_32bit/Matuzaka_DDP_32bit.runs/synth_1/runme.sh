@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1'
+HD_PWD='C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

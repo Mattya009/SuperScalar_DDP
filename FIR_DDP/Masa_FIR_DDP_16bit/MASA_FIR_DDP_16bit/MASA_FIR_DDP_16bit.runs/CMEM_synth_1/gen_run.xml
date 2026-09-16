@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="CMEM_synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1787904955">
+<GenRun Id="CMEM_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1789547809">
+  <File Type="PA-TCL" Name="CMEM.tcl"/>
   <File Type="REPORTS-TCL" Name="CMEM_reports.tcl"/>
+  <File Type="RDS-RDS" Name="CMEM.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="CMEM_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="CMEM_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="CMEM_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="CMEM.tcl"/>
-  <File Type="RDS-RDS" Name="CMEM.vds"/>
   <File Type="RDS-DCP" Name="CMEM.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="CMEM_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="CMEM_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/CMEM" RelGenDir="$PGENDIR/CMEM">
     <File Path="$PSRCDIR/sources_1/ip/CMEM/CMEM.xci">
       <FileInfo>

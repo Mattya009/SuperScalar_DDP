@@ -57,6 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "MMRAM_RAM_synth_1" START { ROLLUP_AUTO }
 set_param general.usePosixSpawnForFork 1
+set_param chipscope.maxJobs 4
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -75,7 +76,7 @@ set_property ip_output_repo c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/MMRAM_RAM/MMRAM_RAM.xci
+read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/MMRAM_RAM/MMRAM_RAM.xci
 set_property used_in_implementation false [get_files -all c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.gen/sources_1/ip/MMRAM_RAM/MMRAM_RAM_ooc.xdc]
 
 OPTRACE "Adding files" END { }

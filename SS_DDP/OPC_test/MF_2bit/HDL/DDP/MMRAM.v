@@ -21,7 +21,7 @@ module MMRAM(Send_in, Send_out, Ack_in, Ack_out, PACKET_IN,
  (* dont_touch = "true" *) reg [`MMRAM_PACKET_IN_SIZE]       DL;
  (* dont_touch = "true" *) reg [`MMRAM_MUX_OUT_SIZE] MUX_OUT;
  (* dont_touch = "true" *) reg [`DEST_SIZE]   dest_out;
- (* dont_touch = "true" *) reg LR;
+ //(* dont_touch = "true" *) reg LR;
 
  // --- CE ---
  CE ce2(.exb(DEL), .Send_in(Send_in), .Ack_in(Ack_in), .Send_out(Send_out), .Ack_out(Ack_out), .CP(CP), .MR(MR));

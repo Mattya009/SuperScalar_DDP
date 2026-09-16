@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
 // Date        : Sat Sep 12 15:34:16 2026
 // Host        : DESKTOP-F8PDQQS running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.gen/sources_1/ip/MMRAM_RAM/MMRAM_RAM_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top MMRAM_RAM -prefix
+//               MMRAM_RAM_ MMRAM_RAM_stub.v
 // Design      : MMRAM_RAM
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

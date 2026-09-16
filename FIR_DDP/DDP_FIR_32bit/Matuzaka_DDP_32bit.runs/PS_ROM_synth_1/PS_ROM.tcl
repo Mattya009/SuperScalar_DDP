@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1/PS_ROM.tcl"
+  variable script "C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1/PS_ROM.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,11 +56,8 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "PS_ROM_synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param general.usePosixSpawnForFork 1
 set_param chipscope.maxJobs 4
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -70,17 +67,17 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.cache/wt [current_project]
-set_property parent.project_path C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.xpr [current_project]
+set_property webtalk.parent_dir C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.cache/wt [current_project]
+set_property parent.project_path C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.cache/ip [current_project]
+set_property ip_output_repo c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/PS_ROM/PS_ROM.xci
-set_property used_in_implementation false [get_files -all c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_ooc.xdc]
+read_ip -quiet C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/PS_ROM/PS_ROM.xci
+set_property used_in_implementation false [get_files -all c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -96,7 +93,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1 -new_name PS_ROM -ip [get_ips PS_ROM]]
+set cacheID [config_ip_cache -export -no_bom  -dir C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1 -new_name PS_ROM -ip [get_ips PS_ROM]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -151,32 +148,32 @@ generate_parallel_reports -reports { "report_utilization -file PS_ROM_utilizatio
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1/PS_ROM.dcp c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM.dcp
+  file copy -force C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1/PS_ROM.dcp c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_stub.v
+  write_verilog -force -mode synth_stub c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_stub.vhdl
+  write_vhdl -force -mode synth_stub c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_sim_netlist.v
+  write_verilog -force -mode funcsim c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -186,32 +183,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1/PS_ROM.dcp c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM.dcp
+  file copy -force C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1/PS_ROM.dcp c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1/PS_ROM_stub.v c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_stub.v
+  file rename -force C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1/PS_ROM_stub.v c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1/PS_ROM_stub.vhdl c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_stub.vhdl
+  file rename -force C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1/PS_ROM_stub.vhdl c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1/PS_ROM_sim_netlist.v c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_sim_netlist.v
+  file rename -force C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1/PS_ROM_sim_netlist.v c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1/PS_ROM_sim_netlist.vhdl c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_sim_netlist.vhdl
+  file rename -force C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/PS_ROM_synth_1/PS_ROM_sim_netlist.vhdl c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -219,15 +216,15 @@ if { [catch {
 close [open .end.used_ip_cache.rst w]
 }; # end if cacheID 
 
-if {[file isdir C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.ip_user_files/ip/PS_ROM]} {
+if {[file isdir C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.ip_user_files/ip/PS_ROM]} {
   catch { 
-    file copy -force c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_stub.v C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.ip_user_files/ip/PS_ROM
+    file copy -force c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_stub.v C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.ip_user_files/ip/PS_ROM
   }
 }
 
-if {[file isdir C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.ip_user_files/ip/PS_ROM]} {
+if {[file isdir C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.ip_user_files/ip/PS_ROM]} {
   catch { 
-    file copy -force c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_stub.vhdl C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.ip_user_files/ip/PS_ROM
+    file copy -force c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_stub.vhdl C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.ip_user_files/ip/PS_ROM
   }
 }
 file delete __synthesis_is_running__

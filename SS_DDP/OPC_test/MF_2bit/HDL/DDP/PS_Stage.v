@@ -32,7 +32,7 @@ module PS_Stage(Send_in, Ack_in, Send_out, Ack_out, MR, PACKET_IN, PACKET_OUT, D
  PS ps (
   .clka(CP),    // input wire clka
   .addra(dest),  // input wire [6 : 0] addra
-  .douta(PSData)  // output wire [16 : 0] douta
+  .douta(PSData)  // output wire [18 : 0] douta
 );
 
  //PS ps0(.dest(dest), .PSData(PSData), .CP(CP), .MR(MR));

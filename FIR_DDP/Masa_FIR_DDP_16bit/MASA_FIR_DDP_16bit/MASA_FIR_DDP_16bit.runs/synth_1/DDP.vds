@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Fri Aug 28 19:05:23 2026
-# Process ID         : 41408
+# Start of session at: Wed Sep 16 17:37:10 2026
+# Process ID         : 36996
 # Current directory  : C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1
 # Command line       : vivado.exe -log DDP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DDP.tcl
 # Log file           : C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/DDP.vds
@@ -19,20 +19,30 @@
 # Host memory        : 34067 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36214 MB
-# Available Virtual  : 12963 MB
+# Available Virtual  : 5052 MB
 #-----------------------------------------------------------
 source DDP.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 561.895 ; gain = 256.836
-Command: synth_design -top DDP -part xc7z010clg400-1
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 561.066 ; gain = 255.801
+Command: synth_design -top DDP -part xc7z020clg484-1
 Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
-INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [IP_Flow 19-2162] IP 'PS' is locked:
+* Current project part 'xc7z020clg484-1' and the part 'xc7z010clg400-1' used to customize the IP 'PS' do not match.
+INFO: [IP_Flow 19-2162] IP 'MMRAM_RAM' is locked:
+* Current project part 'xc7z020clg484-1' and the part 'xc7z010clg400-1' used to customize the IP 'MMRAM_RAM' do not match.
+INFO: [IP_Flow 19-2162] IP 'CMEM' is locked:
+* Current project part 'xc7z020clg484-1' and the part 'xc7z010clg400-1' used to customize the IP 'CMEM' do not match.
+INFO: [IP_Flow 19-2162] IP 'DMEM' is locked:
+* Current project part 'xc7z020clg484-1' and the part 'xc7z010clg400-1' used to customize the IP 'DMEM' do not match.
+INFO: [IP_Flow 19-2162] IP 'SubPS' is locked:
+* Current project part 'xc7z020clg484-1' and the part 'xc7z010clg400-1' used to customize the IP 'SubPS' do not match.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 30528
+INFO: [Synth 8-7075] Helper process launched with PID 34736
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1326.684 ; gain = 541.496
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1352.488 ; gain = 540.992
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-9448] extra semicolon in $unit (global) scope [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/M_Stage.v:1]
 INFO: [Synth 8-11241] undeclared symbol 'CP', assumed default net type 'wire' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/DDP.v:51]
@@ -65,22 +75,22 @@ INFO: [Synth 8-6157] synthesizing module 'Delay_2ns' [C:/lab/4B_Research/FIR_DDP
 INFO: [Synth 8-6155] done synthesizing module 'Delay_2ns' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/Peripheral/Delay_2ns.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'CF' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/C_Elements/CF.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'CE' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/C_Elements/CE.v:3]
-INFO: [Synth 8-6157] synthesizing module 'MMRAM_RAM' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-41408-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'MMRAM_RAM' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-41408-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'CMEM' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-41408-DESKTOP-F8PDQQS/realtime/CMEM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'CMEM' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-41408-DESKTOP-F8PDQQS/realtime/CMEM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'MMRAM_RAM' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-36996-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MMRAM_RAM' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-36996-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'CMEM' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-36996-DESKTOP-F8PDQQS/realtime/CMEM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'CMEM' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-36996-DESKTOP-F8PDQQS/realtime/CMEM_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'MMRAM' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/MMRAM.v:3]
 INFO: [Synth 8-6157] synthesizing module 'PS_Stage' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/PS_Stage.v:3]
-INFO: [Synth 8-6157] synthesizing module 'PS' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-41408-DESKTOP-F8PDQQS/realtime/PS_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PS' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-41408-DESKTOP-F8PDQQS/realtime/PS_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PS' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-36996-DESKTOP-F8PDQQS/realtime/PS_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PS' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-36996-DESKTOP-F8PDQQS/realtime/PS_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'PS_Stage' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/PS_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'FP_Stage' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/FP_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/ALU.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/ALU.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'FP_Stage' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/FP_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'MA_Stage' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/MA_Stage.v:3]
-INFO: [Synth 8-6157] synthesizing module 'DMEM' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-41408-DESKTOP-F8PDQQS/realtime/DMEM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DMEM' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-41408-DESKTOP-F8PDQQS/realtime/DMEM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DMEM' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-36996-DESKTOP-F8PDQQS/realtime/DMEM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DMEM' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-36996-DESKTOP-F8PDQQS/realtime/DMEM_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'MA_Stage' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/MA_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'COPY_Stage' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/COPY_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'CX2' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/C_Elements/CX2.v:2]
@@ -91,24 +101,24 @@ INFO: [Synth 8-6155] done synthesizing module 'COPY_Stage' (0#1) [C:/lab/4B_Rese
 INFO: [Synth 8-6157] synthesizing module 'B_Stage' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/B_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'CB' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/C_Elements/CB.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'CB' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/C_Elements/CB.v:2]
-INFO: [Synth 8-6157] synthesizing module 'SubPS' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-41408-DESKTOP-F8PDQQS/realtime/SubPS_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'SubPS' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-41408-DESKTOP-F8PDQQS/realtime/SubPS_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'SubPS' [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-36996-DESKTOP-F8PDQQS/realtime/SubPS_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SubPS' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/.Xil/Vivado-36996-DESKTOP-F8PDQQS/realtime/SubPS_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'B_Stage' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/B_Stage.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'DDP' (0#1) [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/DDP.v:3]
 WARNING: [Synth 8-5837] Detected dual asynchronous set and preset for register w_q_reg in module DL1S. This is not a recommended register style for Xilinx devices  [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/C_Elements/DL1S.v:10]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1461.672 ; gain = 676.484
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1488.703 ; gain = 677.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1461.672 ; gain = 676.484
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1488.703 ; gain = 677.207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1461.672 ; gain = 676.484
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1488.703 ; gain = 677.207
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1461.672 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1488.703 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -129,20 +139,20 @@ Parsing XDC File [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16b
 Finished Parsing XDC File [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1538.340 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1555.805 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.654 . Memory (MB): peak = 1538.340 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.253 . Memory (MB): peak = 1555.805 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1538.340 ; gain = 753.152
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1555.805 ; gain = 744.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
-Loading part: xc7z010clg400-1
+Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1538.340 ; gain = 753.152
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1555.805 ; gain = 744.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -282,10 +292,10 @@ WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constrain
 WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/XDC/.xdc, line 1).
 WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/XDC/.xdc, line 1).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:16 ; elapsed = 00:02:24 . Memory (MB): peak = 1538.340 ; gain = 753.152
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1555.805 ; gain = 744.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:17 ; elapsed = 00:02:25 . Memory (MB): peak = 1538.340 ; gain = 753.152
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:25 ; elapsed = 00:01:28 . Memory (MB): peak = 1555.805 ; gain = 744.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -327,8 +337,8 @@ Finished RTL Component Statistics
 Start Part Resource Summary
 ---------------------------------------------------------------------------------
 Part Resources:
-DSPs: 80 (col length:40)
-BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
@@ -338,7 +348,7 @@ Start Cross Boundary and Area Optimization
 DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
 DSP Report: operator p_0_out is absorbed into DSP p_0_out.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:26 ; elapsed = 00:02:35 . Memory (MB): peak = 1628.016 ; gain = 842.828
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:01:42 . Memory (MB): peak = 1652.082 ; gain = 840.586
 ---------------------------------------------------------------------------------
  Sort Area is  p_0_out_0 : 0 0 : 1937 1937 : Used 1 time 0
 ---------------------------------------------------------------------------------
@@ -360,19 +370,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:14 ; elapsed = 00:03:25 . Memory (MB): peak = 1736.289 ; gain = 951.102
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:23 ; elapsed = 00:02:29 . Memory (MB): peak = 1759.914 ; gain = 948.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:14 ; elapsed = 00:03:26 . Memory (MB): peak = 1738.492 ; gain = 953.305
+Finished Timing Optimization : Time (s): cpu = 00:02:23 ; elapsed = 00:02:29 . Memory (MB): peak = 1761.848 ; gain = 950.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:16 ; elapsed = 00:03:28 . Memory (MB): peak = 1753.637 ; gain = 968.449
+Finished Technology Mapping : Time (s): cpu = 00:02:25 ; elapsed = 00:02:31 . Memory (MB): peak = 1770.934 ; gain = 959.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -400,37 +410,37 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/C_Elements/DL1S.v:10]
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/HDL/DDP/B_Stage.v:22]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:23 ; elapsed = 00:03:36 . Memory (MB): peak = 1991.000 ; gain = 1205.812
+Finished IO Insertion : Time (s): cpu = 00:02:32 ; elapsed = 00:02:39 . Memory (MB): peak = 2005.895 ; gain = 1194.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:23 ; elapsed = 00:03:36 . Memory (MB): peak = 1991.000 ; gain = 1205.812
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:32 ; elapsed = 00:02:39 . Memory (MB): peak = 2005.895 ; gain = 1194.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:24 ; elapsed = 00:03:36 . Memory (MB): peak = 1991.000 ; gain = 1205.812
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:33 ; elapsed = 00:02:39 . Memory (MB): peak = 2005.895 ; gain = 1194.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:24 ; elapsed = 00:03:36 . Memory (MB): peak = 1991.000 ; gain = 1205.812
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:33 ; elapsed = 00:02:39 . Memory (MB): peak = 2005.895 ; gain = 1194.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:24 ; elapsed = 00:03:37 . Memory (MB): peak = 1991.000 ; gain = 1205.812
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:33 ; elapsed = 00:02:40 . Memory (MB): peak = 2005.895 ; gain = 1194.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:24 ; elapsed = 00:03:37 . Memory (MB): peak = 1991.000 ; gain = 1205.812
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:33 ; elapsed = 00:02:40 . Memory (MB): peak = 2005.895 ; gain = 1194.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -481,18 +491,18 @@ Report Cell Usage:
 |20    |OBUF      |    40|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:24 ; elapsed = 00:03:37 . Memory (MB): peak = 1991.000 ; gain = 1205.812
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:33 ; elapsed = 00:02:40 . Memory (MB): peak = 2005.895 ; gain = 1194.398
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:03 ; elapsed = 00:03:29 . Memory (MB): peak = 1991.000 ; gain = 1129.145
-Synthesis Optimization Complete : Time (s): cpu = 00:03:24 ; elapsed = 00:03:37 . Memory (MB): peak = 1991.000 ; gain = 1205.812
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:24 ; elapsed = 00:02:36 . Memory (MB): peak = 2005.895 ; gain = 1127.297
+Synthesis Optimization Complete : Time (s): cpu = 00:02:34 ; elapsed = 00:02:40 . Memory (MB): peak = 2005.895 ; gain = 1194.398
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.112 . Memory (MB): peak = 1996.148 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 2011.035 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 174 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2003.840 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2018.695 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   FDCP => FDCP (FDCE, FDPE, LDCE, LUT3, VCC): 1 instance 
@@ -500,10 +510,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 Synth Design complete | Checksum: f6e8f747
 INFO: [Common 17-83] Releasing license: Synthesis
-73 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+78 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:33 ; elapsed = 00:03:47 . Memory (MB): peak = 2003.840 ; gain = 1430.438
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2003.840 ; gain = 0.000
+synth_design: Time (s): cpu = 00:02:45 ; elapsed = 00:02:54 . Memory (MB): peak = 2018.695 ; gain = 1440.805
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2018.695 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/lab/4B_Research/FIR_DDP/Masa_FIR_DDP_16bit/MASA_FIR_DDP_16bit/MASA_FIR_DDP_16bit.runs/synth_1/DDP.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file DDP_utilization_synth.rpt -pb DDP_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Aug 28 19:09:21 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 16 17:40:16 2026...

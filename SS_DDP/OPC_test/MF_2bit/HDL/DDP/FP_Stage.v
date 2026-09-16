@@ -25,11 +25,9 @@ module FP_Stage(Send_in, Ack_in, Send_out, Ack_out, MR, DEL, PACKET_IN, WRITE_EN
 
  // --- ALU ---
  assign ALU_PACKET_IN = DL[`FP_ALU_PACKET_IN_RANGE];
- assign DataL_1 = DL[`FP_DATAL_1_RANGE];
- assign DataR_1 = DL[`FP_DATAR_1_RANGE];
- assign DataL_2 = DL[`FP_DATAL_2_RANGE];
- assign DataR_2 = DL[`FP_DATAR_2_RANGE];
+ assign DataL = DL[`FP_DATAL_RANGE];
+ assign DataR = DL[`FP_DATAR_RANGE];
 
- ALU alu0(.ALU_PACKET_IN(ALU_PACKET_IN), .DataL_1(DataL_1), .DataR_1(DataR_1), .DataL_2(DataL_2), .DataR_2(DataR_2), 
-            .WRITE_EN(WRITE_EN), .WRITE_DATA(WRITE_DATA), .PACKET_OUT(PACKET_OUT), .LOAD_FLG(LOAD_FLG));
+ ALU alu0(.ALU_PACKET_IN(ALU_PACKET_IN), .DataL(DataL), .DataR(DataR), .WRITE_EN(WRITE_EN), 
+            .WRITE_DATA(WRITE_DATA), .PACKET_OUT(PACKET_OUT), .LOAD_FLG(LOAD_FLG));
 endmodule

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/DDP.tcl"
+  variable script "C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/DDP.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,11 +56,8 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param general.usePosixSpawnForFork 1
 set_param chipscope.maxJobs 4
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020iclg484-1L
 
@@ -68,55 +65,55 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.cache/wt [current_project]
-set_property parent.project_path C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.xpr [current_project]
+set_property webtalk.parent_dir C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.cache/wt [current_project]
+set_property parent.project_path C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.cache/ip [current_project]
+set_property ip_output_repo c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Coe_files/CMEMFIR.coe
-add_files {{c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Coe_files/PS -FIR.coe}}
-add_files c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Coe_files/SubPS.coe
-read_verilog C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/macro.vh
+add_files C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Coe_files/CMEMFIR.coe
+add_files {{C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Coe_files/PS -FIR.coe}}
+add_files C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Coe_files/SubPS.coe
+read_verilog C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/macro.vh
 read_verilog -library xil_defaultlib {
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/B.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/C.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CB.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CE.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CF.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CJ.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CM.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/COPY.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CX2.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/C_Cycle.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/delay_Elements/Delay.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/FP.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/M.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MA.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMCAM.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMCAM_AM_OR_MA.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMCAM_ENTRY_FD.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMRAM.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/PS.v
-  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/DDP.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/B.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/C.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CB.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CE.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CF.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CJ.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CM.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/COPY.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CX2.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/C_Cycle.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/delay_Elements/Delay.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/FP.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/M.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MA.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMCAM.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMCAM_AM_OR_MA.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMCAM_ENTRY_FD.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMRAM.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/PS.v
+  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/DDP.v
 }
-read_ip -quiet c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/MMRAM_RAM/MMRAM_RAM.xci
-set_property used_in_implementation false [get_files -all c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MMRAM_RAM/MMRAM_RAM_ooc.xdc]
+read_ip -quiet C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/MMRAM_RAM/MMRAM_RAM.xci
+set_property used_in_implementation false [get_files -all c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MMRAM_RAM/MMRAM_RAM_ooc.xdc]
 
-read_ip -quiet c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/MA_DMEM/MA_DMEM.xci
-set_property used_in_implementation false [get_files -all c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MA_DMEM/MA_DMEM_ooc.xdc]
+read_ip -quiet C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/MA_DMEM/MA_DMEM.xci
+set_property used_in_implementation false [get_files -all c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MA_DMEM/MA_DMEM_ooc.xdc]
 
-read_ip -quiet c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/MMRAM_CMEM/MMRAM_CMEM.xci
-set_property used_in_implementation false [get_files -all c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MMRAM_CMEM/MMRAM_CMEM_ooc.xdc]
+read_ip -quiet C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/MMRAM_CMEM/MMRAM_CMEM.xci
+set_property used_in_implementation false [get_files -all c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MMRAM_CMEM/MMRAM_CMEM_ooc.xdc]
 
-read_ip -quiet c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/PS_ROM/PS_ROM.xci
-set_property used_in_implementation false [get_files -all c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_ooc.xdc]
+read_ip -quiet C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/PS_ROM/PS_ROM.xci
+set_property used_in_implementation false [get_files -all c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM_ooc.xdc]
 
-read_ip -quiet c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/B_SubPS/B_SubPS.xci
-set_property used_in_implementation false [get_files -all c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/B_SubPS/B_SubPS_ooc.xdc]
+read_ip -quiet C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/B_SubPS/B_SubPS.xci
+set_property used_in_implementation false [get_files -all c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/B_SubPS/B_SubPS_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -127,12 +124,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc
-set_property used_in_implementation false [get_files C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc]
+read_xdc C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc
+set_property used_in_implementation false [get_files C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/utils_1/imports/synth_1/DDP.dcp
+read_checkpoint -auto_incremental -incremental C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/utils_1/imports/synth_1/DDP.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

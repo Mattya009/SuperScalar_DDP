@@ -56,13 +56,12 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "DMEM_synth_1" START { ROLLUP_AUTO }
-set_param general.maxThreads 32
 set_param general.usePosixSpawnForFork 1
 set_param chipscope.maxJobs 4
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xc7z010clg400-1
+create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -101,7 +100,7 @@ if { $cacheID == "" } {
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top DMEM -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+synth_design -top DMEM -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
 OPTRACE "synth_design" END { }
 OPTRACE "Write IP Cache" START { }
 

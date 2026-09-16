@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/impl_1/DDP.tcl"
+  variable script "C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/impl_1/DDP.tcl"
   variable category "vivado_impl"
 }
 
@@ -97,9 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -107,19 +104,39 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param checkpoint.writeSynthRtdsInDcp 1
-  set_param general.maxThreads 8
   set_param general.usePosixSpawnForFork 1
   set_param chipscope.maxJobs 4
-  set_param dlyest.enablePhysicalLayerCollector 0
   set_param runs.launchOptions { -jobs 16  }
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/impl_1/DDP.dcp
-  set_property webtalk.parent_dir C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.cache/wt [current_project]
-  set_property parent.project_path C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.xpr [current_project]
-  set_property ip_output_repo C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.cache/ip [current_project]
+OPTRACE "create in-memory project" START { }
+  create_project -in_memory -part xc7z020iclg484-1L
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+OPTRACE "create in-memory project" END { }
+OPTRACE "set parameters" START { }
+  set_property webtalk.parent_dir C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.cache/wt [current_project]
+  set_property parent.project_path C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.xpr [current_project]
+  set_property ip_output_repo C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+OPTRACE "set parameters" END { }
+OPTRACE "add files" START { }
+  add_files -quiet C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/DDP.dcp
+  read_ip -quiet C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/MMRAM_RAM/MMRAM_RAM.xci
+  read_ip -quiet C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/MA_DMEM/MA_DMEM.xci
+  read_ip -quiet C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/MMRAM_CMEM/MMRAM_CMEM.xci
+  read_ip -quiet C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/PS_ROM/PS_ROM.xci
+  read_ip -quiet C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/sources_1/ip/B_SubPS/B_SubPS.xci
+OPTRACE "read constraints: implementation" START { }
+  read_xdc C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc
+OPTRACE "read constraints: implementation" END { }
+OPTRACE "read constraints: implementation_pre" START { }
+OPTRACE "read constraints: implementation_pre" END { }
+OPTRACE "add files" END { }
+OPTRACE "link_design" START { }
+  link_design -top DDP -part xc7z020iclg484-1L 
+OPTRACE "link_design" END { }
+OPTRACE "gray box cells" START { }
+OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }

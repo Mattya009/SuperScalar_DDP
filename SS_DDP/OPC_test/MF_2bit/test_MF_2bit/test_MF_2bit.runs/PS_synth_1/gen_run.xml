@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="PS_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1789194765">
+<GenRun Id="PS_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1789547650">
+  <File Type="PA-TCL" Name="PS.tcl"/>
   <File Type="REPORTS-TCL" Name="PS_reports.tcl"/>
+  <File Type="RDS-RDS" Name="PS.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="PS_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="PS_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="PS_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="PS.tcl"/>
-  <File Type="RDS-RDS" Name="PS.vds"/>
   <File Type="RDS-DCP" Name="PS.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="PS_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="PS_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/PS" RelGenDir="$PGENDIR/PS">
     <File Path="$PSRCDIR/sources_1/ip/PS/PS.xci">
       <FileInfo>
@@ -34,6 +37,16 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/DDP.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="UsedInSteps" Val="synth_1_copy_1"/>
+        <Attr Name="UsedInSteps" Val="synth_1_copy_2"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>

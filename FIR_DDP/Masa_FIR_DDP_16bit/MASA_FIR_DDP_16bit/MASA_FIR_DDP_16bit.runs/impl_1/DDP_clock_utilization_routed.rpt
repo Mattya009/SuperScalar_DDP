@@ -1,11 +1,11 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Fri Aug 28 19:10:34 2026
+| Date         : Wed Sep 16 17:42:09 2026
 | Host         : DESKTOP-F8PDQQS running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file DDP_clock_utilization_routed.rpt
 | Design       : DDP
-| Device       : 7z010-clg400
+| Device       : 7z020-clg484
 | Speed File   : -1  PRODUCTION 1.12 2019-11-22
 | Design State : Routed
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -28,12 +28,12 @@ Table of Contents
 | Type     | Used | Available | LOC | Clock Region | Pblock |
 +----------+------+-----------+-----+--------------+--------+
 | BUFGCTRL |    0 |        32 |   0 |            0 |      0 |
-| BUFH     |    0 |        48 |   0 |            0 |      0 |
-| BUFIO    |    0 |         8 |   0 |            0 |      0 |
-| BUFMR    |    0 |         4 |   0 |            0 |      0 |
-| BUFR     |    0 |         8 |   0 |            0 |      0 |
-| MMCM     |    0 |         2 |   0 |            0 |      0 |
-| PLL      |    0 |         2 |   0 |            0 |      0 |
+| BUFH     |    0 |        72 |   0 |            0 |      0 |
+| BUFIO    |    0 |        16 |   0 |            0 |      0 |
+| BUFMR    |    0 |         8 |   0 |            0 |      0 |
+| BUFR     |    0 |        16 |   0 |            0 |      0 |
+| MMCM     |    0 |         4 |   0 |            0 |      0 |
+| PLL      |    0 |         4 |   0 |            0 |      0 |
 +----------+------+-----------+-----+--------------+--------+
 
 
@@ -63,18 +63,18 @@ Table of Contents
 +----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+-----------------------------------------+-----------------------------------+
 | Local Id | Driver Type/Pin | Constraint | Site/BEL           | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                              | Net                               |
 +----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+-----------------------------------------+-----------------------------------+
-| 0        | LUT1/O          | None       | SLICE_X40Y56/A6LUT | X1Y1         |        1326 |               0 |              |       | MMCAM/c1/CP_INST_0/O                    | MMCAM/c1/CP                       |
-| 1        | LUT1/O          | None       | SLICE_X21Y75/B6LUT | X0Y1         |          63 |               0 |              |       | FP_Stage/ce4/cf0/CP_INST_0/O            | FP_Stage/ce4/cf0/CP               |
-| 2        | LUT1/O          | None       | SLICE_X23Y71/A6LUT | X1Y1         |          53 |               0 |              |       | PS_Stage/c3/CP_INST_0/O                 | PS_Stage/c3/CP                    |
-| 3        | LUT1/O          | None       | SLICE_X34Y89/B6LUT | X1Y1         |          42 |               1 |              |       | COPY_Stage/cx2_6/cf0/CP_INST_0/O        | COPY_Stage/cx2_6/cf0/CP           |
-| 4        | LUT1/O          | None       | SLICE_X24Y88/A6LUT | X1Y1         |          42 |               0 |              |       | MA_Stage/c5/CP_INST_0/O                 | MA_Stage/c5/CP                    |
-| 5        | LUT1/O          | None       | SLICE_X37Y57/A6LUT | X1Y1         |          41 |               0 |              |       | MMRAM/ce2/cf0/CP_INST_0/O               | MMRAM/ce2/cf0/CP                  |
-| 6        | LUT1/O          | None       | SLICE_X42Y56/A6LUT | X1Y1         |          40 |               0 |              |       | B_Stage/cb7/CF1/CP_INST_0/O             | B_Stage/cb7/CF1/CP                |
-| 7        | LUT1/O          | None       | SLICE_X41Y47/C6LUT | X1Y0         |          38 |               0 |              |       | C10/CP_INST_0/O                         | C10/CP                            |
-| 8        | LUT1/O          | None       | SLICE_X40Y47/C5LUT | X1Y0         |          38 |               2 |              |       | M_Stage/cm0/cj1/CP_INST_0/O             | M_Stage/cm0/cj1/CP                |
-| 9        | LUT1/O          | None       | SLICE_X39Y48/B6LUT | X1Y0         |          38 |               2 |              |       | M_Stage/cm0/cj2/CP_INST_0/O             | M_Stage/cm0/cj2/CP                |
-| 10       | LUT1/O          | None       | SLICE_X38Y87/D6LUT | X1Y1         |           3 |               0 |              |       | COPY_Stage/cx2_6/DL1S_cp_inferred_i_1/O | COPY_Stage/cx2_6/DL1S_cp          |
-| 11       | LUT1/O          | None       | SLICE_X36Y88/D5LUT | X1Y1         |           0 |               2 |              |       | COPY_Stage/cx2_6/dl1s/w_q_i_2/O         | COPY_Stage/cx2_6/dl1s/w_q_i_2_n_0 |
+| 0        | LUT1/O          | None       | SLICE_X18Y22/A6LUT | X0Y0         |        1326 |               0 |              |       | MMCAM/c1/CP_INST_0/O                    | MMCAM/c1/CP                       |
+| 1        | LUT1/O          | None       | SLICE_X32Y12/B6LUT | X0Y0         |          63 |               0 |              |       | FP_Stage/ce4/cf0/CP_INST_0/O            | FP_Stage/ce4/cf0/CP               |
+| 2        | LUT1/O          | None       | SLICE_X25Y15/B6LUT | X0Y0         |          53 |               0 |              |       | PS_Stage/c3/CP_INST_0/O                 | PS_Stage/c3/CP                    |
+| 3        | LUT1/O          | None       | SLICE_X33Y19/A6LUT | X0Y0         |          42 |               1 |              |       | COPY_Stage/cx2_6/cf0/CP_INST_0/O        | COPY_Stage/cx2_6/cf0/CP           |
+| 4        | LUT1/O          | None       | SLICE_X32Y14/A6LUT | X0Y0         |          42 |               0 |              |       | MA_Stage/c5/CP_INST_0/O                 | MA_Stage/c5/CP                    |
+| 5        | LUT1/O          | None       | SLICE_X27Y18/C6LUT | X0Y0         |          41 |               0 |              |       | MMRAM/ce2/cf0/CP_INST_0/O               | MMRAM/ce2/cf0/CP                  |
+| 6        | LUT1/O          | None       | SLICE_X23Y24/A6LUT | X0Y0         |          40 |               0 |              |       | B_Stage/cb7/CF1/CP_INST_0/O             | B_Stage/cb7/CF1/CP                |
+| 7        | LUT1/O          | None       | SLICE_X20Y25/D6LUT | X0Y0         |          38 |               0 |              |       | C10/CP_INST_0/O                         | C10/CP                            |
+| 8        | LUT1/O          | None       | SLICE_X11Y24/A6LUT | X0Y0         |          38 |               2 |              |       | M_Stage/cm0/cj1/CP_INST_0/O             | M_Stage/cm0/cj1/CP                |
+| 9        | LUT1/O          | None       | SLICE_X13Y25/A6LUT | X0Y0         |          38 |               2 |              |       | M_Stage/cm0/cj2/CP_INST_0/O             | M_Stage/cm0/cj2/CP                |
+| 10       | LUT1/O          | None       | SLICE_X31Y22/A6LUT | X0Y0         |           3 |               0 |              |       | COPY_Stage/cx2_6/DL1S_cp_inferred_i_1/O | COPY_Stage/cx2_6/DL1S_cp          |
+| 11       | LUT1/O          | None       | SLICE_X31Y22/B6LUT | X0Y0         |           0 |               2 |              |       | COPY_Stage/cx2_6/dl1s/w_q_i_2/O         | COPY_Stage/cx2_6/dl1s/w_q_i_2_n_0 |
 +----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+-----------------------------------------+-----------------------------------+
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
@@ -89,10 +89,12 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1100 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   31 |  1100 |    8 |   350 |    0 |    40 |    0 |    20 |    0 |    20 |
-| X0Y1              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  147 |  1100 |   48 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1540 |  1100 |  470 |   350 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1718 |  2500 |  715 |  1000 |    0 |    60 |    0 |    30 |    0 |    60 |
+| X1Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  3200 |    0 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X0Y1              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2600 |    0 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X0Y2              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1200 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2600 |    0 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -104,6 +106,7 @@ All Modules
 +----+----+----+
 |    | X0 | X1 |
 +----+----+----+
+| Y2 |  0 |  0 |
 | Y1 |  0 |  0 |
 | Y0 |  0 |  0 |
 +----+----+----+

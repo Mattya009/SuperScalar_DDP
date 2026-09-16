@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
--- Date        : Sat Sep 12 15:34:17 2026
+-- Date        : Sat Sep 12 15:34:16 2026
 -- Host        : DESKTOP-F8PDQQS running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.gen/sources_1/ip/SubPS/SubPS_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top SubPS -prefix
+--               SubPS_ SubPS_stub.vhdl
 -- Design      : SubPS
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

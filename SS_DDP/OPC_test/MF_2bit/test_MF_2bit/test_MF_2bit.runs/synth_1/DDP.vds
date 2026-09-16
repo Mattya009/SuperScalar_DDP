@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Sat Sep 12 16:09:40 2026
-# Process ID         : 23416
+# Start of session at: Wed Sep 16 17:35:26 2026
+# Process ID         : 28072
 # Current directory  : C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1
 # Command line       : vivado.exe -log DDP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DDP.tcl
 # Log file           : C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/DDP.vds
@@ -19,24 +19,26 @@
 # Host memory        : 34067 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36214 MB
-# Available Virtual  : 10577 MB
+# Available Virtual  : 6547 MB
 #-----------------------------------------------------------
 source DDP.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 559.117 ; gain = 254.828
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 558.590 ; gain = 254.949
+Command: read_checkpoint -auto_incremental -incremental C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/utils_1/imports/synth_1/DDP.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/utils_1/imports/synth_1/DDP.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top DDP -part xc7z020clg484-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 15020
+INFO: [Synth 8-7075] Helper process launched with PID 36588
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1344.648 ; gain = 539.902
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1345.645 ; gain = 540.910
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-9339] data object 'LR' is already declared [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/MMRAM.v:24]
-INFO: [Synth 8-6826] previous declaration of 'LR' is from here [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/MMRAM.v:19]
-CRITICAL WARNING: [Synth 8-11152] second declaration of 'LR' is ignored [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/MMRAM.v:24]
 WARNING: [Synth 8-9448] extra semicolon in $unit (global) scope [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/M_Stage.v:1]
 INFO: [Synth 8-11241] undeclared symbol 'CP', assumed default net type 'wire' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/DDP.v:51]
 INFO: [Synth 8-6157] synthesizing module 'DDP' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/DDP.v:3]
@@ -69,17 +71,17 @@ INFO: [Synth 8-6157] synthesizing module 'Delay_2ns' [C:/lab/4B_Research/SS_DDP/
 INFO: [Synth 8-6155] done synthesizing module 'Delay_2ns' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/Peripheral/Delay_2ns.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'CF' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/C_Elements/CF.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'CE' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/C_Elements/CE.v:3]
-INFO: [Synth 8-6157] synthesizing module 'MMRAM_RAM' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-23416-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'MMRAM_RAM' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-23416-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'MMRAM_RAM' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-28072-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MMRAM_RAM' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-28072-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
 WARNING: [Synth 8-689] width (39) of port connection 'dina' does not match port width (38) of module 'MMRAM_RAM' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/MMRAM.v:40]
 WARNING: [Synth 8-689] width (39) of port connection 'douta' does not match port width (38) of module 'MMRAM_RAM' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/MMRAM.v:41]
-INFO: [Synth 8-6157] synthesizing module 'CMEM' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-23416-DESKTOP-F8PDQQS/realtime/CMEM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'CMEM' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-23416-DESKTOP-F8PDQQS/realtime/CMEM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'CMEM' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-28072-DESKTOP-F8PDQQS/realtime/CMEM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'CMEM' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-28072-DESKTOP-F8PDQQS/realtime/CMEM_stub.v:6]
 INFO: [Synth 8-226] default block is never used [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/MMRAM.v:74]
 INFO: [Synth 8-6155] done synthesizing module 'MMRAM' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/MMRAM.v:3]
 INFO: [Synth 8-6157] synthesizing module 'PS_Stage' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/PS_Stage.v:3]
-INFO: [Synth 8-6157] synthesizing module 'PS' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-23416-DESKTOP-F8PDQQS/realtime/PS_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PS' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-23416-DESKTOP-F8PDQQS/realtime/PS_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PS' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-28072-DESKTOP-F8PDQQS/realtime/PS_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PS' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-28072-DESKTOP-F8PDQQS/realtime/PS_stub.v:6]
 WARNING: [Synth 8-689] width (7) of port connection 'addra' does not match port width (6) of module 'PS' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/PS_Stage.v:34]
 INFO: [Synth 8-6155] done synthesizing module 'PS_Stage' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/PS_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'FP_Stage' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/FP_Stage.v:3]
@@ -87,8 +89,8 @@ INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/lab/4B_Research/SS_DDP/OPC_te
 INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/ALU.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'FP_Stage' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/FP_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'MA_Stage' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/MA_Stage.v:3]
-INFO: [Synth 8-6157] synthesizing module 'DMEM' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-23416-DESKTOP-F8PDQQS/realtime/DMEM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DMEM' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-23416-DESKTOP-F8PDQQS/realtime/DMEM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DMEM' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-28072-DESKTOP-F8PDQQS/realtime/DMEM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DMEM' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-28072-DESKTOP-F8PDQQS/realtime/DMEM_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'MA_Stage' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/MA_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'COPY_Stage' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/COPY_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'CX2' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/C_Elements/CX2.v:2]
@@ -99,26 +101,26 @@ INFO: [Synth 8-6155] done synthesizing module 'COPY_Stage' (0#1) [C:/lab/4B_Rese
 INFO: [Synth 8-6157] synthesizing module 'B_Stage' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/B_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'CB' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/C_Elements/CB.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'CB' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/C_Elements/CB.v:2]
-INFO: [Synth 8-6157] synthesizing module 'SubPS' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-23416-DESKTOP-F8PDQQS/realtime/SubPS_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'SubPS' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-23416-DESKTOP-F8PDQQS/realtime/SubPS_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'SubPS' [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-28072-DESKTOP-F8PDQQS/realtime/SubPS_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SubPS' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/.Xil/Vivado-28072-DESKTOP-F8PDQQS/realtime/SubPS_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'B_Stage' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/B_Stage.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'DDP' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/DDP.v:3]
 WARNING: [Synth 8-5837] Detected dual asynchronous set and preset for register w_q_reg in module DL1S. This is not a recommended register style for Xilinx devices  [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/C_Elements/DL1S.v:10]
 WARNING: [Synth 8-7129] Port ALU_PACKET_IN[3] in module ALU is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ALU_PACKET_IN[1] in module ALU is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1481.848 ; gain = 677.102
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1483.555 ; gain = 678.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1481.848 ; gain = 677.102
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1483.555 ; gain = 678.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1481.848 ; gain = 677.102
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1483.555 ; gain = 678.820
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1481.848 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1483.555 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -137,20 +139,22 @@ Parsing XDC File [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/XDC/.xdc]
 Finished Parsing XDC File [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/XDC/.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1525.438 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1539.992 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.289 . Memory (MB): peak = 1525.438 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.307 . Memory (MB): peak = 1539.992 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1525.438 ; gain = 720.691
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1539.992 ; gain = 735.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1525.438 ; gain = 720.691
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1539.992 ; gain = 735.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -293,10 +297,10 @@ WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constrain
 WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/XDC/.xdc, line 1).
 WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/XDC/.xdc, line 1).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:01:14 . Memory (MB): peak = 1525.438 ; gain = 720.691
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:43 ; elapsed = 00:01:47 . Memory (MB): peak = 1539.992 ; gain = 735.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 1525.438 ; gain = 720.691
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:45 ; elapsed = 00:01:48 . Memory (MB): peak = 1539.992 ; gain = 735.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -366,7 +370,7 @@ DSP Report: operator p_0_out is absorbed into DSP p_0_out.
 WARNING: [Synth 8-7129] Port ALU_PACKET_IN[3] in module ALU is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ALU_PACKET_IN[1] in module ALU is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:01:26 . Memory (MB): peak = 1660.277 ; gain = 855.531
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:59 ; elapsed = 00:02:03 . Memory (MB): peak = 1650.070 ; gain = 845.336
 ---------------------------------------------------------------------------------
  Sort Area is  p_0_out_0 : 0 0 : 2701 4864 : Used 1 time 0
  Sort Area is  p_0_out_0 : 0 1 : 2163 4864 : Used 1 time 0
@@ -394,19 +398,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:56 ; elapsed = 00:02:01 . Memory (MB): peak = 1760.566 ; gain = 955.820
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:53 ; elapsed = 00:02:59 . Memory (MB): peak = 1748.395 ; gain = 943.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:57 ; elapsed = 00:02:01 . Memory (MB): peak = 1763.832 ; gain = 959.086
+Finished Timing Optimization : Time (s): cpu = 00:02:53 ; elapsed = 00:02:59 . Memory (MB): peak = 1751.699 ; gain = 946.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:58 ; elapsed = 00:02:02 . Memory (MB): peak = 1780.148 ; gain = 975.402
+Finished Technology Mapping : Time (s): cpu = 00:02:54 ; elapsed = 00:03:01 . Memory (MB): peak = 1768.195 ; gain = 963.461
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -434,37 +438,37 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/C_Elements/DL1S.v:10]
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/B_Stage.v:23]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:01 ; elapsed = 00:02:06 . Memory (MB): peak = 2016.566 ; gain = 1211.820
+Finished IO Insertion : Time (s): cpu = 00:02:59 ; elapsed = 00:03:06 . Memory (MB): peak = 2004.754 ; gain = 1200.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:01 ; elapsed = 00:02:06 . Memory (MB): peak = 2016.566 ; gain = 1211.820
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:59 ; elapsed = 00:03:06 . Memory (MB): peak = 2004.754 ; gain = 1200.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:02 ; elapsed = 00:02:06 . Memory (MB): peak = 2016.566 ; gain = 1211.820
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:59 ; elapsed = 00:03:06 . Memory (MB): peak = 2004.754 ; gain = 1200.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:02 ; elapsed = 00:02:06 . Memory (MB): peak = 2016.566 ; gain = 1211.820
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:59 ; elapsed = 00:03:06 . Memory (MB): peak = 2004.754 ; gain = 1200.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:02 ; elapsed = 00:02:06 . Memory (MB): peak = 2016.566 ; gain = 1211.820
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:00 ; elapsed = 00:03:06 . Memory (MB): peak = 2004.754 ; gain = 1200.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:02 ; elapsed = 00:02:06 . Memory (MB): peak = 2016.566 ; gain = 1211.820
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:00 ; elapsed = 00:03:06 . Memory (MB): peak = 2004.754 ; gain = 1200.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -518,30 +522,29 @@ Report Cell Usage:
 |20    |OBUF      |    58|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:02 ; elapsed = 00:02:06 . Memory (MB): peak = 2016.566 ; gain = 1211.820
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:00 ; elapsed = 00:03:06 . Memory (MB): peak = 2004.754 ; gain = 1200.020
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:52 ; elapsed = 00:02:03 . Memory (MB): peak = 2016.566 ; gain = 1168.230
-Synthesis Optimization Complete : Time (s): cpu = 00:02:02 ; elapsed = 00:02:07 . Memory (MB): peak = 2016.566 ; gain = 1211.820
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:46 ; elapsed = 00:03:03 . Memory (MB): peak = 2004.754 ; gain = 1143.582
+Synthesis Optimization Complete : Time (s): cpu = 00:03:00 ; elapsed = 00:03:07 . Memory (MB): peak = 2004.754 ; gain = 1200.020
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2021.699 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2009.902 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 224 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2029.359 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2017.559 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   FDCP => FDCP (FDCE, FDPE, LDCE, LUT3, VCC): 1 instance 
   LDC => LDCE (inverted pins: G): 1 instance 
 
-Synth Design complete | Checksum: 4258e256
+Synth Design complete | Checksum: c875ecd0
 INFO: [Common 17-83] Releasing license: Synthesis
-75 Infos, 20 Warnings, 2 Critical Warnings and 0 Errors encountered.
+80 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:07 ; elapsed = 00:02:13 . Memory (MB): peak = 2029.359 ; gain = 1457.965
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2029.359 ; gain = 0.000
+synth_design: Time (s): cpu = 00:03:06 ; elapsed = 00:03:16 . Memory (MB): peak = 2017.559 ; gain = 1446.230
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2017.559 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/synth_1/DDP.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file DDP_utilization_synth.rpt -pb DDP_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Sep 12 16:12:03 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 16 17:38:54 2026...

@@ -3,12 +3,12 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Thu Aug 20 16:23:48 2026
-# Process ID         : 14548
-# Current directory  : C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1
+# Start of session at: Wed Sep 16 17:49:03 2026
+# Process ID         : 33628
+# Current directory  : C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1
 # Command line       : vivado.exe -log DDP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DDP.tcl
-# Log file           : C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/DDP.vds
-# Journal file       : C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1\vivado.jou
+# Log file           : C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/DDP.vds
+# Journal file       : C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1\vivado.jou
 # Running On         : DESKTOP-F8PDQQS
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26200
@@ -19,12 +19,12 @@
 # Host memory        : 34067 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36214 MB
-# Available Virtual  : 7419 MB
+# Available Virtual  : 9038 MB
 #-----------------------------------------------------------
 source DDP.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 561.625 ; gain = 256.098
-Command: read_checkpoint -auto_incremental -incremental C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/utils_1/imports/synth_1/DDP.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/utils_1/imports/synth_1/DDP.dcp for incremental synthesis
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 559.859 ; gain = 255.871
+Command: read_checkpoint -auto_incremental -incremental C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/utils_1/imports/synth_1/DDP.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.srcs/utils_1/imports/synth_1/DDP.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top DDP -part xc7z020iclg484-1L
 Starting synth_design
@@ -35,114 +35,114 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 30472
+INFO: [Synth 8-7075] Helper process launched with PID 17060
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1348.012 ; gain = 540.621
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1348.363 ; gain = 541.125
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-11121] redeclaration of ANSI port 'cp1' is not allowed [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CM.v:29]
-WARNING: [Synth 8-11121] redeclaration of ANSI port 'cp2' is not allowed [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CM.v:29]
-WARNING: [Synth 8-11121] redeclaration of ANSI port 'FEB' is not allowed [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/COPY.v:14]
-WARNING: [Synth 8-6901] identifier 'CP_C' is used before its declaration [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/DDP.v:37]
-INFO: [Synth 8-6157] synthesizing module 'DDP' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/DDP.v:1]
-INFO: [Synth 8-6157] synthesizing module 'C_Cycle' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/C_Cycle.v:1]
-INFO: [Synth 8-6157] synthesizing module 'CM' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CM.v:1]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'cp1' is not allowed [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CM.v:29]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'cp2' is not allowed [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CM.v:29]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'FEB' is not allowed [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/COPY.v:14]
+WARNING: [Synth 8-6901] identifier 'CP_C' is used before its declaration [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/DDP.v:37]
+INFO: [Synth 8-6157] synthesizing module 'DDP' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/DDP.v:1]
+INFO: [Synth 8-6157] synthesizing module 'C_Cycle' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/C_Cycle.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CM.v:1]
 	Parameter delay_LA bound to: 10 - type: integer 
 	Parameter delay_LB bound to: 10 - type: integer 
 	Parameter delay_LC bound to: 10 - type: integer 
 	Parameter delay_LD bound to: 10 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'CJ' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CJ.v:2]
+INFO: [Synth 8-6157] synthesizing module 'CJ' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CJ.v:2]
 	Parameter delay_LA bound to: 10 - type: integer 
 	Parameter delay_LB bound to: 10 - type: integer 
 	Parameter delay_LC bound to: 10 - type: integer 
 	Parameter delay_LD bound to: 10 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'Delay' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/delay_Elements/Delay.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Delay' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/delay_Elements/Delay.v:1]
 	Parameter delay_num bound to: 10 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'LUT1' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95343]
 	Parameter INIT bound to: 2'b10 
 INFO: [Synth 8-6155] done synthesizing module 'LUT1' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95343]
-INFO: [Synth 8-6155] done synthesizing module 'Delay' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/delay_Elements/Delay.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'CJ' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CJ.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'CM' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CM.v:1]
-INFO: [Synth 8-6157] synthesizing module 'C' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/C.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Delay' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/delay_Elements/Delay.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CJ' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CJ.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'CM' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'C' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/C.v:2]
 	Parameter delay_LA bound to: 10 - type: integer 
 	Parameter delay_LB bound to: 10 - type: integer 
 	Parameter delay_LC bound to: 10 - type: integer 
 	Parameter delay_LD bound to: 10 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'C' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/C.v:2]
-INFO: [Synth 8-6157] synthesizing module 'CE' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CE.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'C' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/C.v:2]
+INFO: [Synth 8-6157] synthesizing module 'CE' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CE.v:1]
 	Parameter delay_LA bound to: 10 - type: integer 
 	Parameter delay_LB bound to: 5 - type: integer 
 	Parameter delay_LC bound to: 10 - type: integer 
 	Parameter delay_LD bound to: 5 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'CF' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CF.v:2]
+INFO: [Synth 8-6157] synthesizing module 'CF' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CF.v:2]
 	Parameter delay_LA bound to: 10 - type: integer 
 	Parameter delay_LB bound to: 5 - type: integer 
 	Parameter delay_LC bound to: 10 - type: integer 
 	Parameter delay_LD bound to: 5 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'Delay__parameterized0' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/delay_Elements/Delay.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Delay__parameterized0' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/delay_Elements/Delay.v:1]
 	Parameter delay_num bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Delay__parameterized0' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/delay_Elements/Delay.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'CF' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CF.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'CE' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CE.v:1]
-INFO: [Synth 8-6157] synthesizing module 'CX2' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CX2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Delay__parameterized0' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/delay_Elements/Delay.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CF' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CF.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'CE' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CE.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CX2' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CX2.v:1]
 	Parameter delay_LA bound to: 10 - type: integer 
 	Parameter delay_LB bound to: 5 - type: integer 
 	Parameter delay_LC bound to: 10 - type: integer 
 	Parameter delay_LD bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'CX2' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CX2.v:1]
-INFO: [Synth 8-6157] synthesizing module 'CB' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CB.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'CX2' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CX2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'CB' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CB.v:1]
 	Parameter delay_LA bound to: 10 - type: integer 
 	Parameter delay_LB bound to: 5 - type: integer 
 	Parameter delay_LC bound to: 10 - type: integer 
 	Parameter delay_LD bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'CB' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CB.v:1]
-INFO: [Synth 8-6157] synthesizing module 'C__parameterized0' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/C.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'CB' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CB.v:1]
+INFO: [Synth 8-6157] synthesizing module 'C__parameterized0' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/C.v:2]
 	Parameter delay_LA bound to: 8 - type: integer 
 	Parameter delay_LB bound to: 8 - type: integer 
 	Parameter delay_LC bound to: 8 - type: integer 
 	Parameter delay_LD bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'Delay__parameterized1' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/delay_Elements/Delay.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Delay__parameterized1' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/delay_Elements/Delay.v:1]
 	Parameter delay_num bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Delay__parameterized1' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/delay_Elements/Delay.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'C__parameterized0' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/C.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'C_Cycle' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/C_Cycle.v:1]
-INFO: [Synth 8-6157] synthesizing module 'M' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/M.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'M' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/M.v:1]
-INFO: [Synth 8-6157] synthesizing module 'MMCAM' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMCAM.v:1]
-INFO: [Synth 8-6157] synthesizing module 'MMCAM_ENTRY_FD' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMCAM_ENTRY_FD.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'MMCAM_ENTRY_FD' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMCAM_ENTRY_FD.v:1]
-INFO: [Synth 8-6157] synthesizing module 'MMCAM_AM_OR_MA' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMCAM_AM_OR_MA.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'MMCAM_AM_OR_MA' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMCAM_AM_OR_MA.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'MMCAM' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMCAM.v:1]
-INFO: [Synth 8-6157] synthesizing module 'MMRAM' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMRAM.v:1]
-INFO: [Synth 8-6157] synthesizing module 'MMRAM_RAM' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-14548-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'MMRAM_RAM' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-14548-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
-WARNING: [Synth 8-689] width (36) of port connection 'dina' does not match port width (20) of module 'MMRAM_RAM' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMRAM.v:57]
-WARNING: [Synth 8-689] width (36) of port connection 'douta' does not match port width (20) of module 'MMRAM_RAM' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMRAM.v:58]
-INFO: [Synth 8-6157] synthesizing module 'MMRAM_CMEM' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-14548-DESKTOP-F8PDQQS/realtime/MMRAM_CMEM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'MMRAM_CMEM' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-14548-DESKTOP-F8PDQQS/realtime/MMRAM_CMEM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'MMRAM' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMRAM.v:1]
-INFO: [Synth 8-6157] synthesizing module 'PS' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/PS.v:1]
-INFO: [Synth 8-6157] synthesizing module 'PS_ROM' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-14548-DESKTOP-F8PDQQS/realtime/PS_ROM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PS_ROM' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-14548-DESKTOP-F8PDQQS/realtime/PS_ROM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PS' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/PS.v:1]
-INFO: [Synth 8-6157] synthesizing module 'FP' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/FP.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'FP' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/FP.v:1]
-INFO: [Synth 8-6157] synthesizing module 'MA' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MA.v:1]
-INFO: [Synth 8-6157] synthesizing module 'MA_DMEM' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-14548-DESKTOP-F8PDQQS/realtime/MA_DMEM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'MA_DMEM' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-14548-DESKTOP-F8PDQQS/realtime/MA_DMEM_stub.v:6]
-WARNING: [Synth 8-689] width (32) of port connection 'dina' does not match port width (16) of module 'MA_DMEM' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MA.v:41]
-WARNING: [Synth 8-689] width (32) of port connection 'douta' does not match port width (16) of module 'MA_DMEM' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MA.v:42]
-INFO: [Synth 8-6155] done synthesizing module 'MA' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MA.v:1]
-INFO: [Synth 8-6157] synthesizing module 'COPY' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/COPY.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'COPY' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/COPY.v:1]
-INFO: [Synth 8-6157] synthesizing module 'B' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/B.v:1]
-INFO: [Synth 8-6157] synthesizing module 'B_SubPS' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-14548-DESKTOP-F8PDQQS/realtime/B_SubPS_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'B_SubPS' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-14548-DESKTOP-F8PDQQS/realtime/B_SubPS_stub.v:6]
-WARNING: [Synth 8-689] width (6) of port connection 'addra' does not match port width (7) of module 'B_SubPS' [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/B.v:34]
-INFO: [Synth 8-6155] done synthesizing module 'B' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/B.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'DDP' (0#1) [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/DDP.v:1]
-WARNING: [Synth 8-5837] Detected dual asynchronous set and preset for register DL1S_reg in module CX2. This is not a recommended register style for Xilinx devices  [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CX2.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'Delay__parameterized1' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/delay_Elements/Delay.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'C__parameterized0' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/C.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'C_Cycle' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/C_Cycle.v:1]
+INFO: [Synth 8-6157] synthesizing module 'M' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/M.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'M' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/M.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MMCAM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMCAM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MMCAM_ENTRY_FD' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMCAM_ENTRY_FD.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MMCAM_ENTRY_FD' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMCAM_ENTRY_FD.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MMCAM_AM_OR_MA' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMCAM_AM_OR_MA.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MMCAM_AM_OR_MA' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMCAM_AM_OR_MA.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MMCAM' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMCAM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MMRAM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMRAM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MMRAM_RAM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-33628-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MMRAM_RAM' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-33628-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
+WARNING: [Synth 8-689] width (36) of port connection 'dina' does not match port width (20) of module 'MMRAM_RAM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMRAM.v:57]
+WARNING: [Synth 8-689] width (36) of port connection 'douta' does not match port width (20) of module 'MMRAM_RAM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMRAM.v:58]
+INFO: [Synth 8-6157] synthesizing module 'MMRAM_CMEM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-33628-DESKTOP-F8PDQQS/realtime/MMRAM_CMEM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MMRAM_CMEM' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-33628-DESKTOP-F8PDQQS/realtime/MMRAM_CMEM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MMRAM' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMRAM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PS' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/PS.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PS_ROM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-33628-DESKTOP-F8PDQQS/realtime/PS_ROM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PS_ROM' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-33628-DESKTOP-F8PDQQS/realtime/PS_ROM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PS' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/PS.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FP' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/FP.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FP' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/FP.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MA' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MA.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MA_DMEM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-33628-DESKTOP-F8PDQQS/realtime/MA_DMEM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MA_DMEM' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-33628-DESKTOP-F8PDQQS/realtime/MA_DMEM_stub.v:6]
+WARNING: [Synth 8-689] width (32) of port connection 'dina' does not match port width (16) of module 'MA_DMEM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MA.v:41]
+WARNING: [Synth 8-689] width (32) of port connection 'douta' does not match port width (16) of module 'MA_DMEM' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MA.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'MA' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MA.v:1]
+INFO: [Synth 8-6157] synthesizing module 'COPY' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/COPY.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'COPY' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/COPY.v:1]
+INFO: [Synth 8-6157] synthesizing module 'B' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/B.v:1]
+INFO: [Synth 8-6157] synthesizing module 'B_SubPS' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-33628-DESKTOP-F8PDQQS/realtime/B_SubPS_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'B_SubPS' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/.Xil/Vivado-33628-DESKTOP-F8PDQQS/realtime/B_SubPS_stub.v:6]
+WARNING: [Synth 8-689] width (6) of port connection 'addra' does not match port width (7) of module 'B_SubPS' [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/B.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'B' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/B.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'DDP' (0#1) [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/DDP.v:1]
+WARNING: [Synth 8-5837] Detected dual asynchronous set and preset for register DL1S_reg in module CX2. This is not a recommended register style for Xilinx devices  [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CX2.v:27]
 WARNING: [Synth 8-7129] Port WRITE_DATA[31] in module MA is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WRITE_DATA[30] in module MA is either unconnected or has no load
 WARNING: [Synth 8-7129] Port WRITE_DATA[29] in module MA is either unconnected or has no load
@@ -161,199 +161,199 @@ WARNING: [Synth 8-7129] Port WRITE_DATA[17] in module MA is either unconnected o
 WARNING: [Synth 8-7129] Port WRITE_DATA[16] in module MA is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DEL in module MMRAM is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1483.629 ; gain = 676.238
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1483.926 ; gain = 676.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1483.629 ; gain = 676.238
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1483.926 ; gain = 676.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1483.629 ; gain = 676.238
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1483.926 ; gain = 676.688
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1483.629 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1483.926 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MMRAM_RAM/MMRAM_RAM/MMRAM_RAM_in_context.xdc] for cell 'mmram/RAM'
-Finished Parsing XDC File [c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MMRAM_RAM/MMRAM_RAM/MMRAM_RAM_in_context.xdc] for cell 'mmram/RAM'
-Parsing XDC File [c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MA_DMEM/MA_DMEM/MA_DMEM_in_context.xdc] for cell 'ma/DMEM'
-Finished Parsing XDC File [c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MA_DMEM/MA_DMEM/MA_DMEM_in_context.xdc] for cell 'ma/DMEM'
-Parsing XDC File [c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MMRAM_CMEM/MMRAM_CMEM/MMRAM_CMEM_in_context.xdc] for cell 'mmram/CMEM'
-Finished Parsing XDC File [c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MMRAM_CMEM/MMRAM_CMEM/MMRAM_CMEM_in_context.xdc] for cell 'mmram/CMEM'
-Parsing XDC File [c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM/PS_ROM_in_context.xdc] for cell 'ps/PS'
-Finished Parsing XDC File [c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM/PS_ROM_in_context.xdc] for cell 'ps/PS'
-Parsing XDC File [c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/B_SubPS/B_SubPS/B_SubPS_in_context.xdc] for cell 'b/SubPS'
-Finished Parsing XDC File [c:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/B_SubPS/B_SubPS/B_SubPS_in_context.xdc] for cell 'b/SubPS'
-Parsing XDC File [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc]
-Finished Parsing XDC File [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc]
+Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MMRAM_RAM/MMRAM_RAM/MMRAM_RAM_in_context.xdc] for cell 'mmram/RAM'
+Finished Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MMRAM_RAM/MMRAM_RAM/MMRAM_RAM_in_context.xdc] for cell 'mmram/RAM'
+Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MA_DMEM/MA_DMEM/MA_DMEM_in_context.xdc] for cell 'ma/DMEM'
+Finished Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MA_DMEM/MA_DMEM/MA_DMEM_in_context.xdc] for cell 'ma/DMEM'
+Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MMRAM_CMEM/MMRAM_CMEM/MMRAM_CMEM_in_context.xdc] for cell 'mmram/CMEM'
+Finished Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/MMRAM_CMEM/MMRAM_CMEM/MMRAM_CMEM_in_context.xdc] for cell 'mmram/CMEM'
+Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM/PS_ROM_in_context.xdc] for cell 'ps/PS'
+Finished Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/PS_ROM/PS_ROM/PS_ROM_in_context.xdc] for cell 'ps/PS'
+Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/B_SubPS/B_SubPS/B_SubPS_in_context.xdc] for cell 'b/SubPS'
+Finished Parsing XDC File [c:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.gen/sources_1/ip/B_SubPS/B_SubPS/B_SubPS_in_context.xdc] for cell 'b/SubPS'
+Parsing XDC File [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc]
+Finished Parsing XDC File [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1544.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1554.438 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.250 . Memory (MB): peak = 1544.762 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.309 . Memory (MB): peak = 1554.438 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1544.762 ; gain = 737.371
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1554.438 ; gain = 747.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020iclg484-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1544.762 ; gain = 737.371
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1554.438 ; gain = 747.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
-WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
+WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/CONSTRAINT/DDP.xdc, line 2).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 1544.762 ; gain = 737.371
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1554.438 ; gain = 747.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 1544.762 ; gain = 737.371
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 1554.438 ; gain = 747.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -435,7 +435,7 @@ WARNING: [Synth 8-7129] Port WRITE_DATA[17] in module MA is either unconnected o
 WARNING: [Synth 8-7129] Port WRITE_DATA[16] in module MA is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DEL in module MMRAM is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 1642.922 ; gain = 835.531
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 1655.996 ; gain = 848.758
 ---------------------------------------------------------------------------------
  Sort Area is  ALU2_0 : 0 0 : 2701 4864 : Used 1 time 0
  Sort Area is  ALU2_0 : 0 1 : 2163 4864 : Used 1 time 0
@@ -463,19 +463,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:54 ; elapsed = 00:01:58 . Memory (MB): peak = 1744.496 ; gain = 937.105
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:53 ; elapsed = 00:01:54 . Memory (MB): peak = 1754.875 ; gain = 947.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:55 ; elapsed = 00:01:58 . Memory (MB): peak = 1748.656 ; gain = 941.266
+Finished Timing Optimization : Time (s): cpu = 00:01:53 ; elapsed = 00:01:55 . Memory (MB): peak = 1757.883 ; gain = 950.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:56 ; elapsed = 00:01:59 . Memory (MB): peak = 1789.543 ; gain = 982.152
+Finished Technology Mapping : Time (s): cpu = 00:01:54 ; elapsed = 00:01:56 . Memory (MB): peak = 1796.285 ; gain = 989.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -492,50 +492,50 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/M.v:15]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/M.v:15]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMCAM_ENTRY_FD.v:33]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MMRAM.v:30]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/PS.v:21]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/FP.v:31]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/MA.v:23]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CX2.v:22]
-WARNING: [Synth 8-5396] Clock pin G has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CX2.v:1]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/C_Elements/CX2.v:27]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/B.v:20]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/HDL/DDP/DDP.v:34]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/M.v:15]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/M.v:15]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMCAM_ENTRY_FD.v:33]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MMRAM.v:30]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/PS.v:21]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/FP.v:31]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/MA.v:23]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CX2.v:22]
+WARNING: [Synth 8-5396] Clock pin G has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CX2.v:1]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/C_Elements/CX2.v:27]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/B.v:20]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/HDL/DDP/DDP.v:34]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:59 ; elapsed = 00:02:03 . Memory (MB): peak = 2002.676 ; gain = 1195.285
+Finished IO Insertion : Time (s): cpu = 00:01:58 ; elapsed = 00:01:59 . Memory (MB): peak = 2009.969 ; gain = 1202.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:59 ; elapsed = 00:02:03 . Memory (MB): peak = 2002.676 ; gain = 1195.285
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:58 ; elapsed = 00:01:59 . Memory (MB): peak = 2009.969 ; gain = 1202.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:59 ; elapsed = 00:02:03 . Memory (MB): peak = 2002.676 ; gain = 1195.285
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:58 ; elapsed = 00:01:59 . Memory (MB): peak = 2009.969 ; gain = 1202.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:59 ; elapsed = 00:02:03 . Memory (MB): peak = 2002.676 ; gain = 1195.285
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:58 ; elapsed = 00:01:59 . Memory (MB): peak = 2009.969 ; gain = 1202.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:59 ; elapsed = 00:02:03 . Memory (MB): peak = 2002.676 ; gain = 1195.285
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:58 ; elapsed = 00:02:00 . Memory (MB): peak = 2009.969 ; gain = 1202.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:59 ; elapsed = 00:02:03 . Memory (MB): peak = 2002.676 ; gain = 1195.285
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:58 ; elapsed = 00:02:00 . Memory (MB): peak = 2009.969 ; gain = 1202.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -589,18 +589,18 @@ Report Cell Usage:
 |20    |OBUF       |    56|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:59 ; elapsed = 00:02:03 . Memory (MB): peak = 2002.676 ; gain = 1195.285
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:58 ; elapsed = 00:02:00 . Memory (MB): peak = 2009.969 ; gain = 1202.730
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:50 ; elapsed = 00:02:00 . Memory (MB): peak = 2002.676 ; gain = 1134.152
-Synthesis Optimization Complete : Time (s): cpu = 00:02:00 ; elapsed = 00:02:04 . Memory (MB): peak = 2002.676 ; gain = 1195.285
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:47 ; elapsed = 00:01:56 . Memory (MB): peak = 2009.969 ; gain = 1132.219
+Synthesis Optimization Complete : Time (s): cpu = 00:01:58 ; elapsed = 00:02:00 . Memory (MB): peak = 2009.969 ; gain = 1202.730
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2007.816 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.044 . Memory (MB): peak = 2015.074 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 209 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2015.500 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2022.691 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   FDCP => FDCP (FDCE, FDPE, LDCE, LUT3, VCC): 1 instance 
@@ -610,8 +610,8 @@ Synth Design complete | Checksum: 411568c5
 INFO: [Common 17-83] Releasing license: Synthesis
 78 Infos, 56 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:05 ; elapsed = 00:02:10 . Memory (MB): peak = 2015.500 ; gain = 1442.121
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2015.500 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/lab/4B_Research/Matuzaka/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/DDP.dcp' has been generated.
+synth_design: Time (s): cpu = 00:02:03 ; elapsed = 00:02:06 . Memory (MB): peak = 2022.691 ; gain = 1449.371
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2022.691 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/lab/4B_Research/FIR_DDP/DDP_FIR_32bit/Matuzaka_DDP_32bit.runs/synth_1/DDP.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file DDP_utilization_synth.rpt -pb DDP_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Aug 20 16:26:08 2026...
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 16 17:51:19 2026...

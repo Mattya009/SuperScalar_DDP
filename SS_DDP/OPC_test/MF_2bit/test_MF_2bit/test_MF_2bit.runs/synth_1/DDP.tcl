@@ -74,9 +74,9 @@ set_property ip_output_repo c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/Coe_files/CMEMFIR.coe
-add_files {{c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/Coe_files/PS -FIR.coe}}
-add_files c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/Coe_files/SubPS.coe
+add_files C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/Coe_files/CMEMFIR.coe
+add_files {{C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/Coe_files/PS -FIR.coe}}
+add_files C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/Coe_files/SubPS.coe
 read_verilog {
   C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/DDP_macro.vh
   C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/common_param.vh
@@ -106,19 +106,19 @@ read_verilog -library xil_defaultlib {
   C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/PS_Stage.v
   C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/HDL/DDP/DDP.v
 }
-read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/MMRAM_RAM/MMRAM_RAM.xci
+read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/MMRAM_RAM/MMRAM_RAM.xci
 set_property used_in_implementation false [get_files -all c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.gen/sources_1/ip/MMRAM_RAM/MMRAM_RAM_ooc.xdc]
 
-read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/CMEM_1/CMEM.xci
+read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/CMEM_1/CMEM.xci
 set_property used_in_implementation false [get_files -all c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.gen/sources_1/ip/CMEM_1/CMEM_ooc.xdc]
 
-read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/SubPS/SubPS.xci
+read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/SubPS/SubPS.xci
 set_property used_in_implementation false [get_files -all c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.gen/sources_1/ip/SubPS/SubPS_ooc.xdc]
 
-read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/PS/PS.xci
+read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/PS/PS.xci
 set_property used_in_implementation false [get_files -all c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.gen/sources_1/ip/PS/PS_ooc.xdc]
 
-read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/DMEM/DMEM.xci
+read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/sources_1/ip/DMEM/DMEM.xci
 set_property used_in_implementation false [get_files -all c:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.gen/sources_1/ip/DMEM/DMEM_ooc.xdc]
 
 OPTRACE "Adding files" END { }
@@ -134,6 +134,8 @@ read_xdc C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/XDC/.xdc
 set_property used_in_implementation false [get_files C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/XDC/.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.srcs/utils_1/imports/synth_1/DDP.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
