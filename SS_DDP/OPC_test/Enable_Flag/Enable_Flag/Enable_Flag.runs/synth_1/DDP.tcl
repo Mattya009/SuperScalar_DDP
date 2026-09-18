@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param general.maxThreads 8
 set_param general.usePosixSpawnForFork 1
 set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
@@ -74,9 +75,9 @@ set_property ip_output_repo c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enabl
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Coe_files/CMEMFIR.coe
-add_files {{c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Coe_files/PS -FIR.coe}}
-add_files c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Coe_files/SubPS.coe
+add_files C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Coe_files/CMEMFIR.coe
+add_files {{C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Coe_files/PS -FIR.coe}}
+add_files C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Coe_files/SubPS.coe
 read_verilog {
   C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/common_param.vh
   C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/DDP_macro.vh
@@ -106,19 +107,19 @@ read_verilog -library xil_defaultlib {
   C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/PS_Stage.v
   C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/DDP.v
 }
-read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/MMRAM_RAM/MMRAM_RAM.xci
+read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/MMRAM_RAM/MMRAM_RAM.xci
 set_property used_in_implementation false [get_files -all c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/MMRAM_RAM/MMRAM_RAM_ooc.xdc]
 
-read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/DMEM/DMEM.xci
-set_property used_in_implementation false [get_files -all c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/DMEM/DMEM_ooc.xdc]
-
-read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/CMEM/CMEM.xci
-set_property used_in_implementation false [get_files -all c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/CMEM/CMEM_ooc.xdc]
-
-read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/PS/PS.xci
+read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/PS/PS.xci
 set_property used_in_implementation false [get_files -all c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/PS/PS_ooc.xdc]
 
-read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/SubPS/SubPS.xci
+read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/DMEM/DMEM.xci
+set_property used_in_implementation false [get_files -all c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/DMEM/DMEM_ooc.xdc]
+
+read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/CMEM/CMEM.xci
+set_property used_in_implementation false [get_files -all c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/CMEM/CMEM_ooc.xdc]
+
+read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/SubPS/SubPS.xci
 set_property used_in_implementation false [get_files -all c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/SubPS/SubPS_ooc.xdc]
 
 OPTRACE "Adding files" END { }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1789547656">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1789612716">
   <File Type="PA-TCL" Name="DDP.tcl"/>
   <File Type="REPORTS-TCL" Name="DDP_reports.tcl"/>
   <File Type="INIT-TIMING" Name="DDP_timing_summary_init.rpt"/>
@@ -342,9 +342,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -356,8 +354,8 @@
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="MMRAM_RAM"/>
-  <BlockFileSet Type="BlockSrcs" Name="DMEM"/>
-  <BlockFileSet Type="BlockSrcs" Name="CMEM"/>
   <BlockFileSet Type="BlockSrcs" Name="SubPS"/>
   <BlockFileSet Type="BlockSrcs" Name="PS"/>
+  <BlockFileSet Type="BlockSrcs" Name="DMEM"/>
+  <BlockFileSet Type="BlockSrcs" Name="CMEM"/>
 </GenRun>

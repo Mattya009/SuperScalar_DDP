@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="MMRAM_RAM_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1789547809">
-  <File Type="PA-TCL" Name="MMRAM_RAM.tcl"/>
+<GenRun Id="MMRAM_RAM_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1789612724">
   <File Type="REPORTS-TCL" Name="MMRAM_RAM_reports.tcl"/>
-  <File Type="RDS-RDS" Name="MMRAM_RAM.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="MMRAM_RAM_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="MMRAM_RAM_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="MMRAM_RAM_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="MMRAM_RAM.tcl"/>
+  <File Type="RDS-RDS" Name="MMRAM_RAM.vds"/>
   <File Type="RDS-DCP" Name="MMRAM_RAM.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="MMRAM_RAM_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="MMRAM_RAM_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/MMRAM_RAM" RelGenDir="$PGENDIR/MMRAM_RAM">
     <File Path="$PSRCDIR/sources_1/ip/MMRAM_RAM/MMRAM_RAM.xci">
       <FileInfo>

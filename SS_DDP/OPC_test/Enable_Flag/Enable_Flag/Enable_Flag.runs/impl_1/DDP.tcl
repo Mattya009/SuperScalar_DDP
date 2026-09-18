@@ -104,6 +104,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param general.maxThreads 8
   set_param general.usePosixSpawnForFork 1
   set_param chipscope.maxJobs 4
   set_param runs.launchOptions { -jobs 16  }
@@ -121,11 +122,11 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/DDP.dcp
-  read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/MMRAM_RAM/MMRAM_RAM.xci
-  read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/DMEM/DMEM.xci
-  read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/CMEM/CMEM.xci
-  read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/PS/PS.xci
-  read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/SubPS/SubPS.xci
+  read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/MMRAM_RAM/MMRAM_RAM.xci
+  read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/PS/PS.xci
+  read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/DMEM/DMEM.xci
+  read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/CMEM/CMEM.xci
+  read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/SubPS/SubPS.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/XDC/.xdc
 OPTRACE "read constraints: implementation" END { }

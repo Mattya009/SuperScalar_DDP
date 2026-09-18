@@ -60,9 +60,9 @@ module MMRAM_RAM_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   input wire [5:0] addra,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire [19:0] dina,
+  input wire [35:0] dina,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [19:0] douta
+  output wire [35:0] douta
 );
 
   MMRAM_RAM inst (

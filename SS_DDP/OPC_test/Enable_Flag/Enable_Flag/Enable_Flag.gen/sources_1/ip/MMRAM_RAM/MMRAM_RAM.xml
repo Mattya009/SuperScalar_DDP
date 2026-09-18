@@ -1487,7 +1487,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0d40e7d4</spirit:value>
+            <spirit:value>9:635e6626</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1501,11 +1501,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Sep 16 08:34:44 UTC 2026</spirit:value>
+            <spirit:value>Thu Sep 17 02:38:55 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0d40e7d4</spirit:value>
+            <spirit:value>9:635e6626</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1516,7 +1516,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0d40e7d4</spirit:value>
+            <spirit:value>9:635e6626</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1531,11 +1531,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Sep 16 08:05:21 UTC 2026</spirit:value>
+            <spirit:value>Thu Sep 17 02:25:25 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b5fcd989</spirit:value>
+            <spirit:value>9:635e6626</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1551,11 +1551,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Sep 16 08:08:49 UTC 2026</spirit:value>
+            <spirit:value>Thu Sep 17 02:25:36 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0d40e7d4</spirit:value>
+            <spirit:value>9:635e6626</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1571,11 +1571,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Sep 16 08:08:49 UTC 2026</spirit:value>
+            <spirit:value>Thu Sep 17 02:25:36 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0d40e7d4</spirit:value>
+            <spirit:value>9:635e6626</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4364,6 +4364,7 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_SLAVE_S_AXI.RUSER_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_SLAVE_S_AXI.WUSER_WIDTH" xilinx:valueSource="constant"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Enable_A" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Read_Width_A" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Register_PortA_Output_of_Memory_Primitives" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Write_Depth_A" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Write_Width_A" xilinx:valueSource="user"/>

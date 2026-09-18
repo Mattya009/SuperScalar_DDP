@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "PS_synth_1" START { ROLLUP_AUTO }
+set_param general.maxThreads 8
 set_param general.usePosixSpawnForFork 1
 set_param chipscope.maxJobs 4
 set_param project.vivado.isBlockSynthRun true
@@ -76,7 +77,7 @@ set_property ip_output_repo c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enabl
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/PS/PS.xci
+read_ip -quiet C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/sources_1/ip/PS/PS.xci
 set_property used_in_implementation false [get_files -all c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/PS/PS_ooc.xdc]
 
 OPTRACE "Adding files" END { }

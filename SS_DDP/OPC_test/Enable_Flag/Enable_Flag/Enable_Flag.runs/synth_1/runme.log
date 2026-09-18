@@ -8,37 +8,27 @@
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Wed Sep 16 17:34:46 2026
+  **** Start of session at: Thu Sep 17 11:39:09 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source DDP.tcl -notrace
-create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 561.562 ; gain = 257.680
+create_project: Time (s): cpu = 00:00:40 ; elapsed = 00:00:08 . Memory (MB): peak = 585.754 ; gain = 279.609
 Command: read_checkpoint -auto_incremental -incremental C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/utils_1/imports/synth_1/DDP.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.srcs/utils_1/imports/synth_1/DDP.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top DDP -part xc7z020clg484-1
 Starting synth_design
-INFO: [IP_Flow 19-2162] IP 'MMRAM_RAM' is locked:
-* Current project part 'xc7z020clg484-1' and the part 'xc7z020clg400-1' used to customize the IP 'MMRAM_RAM' do not match.
-INFO: [IP_Flow 19-2162] IP 'DMEM' is locked:
-* Current project part 'xc7z020clg484-1' and the part 'xc7z020clg400-1' used to customize the IP 'DMEM' do not match.
-INFO: [IP_Flow 19-2162] IP 'CMEM' is locked:
-* Current project part 'xc7z020clg484-1' and the part 'xc7z020clg400-1' used to customize the IP 'CMEM' do not match.
-INFO: [IP_Flow 19-2162] IP 'PS' is locked:
-* Current project part 'xc7z020clg484-1' and the part 'xc7z020clg400-1' used to customize the IP 'PS' do not match.
-INFO: [IP_Flow 19-2162] IP 'SubPS' is locked:
-* Current project part 'xc7z020clg484-1' and the part 'xc7z020clg400-1' used to customize the IP 'SubPS' do not match.
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 26672
+INFO: [Synth 8-7075] Helper process launched with PID 304
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1355.355 ; gain = 542.398
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1357.977 ; gain = 540.113
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-9448] extra semicolon in $unit (global) scope [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/M_Stage.v:1]
 INFO: [Synth 8-11241] undeclared symbol 'CP', assumed default net type 'wire' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/DDP.v:51]
@@ -71,16 +61,16 @@ INFO: [Synth 8-6157] synthesizing module 'Delay_2ns' [C:/lab/4B_Research/SS_DDP/
 INFO: [Synth 8-6155] done synthesizing module 'Delay_2ns' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/Peripheral/Delay_2ns.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'CF' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/C_Elements/CF.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'CE' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/C_Elements/CE.v:3]
-INFO: [Synth 8-6157] synthesizing module 'MMRAM_RAM' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-14852-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'MMRAM_RAM' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-14852-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'MMRAM_RAM' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-11968-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MMRAM_RAM' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-11968-DESKTOP-F8PDQQS/realtime/MMRAM_RAM_stub.v:6]
 WARNING: [Synth 8-689] width (38) of port connection 'dina' does not match port width (36) of module 'MMRAM_RAM' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/MMRAM.v:40]
 WARNING: [Synth 8-689] width (38) of port connection 'douta' does not match port width (36) of module 'MMRAM_RAM' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/MMRAM.v:41]
-INFO: [Synth 8-6157] synthesizing module 'CMEM' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-14852-DESKTOP-F8PDQQS/realtime/CMEM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'CMEM' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-14852-DESKTOP-F8PDQQS/realtime/CMEM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'CMEM' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-11968-DESKTOP-F8PDQQS/realtime/CMEM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'CMEM' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-11968-DESKTOP-F8PDQQS/realtime/CMEM_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'MMRAM' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/MMRAM.v:3]
 INFO: [Synth 8-6157] synthesizing module 'PS_Stage' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/PS_Stage.v:3]
-INFO: [Synth 8-6157] synthesizing module 'PS' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-14852-DESKTOP-F8PDQQS/realtime/PS_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'PS' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-14852-DESKTOP-F8PDQQS/realtime/PS_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PS' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-11968-DESKTOP-F8PDQQS/realtime/PS_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PS' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-11968-DESKTOP-F8PDQQS/realtime/PS_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'PS_Stage' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/PS_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'FP_Stage' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/FP_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/ALU.v:4]
@@ -97,8 +87,8 @@ INFO: [Synth 8-155] case statement is not full and has no default [C:/lab/4B_Res
 INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/ALU.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'FP_Stage' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/FP_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'MA_Stage' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/MA_Stage.v:3]
-INFO: [Synth 8-6157] synthesizing module 'DMEM' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-14852-DESKTOP-F8PDQQS/realtime/DMEM_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DMEM' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-14852-DESKTOP-F8PDQQS/realtime/DMEM_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DMEM' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-11968-DESKTOP-F8PDQQS/realtime/DMEM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DMEM' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-11968-DESKTOP-F8PDQQS/realtime/DMEM_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'MA_Stage' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/MA_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'COPY_Stage' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/COPY_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'CX2' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/C_Elements/CX2.v:2]
@@ -109,58 +99,58 @@ INFO: [Synth 8-6155] done synthesizing module 'COPY_Stage' (0#1) [C:/lab/4B_Rese
 INFO: [Synth 8-6157] synthesizing module 'B_Stage' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/B_Stage.v:3]
 INFO: [Synth 8-6157] synthesizing module 'CB' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/C_Elements/CB.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'CB' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/C_Elements/CB.v:2]
-INFO: [Synth 8-6157] synthesizing module 'SubPS' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-14852-DESKTOP-F8PDQQS/realtime/SubPS_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'SubPS' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-14852-DESKTOP-F8PDQQS/realtime/SubPS_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'SubPS' [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-11968-DESKTOP-F8PDQQS/realtime/SubPS_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SubPS' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/.Xil/Vivado-11968-DESKTOP-F8PDQQS/realtime/SubPS_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'B_Stage' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/B_Stage.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'DDP' (0#1) [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/DDP.v:3]
 WARNING: [Synth 8-5837] Detected dual asynchronous set and preset for register w_q_reg in module DL1S. This is not a recommended register style for Xilinx devices  [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/C_Elements/DL1S.v:10]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1494.000 ; gain = 681.043
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1496.246 ; gain = 678.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1494.000 ; gain = 681.043
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1496.246 ; gain = 678.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1494.000 ; gain = 681.043
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1496.246 ; gain = 678.383
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1494.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 1496.246 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/MMRAM_RAM/MMRAM_RAM/MMRAM_RAM_in_context.xdc] for cell 'MMRAM/mmram'
 Finished Parsing XDC File [c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/MMRAM_RAM/MMRAM_RAM/MMRAM_RAM_in_context.xdc] for cell 'MMRAM/mmram'
+Parsing XDC File [c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/PS/PS/PS_in_context.xdc] for cell 'PS_Stage/ps'
+Finished Parsing XDC File [c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/PS/PS/PS_in_context.xdc] for cell 'PS_Stage/ps'
 Parsing XDC File [c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/DMEM/DMEM/DMEM_in_context.xdc] for cell 'MA_Stage/dmem'
 Finished Parsing XDC File [c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/DMEM/DMEM/DMEM_in_context.xdc] for cell 'MA_Stage/dmem'
 Parsing XDC File [c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/CMEM/CMEM/CMEM_in_context.xdc] for cell 'MMRAM/cmem'
 Finished Parsing XDC File [c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/CMEM/CMEM/CMEM_in_context.xdc] for cell 'MMRAM/cmem'
-Parsing XDC File [c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/PS/PS/PS_in_context.xdc] for cell 'PS_Stage/ps'
-Finished Parsing XDC File [c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/PS/PS/PS_in_context.xdc] for cell 'PS_Stage/ps'
 Parsing XDC File [c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/SubPS/SubPS/SubPS_in_context.xdc] for cell 'B_Stage/subps'
 Finished Parsing XDC File [c:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.gen/sources_1/ip/SubPS/SubPS/SubPS_in_context.xdc] for cell 'B_Stage/subps'
 Parsing XDC File [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/XDC/.xdc]
 Finished Parsing XDC File [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/XDC/.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1564.750 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1553.336 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.324 . Memory (MB): peak = 1564.750 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.387 . Memory (MB): peak = 1553.336 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1564.750 ; gain = 751.793
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1553.336 ; gain = 735.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1564.750 ; gain = 751.793
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1553.336 ; gain = 735.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -301,10 +291,10 @@ WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constrain
 WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/XDC/.xdc, line 1).
 WARNING: set_property ALLOW_COMBINATORIAL_LOOPS could not find object (constraint file  C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/XDC/.xdc, line 1).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:39 ; elapsed = 00:01:44 . Memory (MB): peak = 1564.750 ; gain = 751.793
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:53 ; elapsed = 00:01:57 . Memory (MB): peak = 1553.336 ; gain = 735.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:41 ; elapsed = 00:01:46 . Memory (MB): peak = 1564.750 ; gain = 751.793
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:54 ; elapsed = 00:01:58 . Memory (MB): peak = 1553.336 ; gain = 735.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -361,7 +351,7 @@ DSP Report: operator p_0_out is absorbed into DSP p_0_out.
 DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
 DSP Report: operator p_0_out is absorbed into DSP p_0_out.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:59 ; elapsed = 00:02:05 . Memory (MB): peak = 1629.234 ; gain = 816.277
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:05 ; elapsed = 00:02:09 . Memory (MB): peak = 1623.418 ; gain = 805.555
 ---------------------------------------------------------------------------------
  Sort Area is  p_0_out_0 : 0 0 : 1937 1937 : Used 1 time 0
  Sort Area is  p_0_out_2 : 0 0 : 1937 1937 : Used 1 time 0
@@ -385,19 +375,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:58 ; elapsed = 00:03:05 . Memory (MB): peak = 1764.676 ; gain = 951.719
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:55 ; elapsed = 00:03:02 . Memory (MB): peak = 1754.242 ; gain = 936.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:58 ; elapsed = 00:03:06 . Memory (MB): peak = 1767.078 ; gain = 954.121
+Finished Timing Optimization : Time (s): cpu = 00:02:55 ; elapsed = 00:03:02 . Memory (MB): peak = 1756.742 ; gain = 938.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:00 ; elapsed = 00:03:08 . Memory (MB): peak = 1788.840 ; gain = 975.883
+Finished Technology Mapping : Time (s): cpu = 00:02:57 ; elapsed = 00:03:04 . Memory (MB): peak = 1778.586 ; gain = 960.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -425,37 +415,37 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/C_Elements/DL1S.v:10]
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/HDL/DDP/B_Stage.v:22]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:04 ; elapsed = 00:03:13 . Memory (MB): peak = 2021.090 ; gain = 1208.133
+Finished IO Insertion : Time (s): cpu = 00:03:02 ; elapsed = 00:03:09 . Memory (MB): peak = 2009.379 ; gain = 1191.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:04 ; elapsed = 00:03:13 . Memory (MB): peak = 2021.090 ; gain = 1208.133
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:02 ; elapsed = 00:03:09 . Memory (MB): peak = 2009.379 ; gain = 1191.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:04 ; elapsed = 00:03:13 . Memory (MB): peak = 2021.090 ; gain = 1208.133
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:02 ; elapsed = 00:03:09 . Memory (MB): peak = 2009.379 ; gain = 1191.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:04 ; elapsed = 00:03:13 . Memory (MB): peak = 2021.090 ; gain = 1208.133
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:02 ; elapsed = 00:03:10 . Memory (MB): peak = 2009.379 ; gain = 1191.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:04 ; elapsed = 00:03:13 . Memory (MB): peak = 2021.090 ; gain = 1208.133
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:02 ; elapsed = 00:03:10 . Memory (MB): peak = 2009.379 ; gain = 1191.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:04 ; elapsed = 00:03:13 . Memory (MB): peak = 2021.090 ; gain = 1208.133
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:02 ; elapsed = 00:03:10 . Memory (MB): peak = 2009.379 ; gain = 1191.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -506,18 +496,18 @@ Report Cell Usage:
 |20    |OBUF      |    58|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:04 ; elapsed = 00:03:13 . Memory (MB): peak = 2021.090 ; gain = 1208.133
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:02 ; elapsed = 00:03:10 . Memory (MB): peak = 2009.379 ; gain = 1191.516
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:54 ; elapsed = 00:03:09 . Memory (MB): peak = 2021.090 ; gain = 1137.383
-Synthesis Optimization Complete : Time (s): cpu = 00:03:05 ; elapsed = 00:03:13 . Memory (MB): peak = 2021.090 ; gain = 1208.133
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:45 ; elapsed = 00:03:05 . Memory (MB): peak = 2009.379 ; gain = 1134.426
+Synthesis Optimization Complete : Time (s): cpu = 00:03:02 ; elapsed = 00:03:10 . Memory (MB): peak = 2009.379 ; gain = 1191.516
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 2026.238 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 2014.535 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 156 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2033.910 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2022.449 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   FDCP => FDCP (FDCE, FDPE, LDCE, LUT3, VCC): 1 instance 
@@ -525,10 +515,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 Synth Design complete | Checksum: cfb12fc1
 INFO: [Common 17-83] Releasing license: Synthesis
-85 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+80 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:11 ; elapsed = 00:03:21 . Memory (MB): peak = 2033.910 ; gain = 1456.824
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2033.910 ; gain = 0.000
+synth_design: Time (s): cpu = 00:03:10 ; elapsed = 00:03:20 . Memory (MB): peak = 2022.449 ; gain = 1432.797
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2022.449 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/lab/4B_Research/SS_DDP/OPC_test/Enable_Flag/Enable_Flag/Enable_Flag.runs/synth_1/DDP.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file DDP_utilization_synth.rpt -pb DDP_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Sep 16 17:38:19 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 17 11:42:43 2026...

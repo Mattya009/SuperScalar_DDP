@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Wed Sep 16 17:34:13 2026
-# Process ID         : 33960
+# Start of session at: Thu Sep 17 11:38:41 2026
+# Process ID         : 24796
 # Current directory  : C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/PS_synth_1
 # Command line       : vivado.exe -log PS.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PS.tcl
 # Log file           : C:/lab/4B_Research/SS_DDP/OPC_test/MF_2bit/test_MF_2bit/test_MF_2bit.runs/PS_synth_1/PS.vds
@@ -19,9 +19,9 @@
 # Host memory        : 34067 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36214 MB
-# Available Virtual  : 7331 MB
+# Available Virtual  : 11452 MB
 #-----------------------------------------------------------
 source PS.tcl -notrace
-create_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 559.445 ; gain = 256.117
+create_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 580.746 ; gain = 276.207
 INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP PS, cache-ID = 156d92a7248575eb.
-INFO: [Common 17-206] Exiting Vivado at Wed Sep 16 17:34:38 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 17 11:39:14 2026...
